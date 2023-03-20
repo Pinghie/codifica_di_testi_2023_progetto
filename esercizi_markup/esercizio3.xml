@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Aprire il file XML non ben formato presente nel repository github:
+- validarlo con un parser XML
+- correggerlo (commentando gli errori e le modifiche)
+- aggiungere un figlio (child) ad un elemento
+- aggiungere un fratello (sibling) ad un elemento -->
+
+<radice>
+    <!--<elem> non può essere aperto dentro <prova> ed essere chiuso fuori. -->
+    <prova>
+        <elem>
+            <elem_son>Figlio di elem</elem_son>
+        </elem>
+        <elem_sib>
+            Fratello di elem
+        </elem_sib>
+    </prova>
+</radice>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Scrivere e fare il check di un xml non opportunamente annidato -->
+
+<radice>
+    <prova>
+        <elem>
+        </prova>
+    </elem>
+</radice>
+
+<!-- 
+    Errore prodotto da dom.Counter (senza validazione):
+    [Fatal Error] esercizio2.xml:6:11: The element type "elem" must be terminated by the matching end-tag "</elem>". 
+
+    Errore prodotto da dom.Counter (con validazione):
+    [Error] esercizio2.xml:3:8: Document is invalid: no grammar found.
+    [Error] esercizio2.xml:3:8: Document root element "radice", must match DOCTYPE root "null".
+    [Fatal Error] esercizio2.xml:6:11: The element type "elem" must be terminated by the matching end-tag "</elem>".
+
+    Errore prodotto da xmllint:
+    codifica_fm/esercizi_markup/esercizio2.xml:6: parser error : Opening and ending tag mismatch: elem line 5 and prova
+        </prova>
+                ^
+    codifica_fm/esercizi_markup/esercizio2.xml:7: parser error : Opening and ending tag mismatch: prova line 4 and elem
+        </elem>
+-->
