@@ -6,14 +6,41 @@
 - aggiungere un figlio (child) ad un elemento
 - aggiungere un fratello (sibling) ad un elemento -->
 
-<radice>
-    <!--<elem> non può essere aperto dentro <prova> ed essere chiuso fuori. -->
-    <prova>
-        <elem>
-            <elem_son>Figlio di elem</elem_son>
-        </elem>
-        <elem_sib>
-            Fratello di elem
-        </elem_sib>
-    </prova>
-</radice>
+<!-- documento xml da validare -->
+<!-- 
+    file: esercizio-doc-da-validare
+    nome: FABIO MELASI
+    data: 24/03/2023
+-->
+
+<!--Errore generato con Xerces: 
+    [Error] esercizio3.xml:18:16: Document is invalid: no grammar found.
+    [Error] esercizio3.xml:18:16: Document root element "elementoRadice", must match DOCTYPE root "null".
+    [Fatal Error] esercizio3.xml:27:11: The element type "elementoFiglio" must be terminated by the matching end-tag "</elementoFiglio>".
+-->
+
+<!-- corpo del documento XML-->
+<elementoRadice>
+    <elementoFiglio>
+        <elementoAnnidato>
+        </elementoAnnidato>
+    </elementoFiglio>
+    <elementoFiglio>
+        <elementoAnnidato>
+            <elementoAnnidato>
+            </elementoAnnidato>
+            <elementoFiglio>
+            </elementoFiglio>
+        </elementoAnnidato>
+            <elementoFiglio>
+                <nuovoFiglio></nuovoFiglio>
+            </elementoFiglio>
+            <elementoFratello></elementoFratello>
+    </elementoFiglio>
+</elementoRadice>
+
+<!-- epilogo 
+    Il file conteneva elementi annidati in maniera errata. 
+    In particolare <elementoAnnidato> in riga 29 conteneva tag di apertura, ma non di chiusura.
+    Per renderlo ben formato, ho spostato dentro i tag di chiusura.
+-->
