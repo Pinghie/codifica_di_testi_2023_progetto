@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE TEI [
+<!ELEMENT TEI (header, facsimile?, text+)>
+<!ELEMENT header (#PCDATA)>
+<!ELEMENT facsimile (#PCDATA)>
+<!ELEMENT text (#PCDATA)>
+]>
+
+<TEI>
+    <header>
+        Prova
+    </header>
+    <facsimile>
+        Prova
+    </facsimile>
+    <text>
+        Prova
+    </text>
+</TEI>
