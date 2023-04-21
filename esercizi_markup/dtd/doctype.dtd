@@ -1,0 +1,4 @@
+<!ELEMENT TEI (header, facsimile?, text+, ciao)>
+<!ELEMENT header (#PCDATA)>
+<!ELEMENT facsimile (#PCDATA)>
+<!ELEMENT text (#PCDATA)>

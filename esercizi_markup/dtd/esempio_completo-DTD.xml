@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Gli elementi li dichiaro nella dtd, entità e attributi qui-->
+<!DOCTYPE radice SYSTEM "doctype2.dtd"
+[
+    <!ATTLIST tronco dimensione CDATA #IMPLIED>
+    <!ATTLIST ramo id ID #REQUIRED>
+
+    <!ENTITY external_entity SYSTEM "entity.ent">
+    <!ENTITY % attr_ramo "<!ATTLIST ramo dim CDATA #IMPLIED>">
+
+    %attr_ramo;
+]>
+
+<radice>
+    <tronco dimensione="4m">
+        <ramo id="r1">
+            &external_entity;
+            &external_entity;
+        </ramo>
+        <ramo id="r2" dim="2m">
+            &external_entity;
+        </ramo>
+        <ramo id="r3">
+            &external_entity;
+            &external_entity;
+            &external_entity;
+        </ramo>
+    </tronco>
+</radice>

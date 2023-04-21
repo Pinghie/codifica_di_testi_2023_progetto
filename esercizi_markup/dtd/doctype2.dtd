@@ -1,0 +1,4 @@
+<!ELEMENT radice (tronco)>
+<!ELEMENT tronco (ramo+)>
+<!ELEMENT ramo (foglia*)>
+<!ELEMENT foglia (#PCDATA)>

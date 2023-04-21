@@ -1,0 +1,19 @@
+<!DOCTYPE TEI SYSTEM "doctype.dtd"
+[
+    <!ELEMENT ciao (#PCDATA)>
+]>
+<!--<xml-model href="doctype.dtd" type="application/xml-dtd"?>-->
+
+
+<TEI>
+    <header>
+        Prova
+    </header>
+    <facsimile>
+        Prova
+    </facsimile>
+    <text>
+        Prova
+    </text>
+    <ciao>aaa</ciao>
+</TEI>
