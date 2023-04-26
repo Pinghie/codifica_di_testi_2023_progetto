@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
+
+<TEI>
+    <teiHeader>
+    <!--metadati-->
+        <fileDesc>
+        <!--informazioni sul file, non sulla fonte primaria (che invece sono in sourceDesc)-->
+            <titleStmt>
+            <!--Codifica del titolo dell'edizione digitale--> 
+                <title>Codifica elettronica delle pagine 42-44 del diario di Emanuele Artom</title>
+                <author>Artom, Emanuele (1915-1944)</author>
+                <respStmt>
+                    <resp>Codifica TEI a cura di</resp>
+                    <name>Fabio Melasi</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    Edizione digitale realizzata in <date>maggio 2023</date>
+                </edition>
+                <principal>Fabio Melasi</principal>
+                <sponsor>Università di Pisa</sponsor>
+                <respStmt>
+                    <resp>Revisione della codifica a cura di</resp>
+                    <name>Angelo Mario Del Grosso</name>
+                </respStmt>
+            </editionStmt>
+            <publicationStmt>
+            <!--Dati di diffusione e distribuzione dell'edizione-->
+                <distributor>Università di Pisa</distributor>
+                <address>
+                    <addrLine>Lungarno Antonio Pacinotti 43,</addrLine>
+                    <addrLine>56126,</addrLine>
+                    <addrLine>Pisa (PI),</addrLine>
+                    <addrLine>IT</addrLine>
+                </address>
+            </publicationStmt>
+            <notesStmt>
+                <note>Edizione digitale realizzata come progetto d'esame di Codifica di testi del corso di laurea in Informatica Umanistica dell'Università di Pisa</note>
+            </notesStmt>
+            <sourceDesc>
+            <!--Descrizione della fonte primaria-->
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italia</country>
+                        <settlement>Milano</settlement>
+                        <repository role="institute" xml:lang="it" ref="http://digital-library.cdec.it/cdec-web/storico/detail/IT-CDEC-ST0003-000001/Fondo+Emanuele+Artom.html"> CDEC - Centro di Documentazione Ebraica Contemporanea </repository>
+                        <collection>Fondo Emanuele Artom</collection>
+                    </msIdentifier>
+                    <msContents>
+                        <msItem>
+                            <author>Emanuele Artom</author>
+                            <title>Diario di Emanuele Artom</title>
+                            <textLang>Italiano</textLang>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <!--DA RIEMPIRE-->
+                        </objectDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc> 
+        <!-- informazioni riguardo lo schema (e il modello di codifica) utilizzato-->
+            <p>La codifica del testo è stata realizzata rispettando le linee guida TEI P5</p>
+            <editorialDecl> 
+                <correction method="markup"> 
+                    <p> Gli errori sono stati codificati mediante i tag <gi>sic</gi> e <gi>corr</gi>.</p>
+                </correction>
+                <normalization method="markup">
+                    <p>Le normalizzazioni sono state codificate mediante i tag <gi>orig</gi> e <gi>reg</gi>.</p>
+                </normalization>
+                <hyphenation eol="all">  
+                    <p> Nessun trattino è stato rimosso dal testo.</p>
+                </hyphenation>
+            </editorialDecl>
+        </encodingDesc>
+        <profileDesc>
+        <!--descrizione del testo: quando è stato creato, da chi, usando quali lingue etc.-->
+            <langUsage>
+                <language ident="it">Italiano</language>
+            </langUsage>
+            <creation>
+                <date>1943-1944</date>
+            </creation>
+        </profileDesc>
+
+    </teiHeader>
+    <!--<facsimile></facsimile>-->
+    <text xml:lang="it" type="diario">
+        <body>
+            <div>
+            <pb n="1"/>
+                <opener>
+                    <dateline>
+                        <date>8 dic</date>
+                    </dateline>
+                </opener>
+                <p></p>
+            </div>
+        </body>
+    </text>
+</TEI>
