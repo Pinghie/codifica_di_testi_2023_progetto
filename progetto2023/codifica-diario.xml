@@ -36,9 +36,14 @@
                     <addrLine>Pisa (PI),</addrLine>
                     <addrLine>IT</addrLine>
                 </address>
+                <availability status="free">
+                    <p>
+                        Questa edizione digitale è libera e diffusa attraverso <ref target="https://github.com/Pinghie/codifica_fm/tree/main/progetto2023">GitHub</ref>.
+                    </p>
+                </availability>
             </publicationStmt>
             <notesStmt>
-                <note>Edizione digitale realizzata come progetto d'esame di Codifica di testi del corso di laurea in Informatica Umanistica dell'Università di Pisa</note>
+                <note>Edizione digitale realizzata come progetto d'esame di Codifica di testi del corso di laurea in Informatica Umanistica dell'Università di Pisa.</note>
             </notesStmt>
             <sourceDesc>
             <!--Descrizione della fonte primaria-->
@@ -55,10 +60,16 @@
                             <title>Diario di Emanuele Artom</title>
                             <textLang>Italiano</textLang>
                         </msItem>
+                        <msItem>
+                        <p>
+                            Sono codificate tre pagine (42-44) del diario di Emanuele Artom (1915-1944) scritte nel 1943.
+                        </p>
+                        </msItem>
                     </msContents>
                     <physDesc>
+                        <p>Tre fogli di carta</p>
                         <objectDesc>
-                            <!--DA RIEMPIRE-->
+                            <!--DA RIEMPIRE: tre fogli di carta o tre immagini?-->
                         </objectDesc>
                     </physDesc>
                 </msDesc>
@@ -66,10 +77,13 @@
         </fileDesc>
         <encodingDesc> 
         <!-- informazioni riguardo lo schema (e il modello di codifica) utilizzato-->
-            <p>La codifica del testo è stata realizzata rispettando le linee guida TEI P5</p>
+            <projectDesc>
+                <p>La codifica del testo è stata realizzata rispettando le linee guida TEI P5 come progetto d'esame del corso di Codifica dei Testi dell'Università di Pisa.</p>
+            </projectDesc>
             <editorialDecl> 
+            <!--DA CONTROLLARE VERSO LA FINE-->
                 <correction method="markup"> 
-                    <p> Gli errori sono stati codificati mediante i tag <gi>sic</gi> e <gi>corr</gi>.</p>
+                    <p> Per la correzione di errori sono stati usati i tag <gi>sic</gi> e <gi>corr</gi>.</p>
                 </correction>
                 <normalization method="markup">
                     <p>Le normalizzazioni sono state codificate mediante i tag <gi>orig</gi> e <gi>reg</gi>.</p>
@@ -90,17 +104,243 @@
         </profileDesc>
 
     </teiHeader>
-    <!--<facsimile></facsimile>-->
+
+    <facsimile>
+        <surface xml:id="p42">
+            <graphic url='pag42.jpg' width='753.4px' height='1024.4px' />
+            <zone ulx="397" uly="68" lrx="466" lry="109" rendition="hotspot" xml:id="p42_date"/>
+            <zone ulx="83" uly="101" lrx="663" lry="152" rendition="Line" xml:id="p42_l1"/>
+            <zone ulx="83" uly="149" lrx="663" lry="188" rendition="Line" xml:id="p42_l2"/>
+            <zone ulx="85" uly="188" lrx="664" lry="230" rendition="Line" xml:id="p42_l3"/>
+            <zone ulx="84" uly="228" lrx="665" lry="264" rendition="Line" xml:id="p42_l4"/>
+            <zone ulx="85" uly="264" lrx="665" lry="304" rendition="Line" xml:id="p42_l5"/>
+            <zone ulx="85" uly="302" lrx="665" lry="343" rendition="Line" xml:id="p42_l6"/>
+            <zone ulx="84" uly="343" lrx="663" lry="382" rendition="Line" xml:id="p42_l7"/>
+            <zone ulx="82" uly="382" lrx="663" lry="422" rendition="Line" xml:id="p42_l8"/>
+            <zone ulx="82" uly="424" lrx="665" lry="462" rendition="Line" xml:id="p42_l9"/>
+            <zone ulx="84" uly="462" lrx="666" lry="500" rendition="Line" xml:id="p42_l10"/>
+            <zone ulx="82" uly="498" lrx="664" lry="541" rendition="Line" xml:id="p42_l11"/>
+            <zone ulx="83" uly="537" lrx="666" lry="578" rendition="Line" xml:id="p42_l12"/>
+            <zone ulx="84" uly="575" lrx="667" lry="618" rendition="Line" xml:id="p42_l13"/>
+            <zone ulx="85" uly="618" lrx="681" lry="661" rendition="Line" xml:id="p42_l14"/>
+            <zone ulx="81" uly="662" lrx="666" lry="697" rendition="Line" xml:id="p42_l15"/>
+            <zone ulx="85" uly="699" lrx="669" lry="734" rendition="Line" xml:id="p42_l16"/>
+            <zone ulx="87" uly="740" lrx="685" lry="776" rendition="Line" xml:id="p42_l17"/>
+            <zone ulx="85" uly="779" lrx="693" lry="813" rendition="Line" xml:id="p42_l18"/>
+            <zone ulx="85" uly="815" lrx="669" lry="855" rendition="Line" xml:id="p42_l19"/>
+            <zone ulx="86" uly="854" lrx="667" lry="887" rendition="Line" xml:id="p42_l20"/>
+            <zone ulx="86" uly="890" lrx="677" lry="933" rendition="Line" xml:id="p42_l21"/>
+            <zone ulx="85" uly="934" lrx="666" lry="963" rendition="Line" xml:id="p42_l22"/>
+            <zone ulx="85" uly="965" lrx="665" lry="996" rendition="Line" xml:id="p42_l23"/>
+        </surface>
+        <surface xml:id="p43">
+            <graphic url='pag43.jpg' width='753.4px' height='1024.4px' />
+            <zone ulx="90" uly="68" lrx="674" lry="114" rendition="Line" xml:id="p43_l1"/>
+            <zone ulx="89" uly="113" lrx="673" lry="148" rendition="Line" xml:id="p43_l2"/>
+            <zone ulx="89" uly="149" lrx="672" lry="187" rendition="Line" xml:id="p43_l3"/>
+            <zone ulx="87" uly="188" lrx="673" lry="229" rendition="Line" xml:id="p43_l4"/>
+            <zone ulx="89" uly="231" lrx="674" lry="268" rendition="Line" xml:id="p43_l5"/>
+            <zone ulx="90" uly="268" lrx="672" lry="306" rendition="Line" xml:id="p43_l6"/>
+            <zone ulx="89" uly="305" lrx="671" lry="343" rendition="Line" xml:id="p43_l7"/>
+            <zone ulx="89" uly="343" lrx="693" lry="386" rendition="Line" xml:id="p43_l8"/>
+            <zone ulx="89" uly="384" lrx="672" lry="427" rendition="Line" xml:id="p43_l9"/>
+            <zone ulx="89" uly="427" lrx="692" lry="465" rendition="Line" xml:id="p43_l10"/>
+            <zone ulx="89" uly="462" lrx="689" lry="501" rendition="Line" xml:id="p43_l11"/>
+            <zone ulx="89" uly="499" lrx="676" lry="537" rendition="Line" xml:id="p43_l12"/>
+            <zone ulx="89" uly="536" lrx="689" lry="586" rendition="Line" xml:id="p43_l13"/>
+            <zone ulx="88" uly="585" lrx="682" lry="616" rendition="Line" xml:id="p43_l14"/>
+            <zone ulx="87" uly="616" lrx="673" lry="657" rendition="Line" xml:id="p43_l15"/>
+            <zone ulx="89" uly="658" lrx="672" lry="693" rendition="Line" xml:id="p43_l16"/>
+            <zone ulx="87" uly="693" lrx="681" lry="737" rendition="Line" xml:id="p43_l17"/>
+            <zone ulx="86" uly="737" lrx="676" lry="775" rendition="Line" xml:id="p43_l18"/>
+            <zone ulx="88" uly="776" lrx="671" lry="814" rendition="Line" xml:id="p43_l19"/>
+            <zone ulx="86" uly="813" lrx="674" lry="852" rendition="Line" xml:id="p43_l20"/>
+            <zone ulx="85" uly="851" lrx="672" lry="893" rendition="Line" xml:id="p43_l21"/>
+            <zone ulx="85" uly="897" lrx="697" lry="933" rendition="Line" xml:id="p43_l22"/>
+        </surface>
+        <surface xml:id="p44">
+            <graphic url='pag44.jpg' width='754.4px' height='1024.4px' />
+            <zone ulx="81" uly="72" lrx="665" lry="112" rendition="Line" xml:id="p44_l1"/>
+            <zone ulx="79" uly="109" lrx="684" lry="156" rendition="Line" xml:id="p44_l2"/>
+            <zone ulx="79" uly="149" lrx="667" lry="189" rendition="Line" xml:id="p44_l3"/>
+            <zone ulx="77" uly="185" lrx="664" lry="229" rendition="Line" xml:id="p44_l4"/>
+            <zone ulx="79" uly="229" lrx="676" lry="269" rendition="Line" xml:id="p44_l5"/>
+            <zone ulx="79" uly="271" lrx="673" lry="304" rendition="Line" xml:id="p44_l6"/>
+            <zone ulx="79" uly="303" lrx="671" lry="345" rendition="Line" xml:id="p44_l7"/>
+            <zone ulx="79" uly="345" lrx="669" lry="386" rendition="Line" xml:id="p44_l8"/>
+            <zone ulx="78" uly="384" lrx="665" lry="424" rendition="Line" xml:id="p44_l9"/>
+            <zone ulx="78" uly="423" lrx="661" lry="462" rendition="Line" xml:id="p44_l10"/>
+            <zone ulx="77" uly="463" lrx="663" lry="500" rendition="Line" xml:id="p44_l11"/>
+            <zone ulx="77" uly="500" lrx="662" lry="540" rendition="Line" xml:id="p44_l12"/>
+            <zone ulx="76" uly="539" lrx="661" lry="582" rendition="Line" xml:id="p44_l13"/>
+            <zone ulx="76" uly="581" lrx="680" lry="621" rendition="Line" xml:id="p44_l14"/>
+            <zone ulx="77" uly="620" lrx="651" lry="657" rendition="Line" xml:id="p44_l15"/>
+            <zone ulx="79" uly="658" lrx="671" lry="701" rendition="Line" xml:id="p44_l16"/>
+            <zone ulx="83" uly="699" lrx="621" lry="735" rendition="Line" xml:id="p44_l17"/>
+            <zone ulx="85" uly="733" lrx="661" lry="775" rendition="Line" xml:id="p44_l18"/>
+            <zone ulx="93" uly="774" lrx="657" lry="814" rendition="Line" xml:id="p44_l19"/>
+            <zone ulx="77" uly="813" lrx="649" lry="853" rendition="Line" xml:id="p44_l20"/>
+            <zone ulx="79" uly="852" lrx="705" lry="895" rendition="Line" xml:id="p44_l21"/>
+            <zone ulx="76" uly="893" lrx="665" lry="933" rendition="Line" xml:id="p44_l22"/>
+            <zone ulx="74" uly="930" lrx="571" lry="967" rendition="Line" xml:id="p44_l23"/>
+        </surface>
+    </facsimile>
+
     <text xml:lang="it" type="diario">
         <body>
             <div>
-            <pb n="1"/>
+                <pb n="1" facs="#p42"/>
                 <opener>
-                    <dateline>
-                        <date>8 dic</date>
+                    <dateline facs="#p42_date">
+                        <date when="1943-12-08">8 dic</date>
                     </dateline>
                 </opener>
-                <p></p>
+                <ab>
+                    <lb n="1" facs="p42_l1"/>
+                    Ieri, anniversario del<del rend="overstrike">lo</del> primo mese del mio
+                    <lb n="2" facs="p42_l2"/>
+                    servizio, fu il primo giorno interessante della
+                    <lb n="3" facs="p42_l3"/>
+                    vita di partigiano. Dopo aver goduto il gran
+                    <lb n="4" facs="p42_l4"/>
+                    lusso di dormire con le lenzuola a casa <name type="person"><choice><abbr type="initial">B.</abbr><expan>Balestrieri</expan></choice></name> partii
+                    <lb n="5" facs="p42_l5"/>
+                    che era ancor buio con <name type="person"><choice><abbr type="initial">M.</abbr><expan>Mitesa</expan></choice></name> La casa dove erano
+                    <lb n="6" facs="p42_l6"/>
+                    le armi fu piuttosto difficile da cercare, ma da 
+                    <lb n="7" facs="p42_l7"/>
+                    ultimo la trovammo. <name type="person"><choice><abbr type="initial">M.</abbr><expan>Mitesa</expan></choice></name> mi fu molto utile, 
+                    <lb n="8" facs="p42_l8"/>
+                    perché andò nelle portinerie a chiedere informazioni,
+                    <lb n="9" facs="p42_l9"/>
+                    evitando che mi facessi troppo vedere. La signora
+                    <lb n="10" facs="p42_l10"/>
+                    mi accolse con estrema diffidenza ed altrettanta in =
+                    <lb n="11" facs="p42_l11" break="no" rend="double stroke"/>
+                    genuità. Mi raccontò che prima di lei aveva a =
+                    <lb n="12" facs="p42_l12" break="no" rend="double stroke"/>
+                    bitato un maresciallo di marina antifascista. Arre =
+                    <lb n="13" facs="p42_l13" break="no" rend="double stroke"/>
+                    stato, fu portato in carcere e frustato per <num>20</num> 
+                    <lb n="14" facs="p42_l14"/>
+                    giorni, allo scadere dei quali, toccato dalla grazia,
+                    <lb n="15" facs="p42_l15"/>
+                    si era iscritto al fascio repubblicano e aveva conse =
+                    <lb n="16" facs="p42_l16" break="no" rend="double stroke"/>
+                    gnato le armi. Però qualche cosa doveva rimanere
+                    <lb n="17" facs="p42_l17"/>
+                    e me ne accorsi quando la donna, <del rend="overstrike">dopo aver</del> commossa
+                    <lb n="18" facs="p42_l18"/>
+                    da me che le dicevo: <q>pensi che la pistola che mi darà
+                    <lb n="19" facs="p42_l19"/>
+                    potrà salvare suo figlio che combatte con noi&gt;&gt;</q>,
+                    <lb n="20" facs="p42_l20"/>
+                    esclamò: <q><choice><orig><distinct type="dialectal" space="Piedmont">chiel vol feme masè</distinct></orig><reg>lei vuol farmi ammazzare</reg></choice></q>. Persuaso
+                    <lb n="21" facs="p42_l21"/>
+                    dell'esistenza delle armi <choice><orig><del rend="overstrike">le</del>disse</orig><reg>le dissi</reg></choice>:&lt;&lt;<q>Ora le confesso
+                    <lb n="22" facs="p42_l22"/>
+                    una cosa che non dico a nessuno. Sono Ebreo,
+                    <lb n="23" facs="p42_l23"/>
+                    vuole che la denunzi ai Tedeschi?&gt;&gt;</q> e la
+                </ab>
+
+                <pb n="2" facs="#p43"/>
+                <ab>
+                    <lb n="1" facs="p43_l1"/>
+                    brava donna, persuasa che dicevo la verità, senza
+                    <lb n="2" facs="p43_l2"/>
+                    neppure chiedere il mio cognome, mi rispuose:
+                    <lb n="3" facs="p43_l3"/>
+                    <q><choice><orig><distinct type="dialectal" space="Piedmont">ellura i dag tut lan chi l'hai</distinct></orig><reg>allora le do tutto quello che ho</reg></choice></q> e <del rend="overstrike">mi</del> fece di =
+                    <lb n="4" facs="p43_l4" break="no" rend="double stroke"/>
+                    sotterrare dal figlio <num>2</num> rivoltelle, <num>3</num> moschetti e
+                    <lb n="5" facs="p43_l5"/>
+                    munizioni, con grandi proteste di patriottismo
+                    <lb n="6" facs="p43_l6"/>
+                    e raccomandazioni di metterci in salvo dai
+                    <lb n="7" facs="p43_l7"/>
+                    Tedeschi. Poi si andò a <del rend="overstrike">lasciare</del>le
+                    <lb n="8" facs="p43_l8"/>
+                    valigie in una portineria e si ebbe un bel dialogo:
+                    <lb n="9" facs="p43_l9"/>
+                    La portinaia ci chiese: <q>siete marito e moglie?</q>
+                    <lb n="10" facs="p43_l10"/>
+                    e io con la disinvoltura di un consumato agente
+                    <lb n="11" facs="p43_l11"/>
+                    dell'Intelligence Service rispuosi subito: <q>no, siamo
+                    <lb n="12" facs="p43_l12"/>
+                    fratello e sorella&gt;&gt;</q> e la portinaia astutamente: <q>Mi
+                    <lb n="13" facs="p43_l13"/>
+                    pareva che v'assomigliaste&gt;&gt;</q>. Passai il pomeriggio
+                    <lb n="14" facs="p43_l14"/>
+                    con <name type="person"><choice><abbr type="initial">M.</abbr><expan>Mitesa</expan></choice></name> che è una ragazzina di <num>16</num> anni molto
+                    <lb n="15" facs="p43_l15"/>
+                    in gamba. Si fece amicizia e ci si diede del tu, il che
+                    <lb n="16" facs="p43_l16"/>
+                    mi fece piacere, perché mostra che non invecchio
+                    <lb n="17" facs="p43_l17"/>
+                    ancora, dato che fu lei a propormelo. In treno altra
+                    <lb n="18" facs="p43_l18"/>
+                    avventura: si mette a discorrere con noi un mi =
+                    <lb n="19" facs="p43_l19" break="no" rend="double stroke"/>
+                    lite, ignorando che nella valigia avevamo i proiet =
+                    <lb n="20" facs="p43_l20" break="no" rend="double stroke"/>
+                    tili per impallinarlo. Aveva partecipato alla batta =
+                    <lb n="21" facs="p43_l21" break="no" rend="double stroke"/>
+                    glia di <name type="place">Crissolo</name> e <del rend="overstrike">parti</del> doveva raggiungere la
+                    <lb n="22" facs="p43_l22"/>
+                    guarnigione di <name type="place">Bobbio</name>. Persuaso <del rend="overstrike">che</del>dai nostri
+                </ab>
+
+                <pb n="3" facs="#p44"/>
+                <ab>
+                    <lb n="1" facs="p44_l1"/>
+                    ingenui discorsi che non sapevamo nulla di questi
+                    <lb n="2" facs="p44_l2"/>
+                    fatti d'arme, <del rend="overstrike">ci rac</del> siccome lo ascoltavamo dan =
+                    <lb n="3" facs="p44_l3" break="no" rend="double stroke"/>
+                    dogli molta soddisfazione morale e ascoltan =
+                    <lb n="4" facs="p44_l4" break="no" rend="double stroke"/>
+                    dolo attentamente, ci raccontò, dopo aver pre =
+                    <lb n="5" facs="p44_l5" break="no" rend="double stroke"/>
+                    messo che non avrebbe dovuto dirlo, che sta per ar =
+                    <lb n="6" facs="p44_l6" break="no" rend="double stroke"/>
+                    rivare una divisione di <name type="organization">SS</name> per il rastrellamento
+                    <lb n="7" facs="p44_l7"/>
+                    delle montagne, che i partigiani ci sono solo in <name type="place">Pie =
+                    <lb n="8" facs="p44_l8" break="no" rend="double stroke"/>
+                    monte</name> e che muoiono di freddo e fame sulle mon =
+                    <lb n="9" facs="p44_l9" break="no" rend="double stroke"/>
+                    tagne, cioè le frottole che i fascisti raccontano alle <del type="overstrike">capi</del>
+                    <lb n="10" facs="p44_l10"/>
+                    truppe per fare coraggio. Che cosa penserebbe se sapesse
+                    <lb n="11" facs="p44_l11"/>
+                    che stamane io ho ricevuto gratuitamente un paio di
+                    <lb n="12" facs="p44_l12"/>
+                    scarpe che varrà <num>1000</num> lire e che si sono comprati
+                    <lb n="13" facs="p44_l13"/>
+                    <num>100</num> magnifici mantelli impermeabili? Infine disse:
+                    <lb n="14" facs="p44_l14"/>
+                    <q>E' un guaio che se i partigiani continuano, i Tedeschi
+                    <lb n="15" facs="p44_l15"/>
+                    bruc[i]eranno i paesi.&lt;&lt;</q><q>E perché?</q> si chiese <del>f</del> mo =
+                    <lb n="16" facs="p44_l16" break="no" rend="double stroke"/>
+                    strandoci molto stupiti <del type="overstrike">o Perché</del><q>Non è mica giusto&gt;&gt;</q>
+                    <lb n="17" facs="p44_l17"/>
+                    <q>Perché la popolazione è favolerevole a loro.</q>
+                    <lb n="18" facs="p44_l18"/>
+                    <q>Come mai?</q> domandammo ancora più meravigliati.
+                    <lb n="19" facs="p44_l19"/>
+                    Ci guardò e rispuose serio serio: <q>&lt;&lt;non lo so&gt;&gt;</q>.
+                    <lb n="20" facs="p44_l20"/>
+                    Altre sue notizie: il maggiore e gli altri prigionieri
+                    <lb n="21" facs="p44_l21"/>
+                    sarebbero stati portati a <name type="place">Pinerolo</name> per la fucilazione.
+                    <lb n="22" facs="p44_l22"/>
+                    A <name type="place">Bobbio</name> si sono radunati <num>130</num> o <num>40</num> uomini, ma
+                    <lb n="23" facs="p44_l23"/>
+                    presto il presidio verrà diminuito.
+                </ab>
             </div>
         </body>
     </text>
