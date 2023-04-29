@@ -4,12 +4,11 @@
 
 <TEI>
     <teiHeader>
-    <!--metadati-->
         <fileDesc>
         <!--informazioni sul file, non sulla fonte primaria (che invece sono in sourceDesc)-->
             <titleStmt>
             <!--Codifica del titolo dell'edizione digitale--> 
-                <title>Codifica elettronica delle pagine 42-44 del diario di Emanuele Artom</title>
+                <title>Codifica elettronica del diario di Emanuele Artom</title>
                 <author>Artom, Emanuele (1915-1944)</author>
                 <respStmt>
                     <resp>Codifica TEI a cura di</resp>
@@ -18,7 +17,7 @@
             </titleStmt>
             <editionStmt>
                 <edition>
-                    Edizione digitale realizzata in <date>maggio 2023</date>
+                    Edizione digitale realizzata nel <date when="2023-05">maggio 2023</date>
                 </edition>
                 <principal>Fabio Melasi</principal>
                 <sponsor>Università di Pisa</sponsor>
@@ -86,11 +85,8 @@
                     <p> Per la correzione di errori sono stati usati i tag <gi>sic</gi> e <gi>corr</gi>.</p>
                 </correction>
                 <normalization method="markup">
-                    <p>Le normalizzazioni sono state codificate mediante i tag <gi>orig</gi> e <gi>reg</gi>.</p>
+                    <p>Per le normalizzazioni sono stati usati i tag <gi>orig</gi> e <gi>reg</gi>.</p>
                 </normalization>
-                <hyphenation eol="all">  
-                    <p> Nessun trattino è stato rimosso dal testo.</p>
-                </hyphenation>
             </editorialDecl>
         </encodingDesc>
         <profileDesc>
@@ -203,13 +199,13 @@
                     <lb n="3" facs="#p42_l3"/>
                     vita di partigiano. Dopo aver goduto il gran
                     <lb n="4" facs="#p42_l4"/>
-                    lusso di dormire con le lenzuola a casa <name type="person"><choice><abbr type="initial">B.</abbr><expan>Balestrieri</expan></choice></name> partii
+                    lusso di dormire con le lenzuola a casa <name type="person" ref="#B"><choice><abbr type="initial">B.</abbr><expan>Balestrieri</expan></choice></name> partii
                     <lb n="5" facs="#p42_l5"/>
-                    che era ancor buio con <name type="person"><choice><abbr type="initial">M.</abbr><expan>Mitesa</expan></choice></name> La casa dove erano
+                    che era ancor buio con <name type="person" ref="#M"><choice><abbr type="initial">M.</abbr><expan>Mitesa</expan></choice></name> La casa dove erano
                     <lb n="6" facs="#p42_l6"/>
                     le armi fu piuttosto difficile da cercare, ma da 
                     <lb n="7" facs="#p42_l7"/>
-                    ultimo la trovammo. <name type="person"><choice><abbr type="initial">M.</abbr><expan>Mitesa</expan></choice></name> mi fu molto utile, 
+                    ultimo la trovammo. <name type="person" ref="#M"><choice><abbr type="initial">M.</abbr><expan>Mitesa</expan></choice></name> mi fu molto utile, 
                     <lb n="8" facs="#p42_l8"/>
                     perché andò nelle portinerie a chiedere informazioni,
                     <lb n="9" facs="#p42_l9"/>
@@ -229,7 +225,7 @@
                     <lb n="16" facs="#p42_l16" break="no" rend="double stroke"/>
                     gnato le armi. Però qualche cosa doveva rimanere
                     <lb n="17" facs="#p42_l17"/>
-                    e me ne accorsi quando la donna, <del rend="overstrike">dopo aver</del> commossa
+                    e me ne accorsi quando la donna,<del rend="overstrike">dopo aver</del> commossa
                     <lb n="18" facs="#p42_l18"/>
                     da me che le dicevo: <q><supplied reason="omitted-in-original">&#171;</supplied>pensi che la pistola che mi darà
                     <lb n="19" facs="#p42_l19"/>
@@ -251,7 +247,7 @@
                     <lb n="2" facs="#p43_l2"/>
                     neppure chiedere il mio cognome, mi rispuose:
                     <lb n="3" facs="#p43_l3"/>
-                    <q><supplied reason="omitted-in-original">&#171;</supplied><choice><orig><distinct type="dialectal" space="Piedmont">ellura i dag tut lan chi l'hai</distinct></orig><reg>allora le do tutto quello che ho</reg></choice><supplied reason="omitted-in-original">&#187;</supplied></q> e <del rend="overstrike">mi</del> fece di =
+                    <q><supplied reason="omitted-in-original">&#171;</supplied><choice><orig><distinct type="dialectal" space="Piedmont">ellura i dag tut lan chi l'hai</distinct></orig><reg>allora le do tutto quello che ho</reg></choice><supplied reason="omitted-in-original">&#187;</supplied></q> e <del rend="overstrike">mi</del> fece dis =
                     <lb n="4" facs="#p43_l4" break="no" rend="double stroke"/>
                     sotterrare dal figlio <num>2</num> rivoltelle, <num>3</num> moschetti e
                     <lb n="5" facs="#p43_l5"/>
@@ -259,7 +255,7 @@
                     <lb n="6" facs="#p43_l6"/>
                     e raccomandazioni di metterci in salvo dai
                     <lb n="7" facs="#p43_l7"/>
-                    Tedeschi. Poi si andò a <del rend="overstrike">lasciare</del>le
+                    Tedeschi. Poi si andò a <del rend="overstrike">lasciare</del> deporre le
                     <lb n="8" facs="#p43_l8"/>
                     valigie in una portineria e si ebbe un bel dialogo:
                     <lb n="9" facs="#p43_l9"/>
@@ -273,7 +269,7 @@
                     <lb n="13" facs="#p43_l13"/>
                     pareva che v'assomigliaste&#187;</q>. Passai il pomeriggio
                     <lb n="14" facs="#p43_l14"/>
-                    con <name type="person"><choice><abbr type="initial">M.</abbr><expan>Mitesa</expan></choice></name> che è una ragazzina di <num>16</num> anni molto
+                    con <name type="person" ref="#M"><choice><abbr type="initial">M.</abbr><expan>Mitesa</expan></choice></name> che è una ragazzina di <num>16</num> anni molto
                     <lb n="15" facs="#p43_l15"/>
                     in gamba. Si fece amicizia e ci si diede del tu, il che
                     <lb n="16" facs="#p43_l16"/>
@@ -287,9 +283,9 @@
                     <lb n="20" facs="#p43_l20" break="no" rend="double stroke"/>
                     tili per impallinarlo. Aveva partecipato alla batta =
                     <lb n="21" facs="#p43_l21" break="no" rend="double stroke"/>
-                    glia di <name type="place">Crissolo</name> e <del rend="overstrike">parti</del> doveva raggiungere la
+                    glia di <name type="place" ref="#CR">Crissolo</name> e <del rend="overstrike">parti</del> doveva raggiungere la
                     <lb n="22" facs="#p43_l22"/>
-                    guarnigione di <name type="place">Bobbio</name>. Persuaso <del rend="overstrike">che</del>dai nostri
+                    guarnigione di <name type="place" ref="#BO">Bobbio</name>. Persuaso <del rend="overstrike">che</del>dai nostri
                 </ab>
 
                 <pb n="3" facs="#p44"/>
@@ -307,7 +303,7 @@
                     <lb n="6" facs="#p44_l6" break="no" rend="double stroke"/>
                     rivare una divisione di <name type="organization">SS</name> per il rastrellamento
                     <lb n="7" facs="#p44_l7"/>
-                    delle montagne, che i partigiani ci sono solo in <name type="place">Pie =
+                    delle montagne, che i partigiani ci sono solo in <name type="place" ref="#PI">Pie =
                     <lb n="8" facs="#p44_l8" break="no" rend="double stroke"/>
                     monte</name> e che muoiono di freddo e fame sulle mon =
                     <lb n="9" facs="#p44_l9" break="no" rend="double stroke"/>
@@ -327,7 +323,7 @@
                     <lb n="16" facs="#p44_l16" break="no" rend="double stroke"/>
                     strandoci molto stupiti <del type="overstrike">o Perché</del><q><supplied reason="omitted-in-original">&#171;</supplied>Non è mica giusto&#187;</q>
                     <lb n="17" facs="#p44_l17"/>
-                    <q><supplied reason="omitted-in-original">&#171;</supplied>Perché la popolazione è favolerevole a loro.<supplied reason="omitted-in-original">&#187;</supplied></q>
+                    <q><supplied reason="omitted-in-original">&#171;</supplied>Perché la popolazione è favorevole a loro.<supplied reason="omitted-in-original">&#187;</supplied></q>
                     <lb n="18" facs="#p44_l18"/>
                     <q><supplied reason="omitted-in-original">&#171;</supplied>Come mai?<supplied reason="omitted-in-original">&#187;</supplied></q> domandammo ancora più meravigliati.
                     <lb n="19" facs="#p44_l19"/>
@@ -335,13 +331,100 @@
                     <lb n="20" facs="#p44_l20"/>
                     Altre sue notizie: il maggiore e gli altri prigionieri
                     <lb n="21" facs="#p44_l21"/>
-                    sarebbero stati portati a <name type="place">Pinerolo</name> per la fucilazione.
+                    sarebbero stati portati a <name type="place" ref="#PIN">Pinerolo</name> per la fucilazione.
                     <lb n="22" facs="#p44_l22"/>
-                    A <name type="place">Bobbio</name> si sono radunati <num>130</num> o <num>40</num> uomini, ma
+                    A <name type="place" ref="#BO">Bobbio</name> si sono radunati <num>130</num> o <num>40</num> uomini, ma
                     <lb n="23" facs="#p44_l23"/>
                     presto il presidio verrà diminuito.
                 </ab>
             </div>
         </body>
+
+        <back>
+            <div type="addList"> <!--va bene addlist come valore dell'attributo type??-->
+                <listPerson>
+                    <head>Elenco persone presenti nel testo</head>
+                    <person xml:id="EA">
+						<persName role="Partigiano">
+					        <ref xml:lang="it" target="http://digital-library.cdec.it/cdec-web/persone/detail/person-it-cdec-eaccpf0001-000015/artom-emanuele.html"/>
+							<forename> Emanuele </forename>
+							<surname> Artom </surname>
+						</persName>
+						<sex value="M"> male </sex>
+						<birth>
+							<date when="1915-06-23">23 giugno 1915</date>
+							<placeName ref="#AO">
+								<settlement type="municipality">Aosta</settlement>
+                                <settlement type="region">Valle d'Aosta</settlement>
+								<country key="IT">Italia</country>
+							</placeName>
+						</birth>
+						<death>
+							<date when="1944-04-07">7 aprile 1944</date>
+							<placeName ref="#TO">
+								<settlement type="municipality">Torino</settlement>
+                                <settlement type="region">Piemonte</settlement>
+								<country key="IT">Italia</country>
+							</placeName>
+						</death>
+					</person>
+
+                    <person xml:id="M">
+						<persName role="Partigiano">
+							<forename> Maria Teresa </forename>
+							<surname> Bertolini </surname>
+						</persName>
+						<sex value="F"> female </sex>
+						<birth>
+							<date when="1927">1927</date>
+						</birth>
+						<death>
+							<date when="2007">2007</date>
+						</death>
+					</person>
+
+                    <person xml:id="B">
+						<persName role="Partigiano">Balestrieri</persName>
+                        <note>
+                            <p> Non identificato </p>
+                        </note>
+					</person>
+
+                </listPerson>
+
+                <listPlace>
+                    <head>Elenco luoghi presenti nel testo</head>
+
+                    <place xml:id="CR">
+                        <placeName ref="https://www.comune.crissolo.cn.it/">Crissolo</placeName>
+                        <settlement type="province">Cuneo</settlement>
+                        <settlement type="region">Piemonte</settlement>
+                        <country key="IT">Italia</country>
+                    </place>
+
+                    <place xml:id="BO">
+                        <placeName ref="http://www.comune.bobbio.pc.it/">Bobbio</placeName>
+                        <settlement type="province">Piacenza</settlement>
+                        <settlement type="region">Emilia-Romagna</settlement>
+                        <country key="IT">Italia</country>
+                    </place>
+
+                    <place xml:id="PI">
+                        <placeName ref="https://www.regione.piemonte.it">Piemonte</placeName>
+                        <settlement type="region">Piemonte</settlement>
+                        <country key="IT">Italia</country>
+                    </place>
+
+                    <place xml:id="PIN">
+                        <placeName ref="https://www.comune.pinerolo.to.it/">Pinerolo</placeName>
+                        <settlement type="province">Torino</settlement>
+                        <settlement type="region">Piemonte</settlement>
+                        <country key="IT">Italia</country>
+                    </place>
+
+                </listPlace>
+
+            </div>
+        </back>
     </text>
 </TEI>

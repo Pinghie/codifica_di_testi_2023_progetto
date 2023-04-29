@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
+
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Wonderful Wizard of Oz: digital edition</title>
+                <author>Baum, Lyman Frank (1856, 1919)</author>
+                <respStmt>
+                    <resp>codifica di</resp>
+                    <name>Fabio Melasi</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    Edizione digitale realizzata in <date when="2023-04">aprile 2023</date>.
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <distributor>Fabio Melasi</distributor>
+                <availability status="free">
+                    <p>
+                        Questa edizione digitale è libera e diffusa attraverso <ref target="https://github.com/Pinghie/codifica_fm">GitHub</ref>.
+                    </p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note>
+                    La codifica riguarda i primi 3000 caratteri del libro.
+                </note>
+            </notesStmt>
+            <sourceDesc>
+            <biblStruct type="book">
+                <monogr>
+                    <author>
+                        <persName>
+                            <forename>Lyman Frank</forename>
+                            <surname>Baum</surname>
+                        </persName>
+                    </author>
+                    <title>The Wonderful Wizard of Oz</title>
+                    <imprint>
+                        <publisher>Project Gutenberg</publisher>
+                        <date when="2014-1-6">6 gennaio 2014</date>
+                    </imprint>
+                </monogr>
+            </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+
+    <text xml:lang="en">
+        <body>
+            <div>
+                <head type="chapter">Chapter I - The Cyclone</head>
+                
+                
+                <p n="1">
+                    <lb n="1"/>
+                    Dorothy lived in the midst of the great Kansas prairies, with Uncle
+                    <lb n="2"/>
+                    Henry, who was a farmer, and Aunt Em, who was the farmer’s wife. Their
+                    <lb n="3"/>
+                    house was small, for the lumber to build it had to be carried by wagon
+                    <lb n="4"/>
+                    many miles. There were four walls, a floor and a roof, which made one
+                    <lb n="5"/>
+                    room; and this room contained a rusty looking cookstove, a cupboard for
+                    <lb n="6"/>
+                    the dishes, a table, three or four chairs, and the beds. Uncle Henry
+                    <lb n="7"/>
+                    and Aunt Em had a big bed in one corner, and Dorothy a little bed in
+                    <lb n="8"/>
+                    another corner. There was no garret at all, and no cellar—except a
+                    <lb n="9"/>
+                    small hole dug in the ground, called a cyclone cellar, where the family
+                    <lb n="10"/>
+                    could go in case one of those great whirlwinds arose, mighty enough to
+                    <lb n="11"/>
+                    crush any building in its path. It was reached by a trap door in the
+                    <lb n="12"/>
+                    middle of the floor, from which a ladder led down into the small, dark
+                    <lb n="13"/>
+                    hole.
+                </p>
+
+                
+                <p n="2">
+                    <lb n="14"/>
+                    When Dorothy stood in the doorway and looked around, she could see
+                    <lb n="15"/>
+                    nothing but the great gray prairie on every side. Not a tree nor a
+                    <lb n="16"/>
+                    house broke the broad sweep of flat country that reached to the edge of
+                    <lb n="17"/>
+                    the sky in all directions. The sun had baked the plowed land into a
+                    <lb n="18"/>
+                    gray mass, with little cracks running through it. Even the grass was
+                    <lb n="19"/>
+                    not green, for the sun had burned the tops of the long blades until
+                    <lb n="20"/>
+                    they were the same gray color to be seen everywhere. Once the house had
+                    <lb n="21"/>
+                    been painted, but the sun blistered the paint and the rains washed it
+                    <lb n="22"/>
+                    away, and now the house was as dull and gray as everything else.
+                </p>
+                
+                <p n="3">
+                    <lb n="23"/>
+                    When Aunt Em came there to live she was a young, pretty wife. The sun
+                    <lb n="24"/>
+                    and wind had changed her, too. They had taken the sparkle from her eyes
+                    <lb n="25"/>
+                    and left them a sober gray; they had taken the red from her cheeks and
+                    <lb n="26"/>
+                    lips, and they were gray also. She was thin and gaunt, and never smiled
+                    <lb n="27"/>
+                    now. When Dorothy, who was an orphan, first came to her, Aunt Em had
+                    <lb n="28"/>
+                    been so startled by the child’s laughter that she would scream and
+                    <lb n="29"/>
+                    press her hand upon her heart whenever Dorothy’s merry voice reached
+                    <lb n="30"/>
+                    her ears; and she still looked at the little girl with wonder that she
+                    <lb n="31"/>
+                    could find anything to laugh at.
+                </p>
+
+                <p n="4">
+                    <lb n="32"/>
+                    Uncle Henry never laughed. He worked hard from morning till night and
+                    <lb n="33"/>
+                    did not know what joy was. He was gray also, from his long beard to his
+                    <lb n="34"/>
+                    rough boots, and he looked stern and solemn, and rarely spoke.
+                </p>
+
+                <p n="5">
+                    <lb n="35"/>
+                    It was Toto that made Dorothy laugh, and saved her from growing as gray
+                    <lb n="36"/>
+                    as her other surroundings. Toto was not gray; he was a little black
+                    <lb n="37"/>
+                    dog, with long silky hair and small black eyes that twinkled merrily on
+                    <lb n="38"/>
+                    either side of his funny, wee nose. Toto played all day long, and
+                    <lb n="39"/>
+                    Dorothy played with him, and loved him dearly.
+                </p>
+
+                <p n="6">
+                    <lb n="40"/>
+                    Today, however, they were not playing. Uncle Henry sat upon the
+                    <lb n="41"/>
+                    doorstep and looked anxiously at the sky, which was even grayer than
+                    <lb n="42"/>
+                    usual. Dorothy stood in the door with Toto in her arms, and looked at
+                    <lb n="43"/>
+                    the sky too. Aunt Em was washing the dishes.
+                </p>
+
+                <p n="7">
+                    <lb n="44"/>
+                    From the far north they heard a low wail of the wind, and Uncle Henry
+                    <lb n="45"/>
+                    and Dorothy could see where the long grass bowed in waves before the
+                    <lb n="46"/>
+                    coming storm. There now came a sharp whistling in the air from the
+                    <lb n="47"/>
+                    south, and as they turned their eyes that way they saw ripples in the
+                    <lb n="48"/>
+                    grass coming from that direction also.
+                </p>
+
+                <p n="8">
+                    <lb n="49"/>
+                    Suddenly Uncle Henry stood up.
+                </p>
+
+                <p n="9">
+                    <lb n="50"/>
+                    <q>“There’s a cyclone coming, Em,”</q> he called to his wife. <q>“I’ll go look
+                    <lb n="51"/>
+                    after the stock.”</q> Then he ran toward the sheds where the cows and
+                    <lb n="52"/>
+                    horses were kept.
+                </p>
+                    
+                <p n="10">
+                    <lb n="53"/>
+                    Aunt Em dropped her work and came to the door. One glance told her of
+                    <lb n="54"/>
+                    the danger close at hand.
+                </p>
+                
+                <p n="11">
+                    <lb n="55"/>
+                    <q>“Quick, Dorothy!”</q> she screamed. <q>“Run for the cellar!”</q>
+                </p>
+
+            </div>
+        </body>
+    </text>
+</TEI>
