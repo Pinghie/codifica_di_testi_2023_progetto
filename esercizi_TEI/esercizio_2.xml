@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Alla codifica dell'esercizio 1, si aggiungono i nuovi tag visti a lezione-->
 
 <!DOCTYPE TEI SYSTEM "tei_all.dtd">
 
@@ -74,19 +75,19 @@
                 
                 <p n="1">
                     <lb n="1"/>
-                    Dorothy lived in the midst of the great Kansas prairies, with Uncle
+                    <name type="person">Dorothy</name> lived in the midst of the great <name type="place">Kansas</name> prairies, with Uncle
                     <lb n="2"/>
-                    Henry, who was a farmer, and Aunt Em, who was the farmer’s wife. Their
+                    <name type="person">Henry</name>, who was a farmer, and Aunt <name type="person">Em</name>, who was the farmer’s wife. Their
                     <lb n="3"/>
                     house was small, for the lumber to build it had to be carried by wagon
                     <lb n="4"/>
                     many miles. There were four walls, a floor and a roof, which made one
                     <lb n="5"/>
-                    room; and this room contained a rusty looking cookstove, a cupboard for
+                    room; and this room contained <list><item>a rusty looking cookstove,</item><item>a cupboard for 
                     <lb n="6"/>
-                    the dishes, a table, three or four chairs, and the beds. Uncle Henry
+                    the dishes,</item><item>a table,</item><item><num>three</num> or <num>four</num> chairs,</item><item>and the beds</item></list>. Uncle <name type="person">Henry</name>
                     <lb n="7"/>
-                    and Aunt Em had a big bed in one corner, and Dorothy a little bed in
+                    and Aunt <name type="person">Em</name> had a big bed in one corner, and <name type="person">Dorothy</name> a little bed in
                     <lb n="8"/>
                     another corner. There was no garret at all, and no cellar—except a
                     <lb n="9"/>
@@ -104,7 +105,7 @@
                 
                 <p n="2">
                     <lb n="14"/>
-                    When Dorothy stood in the doorway and looked around, she could see
+                    When <name type="person">Dorothy</name> stood in the doorway and looked around, she could see
                     <lb n="15"/>
                     nothing but the great gray prairie on every side. Not a tree nor a
                     <lb n="16"/>
@@ -125,7 +126,7 @@
                 
                 <p n="3">
                     <lb n="23"/>
-                    When Aunt Em came there to live she was a young, pretty wife. The sun
+                    When Aunt <name type="person">Em</name> came there to live she was a young, pretty wife. The sun
                     <lb n="24"/>
                     and wind had changed her, too. They had taken the sparkle from her eyes
                     <lb n="25"/>
@@ -133,11 +134,11 @@
                     <lb n="26"/>
                     lips, and they were gray also. She was thin and gaunt, and never smiled
                     <lb n="27"/>
-                    now. When Dorothy, who was an orphan, first came to her, Aunt Em had
+                    now. When <name type="person">Dorothy</name>, who was an orphan, first came to her, Aunt <name type="person">Em</name> had
                     <lb n="28"/>
                     been so startled by the child’s laughter that she would scream and
                     <lb n="29"/>
-                    press her hand upon her heart whenever Dorothy’s merry voice reached
+                    press her hand upon her heart whenever <name type="person">Dorothy</name>’s merry voice reached
                     <lb n="30"/>
                     her ears; and she still looked at the little girl with wonder that she
                     <lb n="31"/>
@@ -146,7 +147,7 @@
 
                 <p n="4">
                     <lb n="32"/>
-                    Uncle Henry never laughed. He worked hard from morning till night and
+                    Uncle <name type="person">Henry</name> never laughed. He worked hard from morning till night and
                     <lb n="33"/>
                     did not know what joy was. He was gray also, from his long beard to his
                     <lb n="34"/>
@@ -155,33 +156,33 @@
 
                 <p n="5">
                     <lb n="35"/>
-                    It was Toto that made Dorothy laugh, and saved her from growing as gray
+                    It was <name type="animal">Toto</name> that made <name type="person">Dorothy</name> laugh, and saved her from growing as gray
                     <lb n="36"/>
-                    as her other surroundings. Toto was not gray; he was a little black
+                    as her other surroundings. <name type="animal">Toto</name> was not gray; he was a little black
                     <lb n="37"/>
                     dog, with long silky hair and small black eyes that twinkled merrily on
                     <lb n="38"/>
                     either side of his funny, wee nose. Toto played all day long, and
                     <lb n="39"/>
-                    Dorothy played with him, and loved him dearly.
+                    <name type="person">Dorothy</name> played with him, and loved him dearly.
                 </p>
 
                 <p n="6">
                     <lb n="40"/>
-                    Today, however, they were not playing. Uncle Henry sat upon the
+                    Today, however, they were not playing. Uncle <name type="person">Henry</name> sat upon the
                     <lb n="41"/>
                     doorstep and looked anxiously at the sky, which was even grayer than
                     <lb n="42"/>
-                    usual. Dorothy stood in the door with Toto in her arms, and looked at
+                    usual. <name type="person">Dorothy</name> stood in the door with Toto in her arms, and looked at
                     <lb n="43"/>
-                    the sky too. Aunt Em was washing the dishes.
+                    the sky too. Aunt <name type="person">Em</name> was washing the dishes.
                 </p>
 
                 <p n="7">
                     <lb n="44"/>
-                    From the far north they heard a low wail of the wind, and Uncle Henry
+                    From the far north they heard a low wail of the wind, and Uncle <name type="person">Henry</name>
                     <lb n="45"/>
-                    and Dorothy could see where the long grass bowed in waves before the
+                    and <name type="person">Dorothy</name> could see where the long grass bowed in waves before the
                     <lb n="46"/>
                     coming storm. There now came a sharp whistling in the air from the
                     <lb n="47"/>
@@ -192,12 +193,12 @@
 
                 <p n="8">
                     <lb n="49"/>
-                    Suddenly Uncle Henry stood up.
+                    Suddenly Uncle <name type="person">Henry</name> stood up.
                 </p>
 
                 <p n="9">
                     <lb n="50"/>
-                    <q>“There’s a cyclone coming, Em,”</q> he called to his wife. <q>“I’ll go look
+                    <q>“There’s a cyclone coming, <name type="person">Em</name>,”</q> he called to his wife. <q>“I’ll go look
                     <lb n="51"/>
                     after the stock.”</q> Then he ran toward the sheds where the cows and
                     <lb n="52"/>
@@ -206,14 +207,14 @@
                     
                 <p n="10">
                     <lb n="53"/>
-                    Aunt Em dropped her work and came to the door. One glance told her of
+                    Aunt <name type="person">Em</name> dropped her work and came to the door. One glance told her of
                     <lb n="54"/>
                     the danger close at hand.
                 </p>
                 
                 <p n="11">
                     <lb n="55"/>
-                    <q>“Quick, Dorothy!”</q> she screamed. <q>“Run for the cellar!”</q>
+                    <q>“Quick, <name type="person">Dorothy</name>!”</q> she screamed. <q>“Run for the cellar!”</q>
                 </p>
 
             </div>
