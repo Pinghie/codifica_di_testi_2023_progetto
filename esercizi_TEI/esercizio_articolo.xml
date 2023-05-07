@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Alla codifica dell'esercizio 1, si aggiungono i nuovi tag visti a lezione-->
+
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
+
+<TEI>
+    <teiHeader xml:lang="it">
+        <fileDesc>
+            <titleStmt>
+                <title>Tecnologie linguistico-computazionali e monitoraggio della lingua italiana: codifica elettronica</title>
+                <author>Montemagni, Simonetta</author>
+                <respStmt xml:id="FM">
+                    <resp>codifica di</resp>
+                    <name>Fabio Melasi</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    Edizione digitale realizzata in <date when="2023-05">maggio 2023</date>.
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <distributor>Fabio Melasi</distributor>
+                <availability status="free">
+                    <p>
+                        Questa edizione digitale è libera e diffusa attraverso <ref target="https://github.com/Pinghie/codifica_fm">GitHub</ref>.
+                    </p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note>
+                    La codifica riguarda la prima sezione dell'articolo.
+                </note>
+            </notesStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <analytic>
+                        <author>Montemagni, Simonetta</author>
+                        <title level="a">Tecnologie linguistico-computazionali e monitoraggio della lingua italiana</title>
+                    </analytic>
+                    <monogr>
+                        <title level="j">Studi Italiani di Linguistica Teorica e Applicata (SILTA)</title>
+                        <imprint><date>2013</date></imprint>
+                        <biblScope unit="vol">XLII, 1</biblScope>
+                        <biblScope unit="pages">27</biblScope>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>La codifica del testo è stata realizzata rispettando le linee guida TEI P5 come esercitazione del corso di Codifica dei Testi dell'Università di Pisa.</p>
+                <p>L'esercizio consiste nella codifica di un articolo di rivista.</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="it">Italiano</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+
+    <text>
+        <body>
+            <div type="section" n="1">
+                <p n="1">
+                    <lb n="1"/>
+                    In una riflessione su dove stia andando l’italiano del terzo millennio, è legittimo
+                    <lb n="2"/>
+                    chiedersi se e in che misura le tecnologie linguistico-computazionali possano essere di
+                    <lb n="3"/>
+                    aiuto nel monitoraggio della lingua italiana nelle sue varietà diamesiche, diafasiche e
+                    <lb n="4"/>
+                    diastratiche, nonché sull’asse diacronico. L’obiettivo del presente contributo consiste
+                    <lb n="5"/>
+                    nel fornire una risposta, sebbene preliminare, a questo interrogativo, primariamente sul
+                    <lb n="6"/>
+                    versante metodologico. In particolare, si vuole mostrare che mediante il ricorso a
+                    <lb n="7"/>
+                    tecnologie linguistico-computazionali è oggi possibile monitorare un ampio spettro di
+                    <lb n="8"/>
+                    tratti, che spaziano tra i diversi livelli di descrizione linguistica (primariamente, lessico,
+                    <lb n="9"/>
+                    morfo-sintassi e sintassi), in relazione a corpora di sempre più vaste dimensioni. Questo
+                    <lb n="10"/>
+                    rappresenta un cambio fondamentale nello studio della variazione linguistica, in
+                    <lb n="11"/>
+                    particolare della lingua italiana, fino a oggi basato su corpora di dimensioni
+                    <lb n="12"/>
+                    relativamente ridotte e tipicamente condotto mediante un’analisi (semi-)manuale del
+                    <lb n="13"/>
+                    testo. Come vedremo, l’uso di vasti corpora testuali combinato con il ricorso a
+                    <lb n="14"/>
+                    tecnologie linguistico-computazionali per l’analisi e il monitoraggio linguistico rendono
+                    <lb n="15"/>
+                    oggi possibili analisi sempre più accurate e affidabili, che coprono aspetti della struttura
+                    <lb n="16"/>
+                    linguistica rimasti fino a ora inesplorati in quanto difficilmente attingibili mediante
+                    <lb n="17"/>
+                    un’analisi manuale del testo.
+                </p>
+
+                <p n="2">
+                    <lb n="18"/>
+                    L’intuizione di partenza riguardante il “potere diagnostico” delle tecnologie
+                    <lb n="19"/>
+                    linguistico-computazionali in compiti di monitoraggio linguistico trova conferma in un
+                    <lb n="20"/>
+                    recente filone di studi avviato a livello internazionale all’interno del quale analisi
+                    <lb n="21"/>
+                    linguistiche generate da strumenti di trattamento automatico del linguaggio sono usate,
+                    <lb n="21"/>
+                    ad esempio, per:
+                    <list type="simple">
+                        <lb n="22"/>
+                        <item>- monitorare lo sviluppo della sintassi nel linguaggio infantile (<bibl><author>Sagae et al.</author>, <date>2005</date>;</bibl><bibl><author>Lu</author>,
+                        <lb n="23"/>
+                        <date>2008</date></bibl>);</item>
+                        <lb n="24"/>
+                        <item>- identificare deficit cognitivi attraverso misure di complessità sintattica (<bibl>Roark et al.</bibl>,
+                        <lb n="25"/>
+                        <date>2007</date>);</item>
+                        <lb n="26"/>
+                        <item>- misurare la leggibilità di testi per studenti di L1 e L2 (<bibl><author>Heilman et al.</author>, <date>2007</date>;</bibl><bibl>Collins-Thompson, <date>2005</date></bibl>);</item>
+                        <lb n="27"/>
+                        <item>- monitorare la capacità di lettura come componente centrale della competenza
+                        <lb n="28"/>
+                        linguistica (<bibl>Schwarm et al., <date>2005</date></bibl>;<bibl><author>Petersen et al.</author>, <date>2009</date></bibl>).</item>
+                    </list>
+                </p>
+
+                <p n="3">
+                    <lb n="29"/>
+                    Sulla scia di questi studi, abbiamo condotto primi esperimenti finalizzati al
+                    <lb n="30"/>
+                    monitoraggio della lingua italiana nelle sue varietà d’uso. Nell’indagare le potenzialità
+                    <lb n="31"/>
+                    di tali tecnologie nel monitoraggio della lingua italiana a partire dall’analisi automatica
+                    <lb n="32"/>
+                    di corpora rappresentativi di diverse varietà di lingua e generi testuali, questo studio si
+                    <lb n="33"/>
+                    focalizza sulla definizione di una metodologia che possa essere utilmente sfruttata sia
+                    
+                    <pb n="2"/>
+
+                    <lb n="34"/>
+                    sul versante teorico sia in contesti applicativi (ad esempio per il monitoraggio delle
+                    <lb n="35"/>
+                    competenze linguistiche in ambito scolastico, cfr. <bibl><author>Dell’Orletta</author> e <author>Montemagni</author>, <date>2012</date></bibl>).
+                </p>
+
+                <p n="4">
+                    <lb n="36"/>
+                    Le tecnologie linguistico-computazionali utilizzate a tal fine sono costituite da una
+                    <lb n="37"/>
+                    piattaforma ormai consolidata e ampiamente sperimentata di metodi e strumenti per il
+                    <lb n="38"/>
+                    trattamento automatico dell’italiano sviluppati presso l’Istituto di Linguistica
+                    <lb n="39"/>
+                    Computazionale “Antonio Zampolli” (ILC-CNR) che ha ricevuto ampia validazione sia
+                    <lb n="40"/>
+                    nell’ambito di progetti di ricerca volti all’estrazione di informazione linguistica da
+                    <lb n="41"/>
+                    corpora testuali, sia in progetti di carattere applicativo finalizzati all’estrazione di
+                    <lb n="42"/>
+                    conoscenza di dominio. Il monitoraggio ha riguardato sia il lessico sia aspetti della
+                    <lb n="43"/>
+                    struttura linguistica (morfo-sintattica e sintattica). Nella tipologia di parametri di
+                    <lb n="44"/>
+                    monitoraggio indagati, l’aspetto di maggiore novità riguarda quelli basati su
+                    <lb n="45"/>
+                    “microprelievi” effettuati sul testo arricchito con informazione morfo-sintattica e
+                    <lb n="46"/>
+                    sintattica che, per quanto includa un inevitabile margine di errore, se appropriatamente
+                    <lb n="47"/>
+                    esplorato rende possibile l’indagine di aspetti della struttura linguistica altrimenti
+                    <lb n="48"/>
+                    difficilmente investigabili: è su questi aspetti che si incentra il presente contributo.
+                </p>
+
+                <p n="5">
+                    <lb n="49"/>
+                    In quanto segue, la metodologia di monitoraggio proposta verrà illustrata in
+                    <lb n="50"/>
+                    dettaglio: nella sezione 2 sono fornite le nozioni di base relative alle tecnologie
+                    <lb n="51"/>
+                    linguistico-computazionali utilizzate; la sezione 3 descrive i corpora su cui questo
+                    <lb n="52"/>
+                    studio si è basato, mentre la sezione 4 discute la tipologia di parametri di monitoraggio
+                    <lb n="53"/>
+                    identificabili a partire da testi arricchiti con annotazione linguistica automatica. La
+                    <lb n="54"/>
+                    sezione 5 fornisce una rivisitazione di un caso di studio ampiamente dibattuto nella
+                    <lb n="55"/>
+                    letteratura linguistica - ovvero la distribuzione di nomi e verbi - alla luce dell’evidenza
+                    <lb n="56"/>
+                    emersa dall’analisi automatica di corpora di vaste dimensioni rappresentativi di diverse
+                    <lb n="57"/>
+                    varietà d’uso della lingua italiana.
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>
