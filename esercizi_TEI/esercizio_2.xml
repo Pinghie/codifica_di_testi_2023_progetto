@@ -9,7 +9,7 @@
             <titleStmt>
                 <title>The Wonderful Wizard of Oz: edizione digitale</title>
                 <author>Baum, Lyman Frank (1856, 1919)</author>
-                <respStmt>
+                <respStmt xml:id="FM">
                     <resp>codifica di</resp>
                     <name>Fabio Melasi</name>
                 </respStmt>
@@ -91,7 +91,7 @@
                     <lb n="8"/>
                     another corner. There was no garret at all, and no cellar—except a
                     <lb n="9"/>
-                    small hole dug in the ground, called a cyclone cellar, where the family
+                    small hole dug in the ground, called a <term xml:id="cycl_cell">cyclone cellar</term>, where the family
                     <lb n="10"/>
                     could go in case one of those great whirlwinds arose, mighty enough to
                     <lb n="11"/>
@@ -156,13 +156,13 @@
 
                 <p n="5">
                     <lb n="35"/>
-                    It was <name type="animal">Toto</name> that made <name type="person">Dorothy</name> laugh, and saved her from growing as gray
+                    It was Toto that made <name type="person">Dorothy</name> laugh, and saved her from growing as gray
                     <lb n="36"/>
-                    as her other surroundings. <name type="animal">Toto</name> was not gray; he was a little black
+                    as her other surroundings. Toto was not gray; he was a little black
                     <lb n="37"/>
                     dog, with long silky hair and small black eyes that twinkled merrily on
                     <lb n="38"/>
-                    either side of his funny, wee nose. Toto played all day long, and
+                    either side of his funny, wee nose. <note resp="#FM">In the 1939 movie 'The Wizard of Oz', Toto is played by a Cairn Terrier named Terry. <ptr target="https://en.wikipedia.org/wiki/Terry_(dog)"/></note> Toto played all day long, and
                     <lb n="39"/>
                     <name type="person">Dorothy</name> played with him, and loved him dearly.
                 </p>
@@ -198,7 +198,7 @@
 
                 <p n="9">
                     <lb n="50"/>
-                    <q>“There’s a cyclone coming, <name type="person">Em</name>,”</q> he called to his wife. <q>“I’ll go look
+                    <q>“There’s a cyclone coming, <name type="person">Em</name>,”</q> he called to <rs type="person">his wife</rs>. <q>“I’ll go look
                     <lb n="51"/>
                     after the stock.”</q> Then he ran toward the sheds where the cows and
                     <lb n="52"/>
@@ -219,5 +219,19 @@
 
             </div>
         </body>
+        <back>
+            <div type="glossary">
+                <list type="gloss">
+                    <label>prairie</label>
+                    <item>a large open area of grassland</item>
+                    <label>whirlwinds</label>
+                    <item>a column of air moving rapidly around and around in a cylindrical or funnel shape</item>
+                    <label>cyclon cellar</label>
+                    <item>small hole dug in the ground</item>
+                    <label>shed</label>
+                    <item>a simple roofed structure, typically made of wood or metal, used as a storage space, a shelter for animals, or a workshop</item>
+                </list>
+            </div>
+        </back>
     </text>
 </TEI>
