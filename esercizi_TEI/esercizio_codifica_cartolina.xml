@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
+<TEI>
+    <teiHeader xml:lang="it">
+        <fileDesc>
+            <titleStmt>
+                <title>Cartolina 50: Ragazza con cane</title>
+                <respStmt>
+                    <resp>Codifica di</resp>
+                    <name type="person">Fabio Melasi</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    Edizione digitale realizzata in <date when="2023-05">maggio 2023</date>.
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <distributor>Fabio Melasi</distributor>
+                <availability status="free">
+                    <p>
+                        Questa edizione digitale è libera e diffusa attraverso <ref target="https://github.com/Pinghie/codifica_fm">GitHub</ref>.
+                    </p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note>
+                    La codifica riguarda una cartolina facente parte del progetto d'esame di Codifica di Testi dell'anno 2018/2019.
+                </note>
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    Cartolina del 1913 spedita ad <name type="person">Antonietta Turtura</name> da <name type="person">Giuseppe</name>.
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Codifica digitale di entrambi i lati della cartolina</p>
+        </encodingDesc>
+    </teiHeader>
+
+    <text type="cartolina">
+        <!-- TRASCRIZIONE -->
+        <body>
+            <div type="fronte">
+                <figure>
+                    <graphic url="immagini_cartolina/7694-050F.jpg" />
+                    <figDesc>Ragazza con in braccio un cane</figDesc>
+                </figure>
+            </div>
+            <div type="retro">
+                <div type="message">
+                    <p>Saluti affettuosi <lb/>
+                    a tutti</p>
+                    <p><name type="place">Genova</name><date when="1913-05-31">31-V,913</date></p>
+                    <signed>Giuseppe</signed>
+                </div>
+                <div type="destination">
+                    <p>
+                        <address>
+                            <addrLine>Distinta Signorina</addrLine>
+                            <addrLine><persName>Antonietta Turtura</persName></addrLine>
+                            <addrLine>Via Girolamo Rossi 60</addrLine>
+                            <addrLine> <placeName>Ravenna</placeName></addrLine>
+                        </address>
+                    </p>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>
