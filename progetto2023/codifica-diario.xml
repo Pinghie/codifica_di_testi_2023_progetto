@@ -9,7 +9,7 @@
             <titleStmt>
             <!--Codifica del titolo dell'edizione digitale--> 
                 <title>Codifica elettronica del diario di Emanuele Artom</title>
-                <author>Artom, Emanuele (1915-1944)</author>
+                <author ref="#EA">Artom, Emanuele (1915-1944)</author>
                 <respStmt xml:id="FM">
                     <resp>Codifica TEI a cura di</resp>
                     <name>Fabio Melasi</name>
@@ -28,7 +28,7 @@
             </editionStmt>
             <publicationStmt>
             <!--Dati di diffusione e distribuzione dell'edizione-->
-                <distributor>Università di Pisa</distributor>
+                <distributor ref="#unipi">Università di Pisa</distributor>
                 <address>
                     <addrLine>Lungarno Antonio Pacinotti 43,</addrLine>
                     <addrLine>56126,</addrLine>
@@ -49,30 +49,41 @@
                 <msDesc>
                     <msIdentifier>
                         <country key="IT">Italia</country>
-                        <settlement type="city">Milano</settlement>
-                        <institution ref="https://www.cdec.it/"> CDEC - Centro di Documentazione Ebraica Contemporanea  </institution>
+                        <settlement type="city" ref="#MI">Milano</settlement>
+                        <institution ref="#CDEC"> CDEC - Centro di Documentazione Ebraica Contemporanea  </institution>
                         <repository ref="http://digital-library.cdec.it/cdec-web/storico/detail/IT-CDEC-ST0003-000001/Fondo+Emanuele+Artom.html">Fondo Emanuele Artom</repository>
                         <collection>Fondo Emanuele Artom</collection>
-                        <idno>b. 1, fasc. 9</idno>
+                        <idno>busta 1, fascicolo 9</idno>
                     </msIdentifier>
                     <msContents>
-                        <p>Raccolta degli scritti autografi di Emanuele Artom redatti tra il 1943 e il 1944 accompagnati dalla lettera originale della madre Amalia riportante l'epigrafe alla mia morte questo plico deve essere consegnato al Centro di documentazione ebraica [..] esso ha un grande valore storico [..].</p>
-                        <p>I diari, pubblicati integralmente da Guri Schwarz nel 2008, sono composti da due parti distinte. La prima riguarda il periodo che va dal 1 gennaio 1940 al 10 settembre 1943, ed è una fonte di notizie sulla vita culturale torinese di quegli anni e sullo sviluppo della persecuzione razziale. La seconda parte, qui conservata e descritta, che va dal novembre 1943 al 23 febbraio 1944 riguarda invece l'esperienza partigiana di Emanuele Artom. Si conservano nel fascicolo anche i negativi delle copie fotografiche.</p>
+                        <summary>Raccolta degli scritti autografi di <name type="person" ref="#EA">Emanuele Artom</name> redatti tra il <date when="1943">1943</date> e il <date when="1944">1944</date> accompagnati dalla lettera originale della madre <name type="person" ref="#AA">Amalia</name> riportante l'epigrafe <quote>alla mia morte questo plico deve essere consegnato al Centro di documentazione ebraica [..] esso ha un grande valore storico [..].</quote></summary>
+                        <msItem n="1">
+                            <author ref="#AA">Amalia Artom</author> <!--Aggiungere alla lista di persone-->
+                            <title>Appunto della signora <name type="person" ref="#AA">Amalia Artom</name> sul diario del figlio <name ref="#EA">Emanuele</name></title>
+                            <incipit>Questo pacco contiene il diario autografo di <name type="person" ref="#EA">Emanuele Artom</name></incipit>
+                            <textLang mainLang="it">Italiano</textLang>
+                        </msItem>
+                        <msItem n="2">
+                            <author ref="#AA">Emanuele Artom</author> <!--Aggiungere alla lista di persone-->
+                            <title>Diario di Emanuele Artom</title>
+                            <textLang mainLang="it">Italiano</textLang>
+                            <note>Sono contenute le pagine del diario dal <date when="1943-11">novembre 1943</date> al <date when="1944-02-23">23 febbraio 1944</date></note>
+                        </msItem>
                     </msContents>
                     <physDesc>
                         <objectDesc>
-                            <supportDesc>
+                            <supportDesc material="paper">
                                 <support>Fogli di <material>carta</material>.</support>
                                 <extent>172 pagine e un foglietto della madre di <name type="person" ref="#EA">Emanuele Artom</name></extent>
                                 <collation>
-                                    <p>Il manoscritto è composto da due parti distinte. La prima riguarda il periodo che va dal 1 gennaio 1940 al 10 settembre 1943, la seconda parte va dal novembre 1943 al 23 febbraio 1944. Il diario è preceduto da una nota scritta dalla madre di Emanuele Artom.</p>
+                                    <p>Il diario è preceduto da una nota scritta dalla madre di Emanuele Artom.</p>
                                 </collation>
                                 <condition>
                                     <p>Le pagine sono in buone condizioni. Sono presenti talvolta degli strappi sui bordi che però non compromettono la lettura del testo.</p>
                                 </condition>
                             </supportDesc>
                             <layoutDesc>
-                                <p>Le pagine hanno un numero di righe che varia tra 18 e 30.</p>
+                                <p>Le pagine hanno un numero di righe che varia tra <num>18</num> e <num>30</num>.</p>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc hands="1">
@@ -80,7 +91,7 @@
                         </handDesc>
                     </physDesc>
                     <history>
-                        <p>Manoscritto realizzato tra il 1943 e il 1944 in Italia. </p>
+                        <p>Manoscritto realizzato tra il <date when="1943">1943</date> e il <date when="1944">1944</date> in <name type="place">Italia</name>. </p>
                     </history>
                 </msDesc>
             </sourceDesc>
@@ -116,6 +127,9 @@
                 <hyphenation eol="all">
                     <p>Tutti i trattini del ritorno a capo sono stati mantenuti, segnalando esplicitamente l'interruzione di parola attraverso l'attributo <att>break</att> dell'elemento milestone <gi>lb</gi>.</p>
                 </hyphenation>
+                <interpretation>
+                    <p>I cognomi che nella fonte venivano indicati esclusivamente attraverso l'iniziale sono stati indicati attraverso il tag <gi>abbr</gi> con attributo <att>surname</att>. Sono stati sciolti utilizzando il tag <gi>expan</gi>.</p>
+                </interpretation>
             </editorialDecl>
         </encodingDesc>
         <profileDesc>
@@ -130,239 +144,239 @@
     </teiHeader>
 
     <facsimile>
-        <surface xml:id="p42">
+        <surface xml:id="p42" start="#pb42">
             <graphic url='pag42.jpg' width='753.4px' height='1024.4px' />
-            <zone ulx="397" uly="68" lrx="466" lry="109" rendition="hotspot" xml:id="p42_date"/>
-            <zone ulx="83" uly="101" lrx="663" lry="152" rendition="Line" xml:id="p42_l1"/>
-            <zone ulx="83" uly="149" lrx="663" lry="188" rendition="Line" xml:id="p42_l2"/>
-            <zone ulx="85" uly="188" lrx="664" lry="230" rendition="Line" xml:id="p42_l3"/>
-            <zone ulx="84" uly="228" lrx="665" lry="264" rendition="Line" xml:id="p42_l4"/>
-            <zone ulx="85" uly="264" lrx="665" lry="304" rendition="Line" xml:id="p42_l5"/>
-            <zone ulx="85" uly="302" lrx="665" lry="343" rendition="Line" xml:id="p42_l6"/>
-            <zone ulx="84" uly="343" lrx="663" lry="382" rendition="Line" xml:id="p42_l7"/>
-            <zone ulx="82" uly="382" lrx="663" lry="422" rendition="Line" xml:id="p42_l8"/>
-            <zone ulx="82" uly="424" lrx="665" lry="462" rendition="Line" xml:id="p42_l9"/>
-            <zone ulx="84" uly="462" lrx="666" lry="500" rendition="Line" xml:id="p42_l10"/>
-            <zone ulx="82" uly="498" lrx="664" lry="541" rendition="Line" xml:id="p42_l11"/>
-            <zone ulx="83" uly="537" lrx="666" lry="578" rendition="Line" xml:id="p42_l12"/>
-            <zone ulx="84" uly="575" lrx="667" lry="618" rendition="Line" xml:id="p42_l13"/>
-            <zone ulx="85" uly="618" lrx="681" lry="661" rendition="Line" xml:id="p42_l14"/>
-            <zone ulx="81" uly="662" lrx="666" lry="697" rendition="Line" xml:id="p42_l15"/>
-            <zone ulx="85" uly="699" lrx="669" lry="734" rendition="Line" xml:id="p42_l16"/>
-            <zone ulx="87" uly="740" lrx="685" lry="776" rendition="Line" xml:id="p42_l17"/>
-            <zone ulx="85" uly="779" lrx="693" lry="813" rendition="Line" xml:id="p42_l18"/>
-            <zone ulx="85" uly="815" lrx="669" lry="855" rendition="Line" xml:id="p42_l19"/>
-            <zone ulx="86" uly="854" lrx="667" lry="887" rendition="Line" xml:id="p42_l20"/>
-            <zone ulx="86" uly="890" lrx="677" lry="933" rendition="Line" xml:id="p42_l21"/>
-            <zone ulx="85" uly="934" lrx="666" lry="963" rendition="Line" xml:id="p42_l22"/>
-            <zone ulx="85" uly="965" lrx="665" lry="996" rendition="Line" xml:id="p42_l23"/>
+            <zone ulx="397" uly="68" lrx="466" lry="109" xml:id="p42_date" corresp="#p42_dateLine"/>
+            <zone ulx="83" uly="101" lrx="663" lry="152" xml:id="p42_l1" start="#p42_lb1"/>
+            <zone ulx="83" uly="149" lrx="663" lry="188" xml:id="p42_l2" start="#p42_lb2"/>
+            <zone ulx="85" uly="188" lrx="664" lry="230" xml:id="p42_l3" start="#p42_lb3"/>
+            <zone ulx="84" uly="228" lrx="665" lry="264" xml:id="p42_l4" start="#p42_lb4"/>
+            <zone ulx="85" uly="264" lrx="665" lry="304" xml:id="p42_l5" start="#p42_lb5"/>
+            <zone ulx="85" uly="302" lrx="665" lry="343" xml:id="p42_l6" start="#p42_lb6"/>
+            <zone ulx="84" uly="343" lrx="663" lry="382" xml:id="p42_l7" start="#p42_lb7"/>
+            <zone ulx="82" uly="382" lrx="663" lry="422" xml:id="p42_l8" start="#p42_lb8"/>
+            <zone ulx="82" uly="424" lrx="665" lry="462" xml:id="p42_l9" start="#p42_lb9"/>
+            <zone ulx="84" uly="462" lrx="666" lry="500" xml:id="p42_l10" start="#p42_lb10"/>
+            <zone ulx="82" uly="498" lrx="664" lry="541" xml:id="p42_l11" start="#p42_lb11"/>
+            <zone ulx="83" uly="537" lrx="666" lry="578" xml:id="p42_l12" start="#p42_lb12"/>
+            <zone ulx="84" uly="575" lrx="667" lry="618" xml:id="p42_l13" start="#p42_lb13"/>
+            <zone ulx="85" uly="618" lrx="681" lry="661" xml:id="p42_l14" start="#p42_lb14"/>
+            <zone ulx="81" uly="662" lrx="666" lry="697" xml:id="p42_l15" start="#p42_lb15"/>
+            <zone ulx="85" uly="699" lrx="669" lry="734" xml:id="p42_l16" start="#p42_lb16"/>
+            <zone ulx="87" uly="740" lrx="685" lry="776" xml:id="p42_l17" start="#p42_lb17"/>
+            <zone ulx="85" uly="779" lrx="693" lry="813" xml:id="p42_l18" start="#p42_lb18"/>
+            <zone ulx="85" uly="815" lrx="669" lry="855" xml:id="p42_l19" start="#p42_lb19"/>
+            <zone ulx="86" uly="854" lrx="667" lry="887" xml:id="p42_l20" start="#p42_lb20"/>
+            <zone ulx="86" uly="890" lrx="677" lry="933" xml:id="p42_l21" start="#p42_lb21"/>
+            <zone ulx="85" uly="934" lrx="666" lry="963" xml:id="p42_l22" start="#p42_lb22"/>
+            <zone ulx="85" uly="965" lrx="665" lry="996" xml:id="p42_l23" start="#p42_lb23"/>
         </surface>
-        <surface xml:id="p43">
+        <surface xml:id="p43" start="#pb43">
             <graphic url='pag43.jpg' width='753.4px' height='1024.4px' />
-            <zone ulx="90" uly="68" lrx="674" lry="114" rendition="Line" xml:id="p43_l1"/>
-            <zone ulx="89" uly="113" lrx="673" lry="148" rendition="Line" xml:id="p43_l2"/>
-            <zone ulx="89" uly="149" lrx="672" lry="187" rendition="Line" xml:id="p43_l3"/>
-            <zone ulx="87" uly="188" lrx="673" lry="229" rendition="Line" xml:id="p43_l4"/>
-            <zone ulx="89" uly="231" lrx="674" lry="268" rendition="Line" xml:id="p43_l5"/>
-            <zone ulx="90" uly="268" lrx="672" lry="306" rendition="Line" xml:id="p43_l6"/>
-            <zone ulx="89" uly="305" lrx="671" lry="343" rendition="Line" xml:id="p43_l7"/>
-            <zone ulx="89" uly="343" lrx="693" lry="386" rendition="Line" xml:id="p43_l8"/>
-            <zone ulx="89" uly="384" lrx="672" lry="427" rendition="Line" xml:id="p43_l9"/>
-            <zone ulx="89" uly="427" lrx="692" lry="465" rendition="Line" xml:id="p43_l10"/>
-            <zone ulx="89" uly="462" lrx="689" lry="501" rendition="Line" xml:id="p43_l11"/>
-            <zone ulx="89" uly="499" lrx="676" lry="537" rendition="Line" xml:id="p43_l12"/>
-            <zone ulx="89" uly="536" lrx="689" lry="586" rendition="Line" xml:id="p43_l13"/>
-            <zone ulx="88" uly="585" lrx="682" lry="616" rendition="Line" xml:id="p43_l14"/>
-            <zone ulx="87" uly="616" lrx="673" lry="657" rendition="Line" xml:id="p43_l15"/>
-            <zone ulx="89" uly="658" lrx="672" lry="693" rendition="Line" xml:id="p43_l16"/>
-            <zone ulx="87" uly="693" lrx="681" lry="737" rendition="Line" xml:id="p43_l17"/>
-            <zone ulx="86" uly="737" lrx="676" lry="775" rendition="Line" xml:id="p43_l18"/>
-            <zone ulx="88" uly="776" lrx="671" lry="814" rendition="Line" xml:id="p43_l19"/>
-            <zone ulx="86" uly="813" lrx="674" lry="852" rendition="Line" xml:id="p43_l20"/>
-            <zone ulx="85" uly="851" lrx="672" lry="893" rendition="Line" xml:id="p43_l21"/>
-            <zone ulx="85" uly="897" lrx="697" lry="933" rendition="Line" xml:id="p43_l22"/>
+            <zone ulx="90" uly="68" lrx="674" lry="114" xml:id="p43_l1" start="#p43_lb1"/>
+            <zone ulx="89" uly="113" lrx="673" lry="148" xml:id="p43_l2" start="#p43_lb2"/>
+            <zone ulx="89" uly="149" lrx="672" lry="187" xml:id="p43_l3" start="#p43_lb3"/>
+            <zone ulx="87" uly="188" lrx="673" lry="229" xml:id="p43_l4" start="#p43_lb4"/>
+            <zone ulx="89" uly="231" lrx="674" lry="268" xml:id="p43_l5" start="#p43_lb5"/>
+            <zone ulx="90" uly="268" lrx="672" lry="306" xml:id="p43_l6" start="#p43_lb6"/>
+            <zone ulx="89" uly="305" lrx="671" lry="343" xml:id="p43_l7" start="#p43_lb7"/>
+            <zone ulx="89" uly="343" lrx="693" lry="386" xml:id="p43_l8" start="#p43_lb8"/>
+            <zone ulx="89" uly="384" lrx="672" lry="427" xml:id="p43_l9" start="#p43_lb9"/>
+            <zone ulx="89" uly="427" lrx="692" lry="465" xml:id="p43_l10" start="#p43_lb10"/>
+            <zone ulx="89" uly="462" lrx="689" lry="501" xml:id="p43_l11" start="#p43_lb11"/>
+            <zone ulx="89" uly="499" lrx="676" lry="537" xml:id="p43_l12" start="#p43_lb12"/>
+            <zone ulx="89" uly="536" lrx="689" lry="586" xml:id="p43_l13" start="#p43_lb13"/>
+            <zone ulx="88" uly="585" lrx="682" lry="616" xml:id="p43_l14" start="#p43_lb14"/>
+            <zone ulx="87" uly="616" lrx="673" lry="657" xml:id="p43_l15" start="#p43_lb15"/>
+            <zone ulx="89" uly="658" lrx="672" lry="693" xml:id="p43_l16" start="#p43_lb16"/>
+            <zone ulx="87" uly="693" lrx="681" lry="737" xml:id="p43_l17" start="#p43_lb17"/>
+            <zone ulx="86" uly="737" lrx="676" lry="775" xml:id="p43_l18" start="#p43_lb18"/>
+            <zone ulx="88" uly="776" lrx="671" lry="814" xml:id="p43_l19" start="#p43_lb19"/>
+            <zone ulx="86" uly="813" lrx="674" lry="852" xml:id="p43_l20" start="#p43_lb20"/>
+            <zone ulx="85" uly="851" lrx="672" lry="893" xml:id="p43_l21" start="#p43_lb21"/>
+            <zone ulx="85" uly="897" lrx="697" lry="933" xml:id="p43_l22" start="#p43_lb22"/>
         </surface>
-        <surface xml:id="p44">
+        <surface xml:id="p44" start="#pb44">
             <graphic url='pag44.jpg' width='754.4px' height='1024.4px' />
-            <zone ulx="81" uly="72" lrx="665" lry="112" rendition="Line" xml:id="p44_l1"/>
-            <zone ulx="79" uly="109" lrx="684" lry="156" rendition="Line" xml:id="p44_l2"/>
-            <zone ulx="79" uly="149" lrx="667" lry="189" rendition="Line" xml:id="p44_l3"/>
-            <zone ulx="77" uly="185" lrx="664" lry="229" rendition="Line" xml:id="p44_l4"/>
-            <zone ulx="79" uly="229" lrx="676" lry="269" rendition="Line" xml:id="p44_l5"/>
-            <zone ulx="79" uly="271" lrx="673" lry="304" rendition="Line" xml:id="p44_l6"/>
-            <zone ulx="79" uly="303" lrx="671" lry="345" rendition="Line" xml:id="p44_l7"/>
-            <zone ulx="79" uly="345" lrx="669" lry="386" rendition="Line" xml:id="p44_l8"/>
-            <zone ulx="78" uly="384" lrx="665" lry="424" rendition="Line" xml:id="p44_l9"/>
-            <zone ulx="78" uly="423" lrx="661" lry="462" rendition="Line" xml:id="p44_l10"/>
-            <zone ulx="77" uly="463" lrx="663" lry="500" rendition="Line" xml:id="p44_l11"/>
-            <zone ulx="77" uly="500" lrx="662" lry="540" rendition="Line" xml:id="p44_l12"/>
-            <zone ulx="76" uly="539" lrx="661" lry="582" rendition="Line" xml:id="p44_l13"/>
-            <zone ulx="76" uly="581" lrx="680" lry="621" rendition="Line" xml:id="p44_l14"/>
-            <zone ulx="77" uly="620" lrx="651" lry="657" rendition="Line" xml:id="p44_l15"/>
-            <zone ulx="79" uly="658" lrx="671" lry="701" rendition="Line" xml:id="p44_l16"/>
-            <zone ulx="83" uly="699" lrx="621" lry="735" rendition="Line" xml:id="p44_l17"/>
-            <zone ulx="85" uly="733" lrx="661" lry="775" rendition="Line" xml:id="p44_l18"/>
-            <zone ulx="93" uly="774" lrx="657" lry="814" rendition="Line" xml:id="p44_l19"/>
-            <zone ulx="77" uly="813" lrx="649" lry="853" rendition="Line" xml:id="p44_l20"/>
-            <zone ulx="79" uly="852" lrx="705" lry="895" rendition="Line" xml:id="p44_l21"/>
-            <zone ulx="76" uly="893" lrx="665" lry="933" rendition="Line" xml:id="p44_l22"/>
-            <zone ulx="74" uly="930" lrx="571" lry="967" rendition="Line" xml:id="p44_l23"/>
+            <zone ulx="81" uly="72" lrx="665" lry="112" xml:id="p44_l1" start="#p44_lb1"/>
+            <zone ulx="79" uly="109" lrx="684" lry="156" xml:id="p44_l2" start="#p44_lb2"/>
+            <zone ulx="79" uly="149" lrx="667" lry="189" xml:id="p44_l3" start="#p44_lb3"/>
+            <zone ulx="77" uly="185" lrx="664" lry="229" xml:id="p44_l4" start="#p44_lb4"/>
+            <zone ulx="79" uly="229" lrx="676" lry="269" xml:id="p44_l5" start="#p44_lb5"/>
+            <zone ulx="79" uly="271" lrx="673" lry="304" xml:id="p44_l6" start="#p44_lb6"/>
+            <zone ulx="79" uly="303" lrx="671" lry="345" xml:id="p44_l7" start="#p44_lb7"/>
+            <zone ulx="79" uly="345" lrx="669" lry="386" xml:id="p44_l8" start="#p44_lb8"/>
+            <zone ulx="78" uly="384" lrx="665" lry="424" xml:id="p44_l9" start="#p44_lb9"/>
+            <zone ulx="78" uly="423" lrx="661" lry="462" xml:id="p44_l10" start="#p44_lb10"/>
+            <zone ulx="77" uly="463" lrx="663" lry="500" xml:id="p44_l11" start="#p44_lb11"/>
+            <zone ulx="77" uly="500" lrx="662" lry="540" xml:id="p44_l12" start="#p44_lb12"/>
+            <zone ulx="76" uly="539" lrx="661" lry="582" xml:id="p44_l13" start="#p44_lb13"/>
+            <zone ulx="76" uly="581" lrx="680" lry="621" xml:id="p44_l14" start="#p44_lb14"/>
+            <zone ulx="77" uly="620" lrx="651" lry="657" xml:id="p44_l15" start="#p44_lb15"/>
+            <zone ulx="79" uly="658" lrx="671" lry="701" xml:id="p44_l16" start="#p44_lb16"/>
+            <zone ulx="83" uly="699" lrx="621" lry="735" xml:id="p44_l17" start="#p44_lb17"/>
+            <zone ulx="85" uly="733" lrx="661" lry="775" xml:id="p44_l18" start="#p44_lb18"/>
+            <zone ulx="93" uly="774" lrx="657" lry="814" xml:id="p44_l19" start="#p44_lb19"/>
+            <zone ulx="77" uly="813" lrx="649" lry="853" xml:id="p44_l20" start="#p44_lb20"/>
+            <zone ulx="79" uly="852" lrx="705" lry="895" xml:id="p44_l21" start="#p44_lb21"/>
+            <zone ulx="76" uly="893" lrx="665" lry="933" xml:id="p44_l22" start="#p44_lb22"/>
+            <zone ulx="74" uly="930" lrx="571" lry="967" xml:id="p44_l23" start="#p44_lb23"/>
         </surface>
     </facsimile>
 
     <text xml:lang="it" type="diario">
         <body>
             <div>
-                <pb n="1" facs="#p42"/>
+                <pb n="1" facs="#p42" xml:id="pb42"/>
                 <opener>
-                    <dateline facs="#p42_date">
+                    <dateline facs="#p42_date" xml:id="p42_dateLine">
                         <date when="1943-12-08">8 dic</date>
                     </dateline>
                 </opener>
                 <ab>
-                    <lb n="1" facs="#p42_l1" break="yes"/>
+                    <lb n="1" facs="#p42_l1" xml:id="p42_lb1"/>
                     Ieri, anniversario del<del rend="overstrike" hand="author">lo</del> primo mese del mio
-                    <lb n="2" facs="#p42_l2" break="yes"/>
+                    <lb n="2" facs="#p42_l2" xml:id="p42_lb2"/>
                     servizio, fu il primo giorno interessante della
-                    <lb n="3" facs="#p42_l3" break="yes"/>
+                    <lb n="3" facs="#p42_l3" xml:id="p42_lb3"/>
                     vita di partigiano. Dopo aver goduto il gran
-                    <lb n="4" facs="#p42_l4" break="yes"/>
-                    lusso di dormire con le lenzuola a casa <name type="person" ref="#B"><choice><abbr type="suspension">B.</abbr><expan resp="#FM" cert="high">Balestrieri</expan></choice></name> partii
-                    <lb n="5" facs="#p42_l5" break="yes"/>
-                    che era ancor buio con <name type="person" ref="#M"><choice><abbr type="suspension">M</abbr><expan resp="#FM" cert="high">Mitesa</expan></choice></name>. La casa dove erano
-                    <lb n="6" facs="#p42_l6" break="yes"/>
+                    <lb n="4" facs="#p42_l4" xml:id="p42_lb4"/>
+                    lusso di dormire con le lenzuola a casa <name type="person" ref="#B1 #B2"><choice><abbr type="surname">B.</abbr><expan resp="#CDEC" source="#DeBenedetti-Ravenna" cert="high">Balestrieri</expan></choice></name> partii
+                    <lb n="5" facs="#p42_l5" xml:id="p42_lb5"/>
+                    che era ancor buio con <name type="person" ref="#M"><choice><abbr type="surname">M</abbr><expan resp="#CDEC" source="#DeBenedetti-Ravenna" cert="high">Mitesa</expan></choice></name>. La casa dove erano
+                    <lb n="6" facs="#p42_l6" xml:id="p42_lb6"/>
                     le armi fu piuttosto difficile da cercare, ma da 
-                    <lb n="7" facs="#p42_l7" break="yes"/>
-                    ultimo la trovammo. <name type="person" ref="#M"><choice><abbr type="suspension">M.</abbr><expan resp="#FM" cert="high">Mitesa</expan></choice></name> mi fu molto utile, 
-                    <lb n="8" facs="#p42_l8" break="yes"/>
+                    <lb n="7" facs="#p42_l7" xml:id="p42_lb7"/>
+                    ultimo la trovammo. <name type="person" ref="#M"><choice><abbr type="surname">M.</abbr><expan resp="#CDEC" source="#DeBenedetti-Ravenna" cert="high">Mitesa</expan></choice></name> mi fu molto utile, 
+                    <lb n="8" facs="#p42_l8" xml:id="p42_lb8"/>
                     perché andò nelle portinerie a chiedere informazioni,
-                    <lb n="9" facs="#p42_l9" break="yes"/>
+                    <lb n="9" facs="#p42_l9" xml:id="p42_lb9"/>
                     evitando che mi facessi troppo vedere. La signora
-                    <lb n="10" facs="#p42_l10" break="yes"/>
-                    mi accolse con estrema diffidenza ed altrettanta in =
-                    <lb n="11" facs="#p42_l11" break="no" rend="double stroke"/>
-                    genuità. Mi raccontò che prima di lei aveva a =
-                    <lb n="12" facs="#p42_l12" break="no" rend="double stroke"/>
-                    bitato un maresciallo di marina antifascista. Arre =
-                    <lb n="13" facs="#p42_l13" break="no" rend="double stroke"/>
+                    <lb n="10" facs="#p42_l10" xml:id="p42_lb10"/>
+                    mi accolse con estrema diffidenza ed altrettanta in
+                    <lb n="11" facs="#p42_l11" break="no" rend="double_stroke" xml:id="p42_lb11"/>
+                    genuità. Mi raccontò che prima di lei aveva a
+                    <lb n="12" facs="#p42_l12" break="no" rend="double_stroke" xml:id="p42_lb12"/>
+                    bitato un maresciallo di marina antifascista. Arre
+                    <lb n="13" facs="#p42_l13" break="no" rend="double_stroke" xml:id="p42_lb13"/>
                     stato, fu portato in carcere e frustato per <num>20</num> 
-                    <lb n="14" facs="#p42_l14" break="yes"/>
+                    <lb n="14" facs="#p42_l14" xml:id="p42_lb14"/>
                     giorni, allo scadere dei quali, toccato dalla grazia,
-                    <lb n="15" facs="#p42_l15" break="yes"/>
-                    si era iscritto al fascio repubblicano e aveva conse =
-                    <lb n="16" facs="#p42_l16" break="no" rend="double stroke"/>
+                    <lb n="15" facs="#p42_l15" xml:id="p42_lb15"/>
+                    si era iscritto al fascio repubblicano e aveva conse
+                    <lb n="16" facs="#p42_l16" break="no" rend="double_stroke" xml:id="p42_lb16"/>
                     gnato le armi. Però qualche cosa doveva rimanere
-                    <lb n="17" facs="#p42_l17" break="yes"/>
+                    <lb n="17" facs="#p42_l17" xml:id="p42_lb17"/>
                     e me ne accorsi quando la donna,<subst><del rend="overstrike" hand="author">dopo aver</del><add place="inline" hand="author">commossa</add></subst>
-                    <lb n="18" facs="#p42_l18" break="yes"/>
+                    <lb n="18" facs="#p42_l18" xml:id="p42_lb18"/>
                     da me che le dicevo: <q><supplied reason="omitted-in-original" cert="high" resp="#FM">&#171;</supplied>pensi che la pistola che mi darà
-                    <lb n="19" facs="#p42_l19" break="yes"/>
+                    <lb n="19" facs="#p42_l19" xml:id="p42_lb19"/>
                     potrà salvare suo figlio che combatte con noi&#187;</q>,
-                    <lb n="20" facs="#p42_l20" break="yes"/>
-                    esclamò: <q><supplied reason="omitted-in-original" cert="high" resp="#FM">&#171;</supplied><choice><orig><distinct type="dialectal" space="Piedmont">chiel vol feme masè</distinct></orig><reg resp="#FM" cert="high">lei vuol farmi ammazzare</reg></choice></q>. Persuaso
-                    <lb n="21" facs="#p42_l21" break="yes"/>
+                    <lb n="20" facs="#p42_l20" xml:id="p42_lb20"/>
+                    esclamò: <q><supplied reason="omitted-in-original" cert="high" resp="#FM">&#171;</supplied><choice><orig><distinct type="dialectal" space="Piedmont">chiel vol feme masè</distinct></orig><reg resp="#CDEC" source="#DeBenedetti-Ravenna" cert="high">lei vuol farmi ammazzare</reg></choice></q>. Persuaso
+                    <lb n="21" facs="#p42_l21" xml:id="p42_lb21"/>
                     dell'esistenza delle armi <choice><sic><del rend="overstrike" hand="author">le</del>disse</sic><corr resp="#FM" cert="high">le dissi</corr><supplied reason="omitted-in-original" cert="high" resp="#FM">&#187;</supplied></choice>:<q>&#171;Ora le confesso
-                    <lb n="22" facs="#p42_l22" break="yes"/>
+                    <lb n="22" facs="#p42_l22" xml:id="p42_lb22"/>
                     una cosa che non dico a nessuno. Sono Ebreo,
-                    <lb n="23" facs="#p42_l23" break="yes"/>
+                    <lb n="23" facs="#p42_l23" xml:id="p42_lb23"/>
                     vuole che la denunzi ai Tedeschi?&#187;</q> e la
                 </ab>
 
-                <pb n="2" facs="#p43"/>
+                <pb n="2" facs="#p43" xml:id="pb43"/>
                 <ab>
-                    <lb n="1" facs="#p43_l1" break="yes"/>
+                    <lb n="1" facs="#p43_l1" xml:id="p43_lb1"/>
                     brava donna, persuasa che dicevo la verità, senza
-                    <lb n="2" facs="#p43_l2" break="yes"/>
+                    <lb n="2" facs="#p43_l2" xml:id="p43_lb2"/>
                     neppure chiedere il mio cognome, mi rispuose:
-                    <lb n="3" facs="#p43_l3" break="yes"/>
-                    <q><supplied reason="omitted-in-original" cert="high" resp="#FM">&#171;</supplied><choice><orig><distinct type="dialectal" space="Piedmont">ellura i dag tut lan chi l'hai</distinct></orig><reg resp="#FM" cert="high">allora le do tutto quello che ho</reg></choice><supplied reason="omitted-in-original" cert="high" resp="#FM">&#187;</supplied></q> e <del rend="overstrike" hand="author">mi</del> fece dis =
-                    <lb n="4" facs="#p43_l4" break="no" rend="double stroke"/>
+                    <lb n="3" facs="#p43_l3" xml:id="p43_lb3"/>
+                    <q><supplied reason="omitted-in-original" cert="high" resp="#FM">&#171;</supplied><choice><orig><distinct type="dialectal" space="Piedmont">ellura i dag tut lan chi l'hai</distinct></orig><reg resp="#CDEC" source="#DeBenedetti-Ravenna" cert="high">allora le do tutto quello che ho</reg></choice><supplied reason="omitted-in-original" cert="high" resp="#FM">&#187;</supplied></q> e <del rend="overstrike" hand="author">mi</del> fece dis
+                    <lb n="4" facs="#p43_l4" break="no" rend="double_stroke" xml:id="p43_lb4"/>
                     sotterrare dal figlio <num>2</num> rivoltelle, <num>3</num> moschetti e
-                    <lb n="5" facs="#p43_l5" break="yes"/>
+                    <lb n="5" facs="#p43_l5" xml:id="p43_lb5"/>
                     munizioni, con grandi proteste di patriottismo
-                    <lb n="6" facs="#p43_l6" break="yes"/>
+                    <lb n="6" facs="#p43_l6" xml:id="p43_lb6"/>
                     e raccomandazioni di metterci in salvo dai
-                    <lb n="7" facs="#p43_l7" break="yes"/>
+                    <lb n="7" facs="#p43_l7" xml:id="p43_lb7"/>
                     Tedeschi. Poi si andò a <subst><del rend="overstrike" hand="author">lasciare</del><add place="inline" hand="author">deporre</add></subst> le
-                    <lb n="8" facs="#p43_l8" break="yes"/>
+                    <lb n="8" facs="#p43_l8" xml:id="p43_lb8"/>
                     valigie in una portineria e si ebbe un bel dialogo:
-                    <lb n="9" facs="#p43_l9" break="yes"/>
+                    <lb n="9" facs="#p43_l9" xml:id="p43_lb9"/>
                     La portinaia ci chiese: <q><supplied reason="omitted-in-original" cert="high" resp="#FM">&#171;</supplied>siete marito e moglie?<supplied reason="omitted-in-original" cert="high" resp="#FM">&#187;</supplied></q>
-                    <lb n="10" facs="#p43_l10" break="yes"/>
+                    <lb n="10" facs="#p43_l10" xml:id="p43_lb10"/>
                     e io con la disinvoltura di un consumato agente
-                    <lb n="11" facs="#p43_l11" break="yes"/>
+                    <lb n="11" facs="#p43_l11" xml:id="p43_lb11"/>
                     dell'<foreign xml:lang="en">Intelligence Service</foreign>rispuosi subito: <q><supplied reason="omitted-in-original" cert="high" resp="#FM">&#171;</supplied>no, siamo
-                    <lb n="12" facs="#p43_l12" break="yes"/>
+                    <lb n="12" facs="#p43_l12" xml:id="p43_lb12"/>
                     fratello e sorella&#187;</q> e la portinaia astutamente: <q><supplied reason="omitted-in-original" cert="high" resp="#FM">&#171;</supplied>Mi
-                    <lb n="13" facs="#p43_l13" break="yes"/>
+                    <lb n="13" facs="#p43_l13" xml:id="p43_lb13"/>
                     pareva che v'assomigliaste&#187;</q>. Passai il pomeriggio
-                    <lb n="14" facs="#p43_l14" break="yes"/>
-                    con <name type="person" ref="#M"><choice><abbr type="suspension">M.</abbr><expan resp="#FM" cert="high">Mitesa</expan></choice></name> che è una ragazzina di <num>16</num> anni molto
-                    <lb n="15" facs="#p43_l15" break="yes"/>
+                    <lb n="14" facs="#p43_l14" xml:id="p43_lb14"/>
+                    con <name type="person" ref="#M"><choice><abbr type="surname">M.</abbr><expan resp="#FM" cert="high">Mitesa</expan></choice></name> che è una ragazzina di <num>16</num> anni molto
+                    <lb n="15" facs="#p43_l15" xml:id="p43_lb15"/>
                     in gamba. Si fece amicizia e ci si diede del tu, il che
-                    <lb n="16" facs="#p43_l16" break="yes"/>
+                    <lb n="16" facs="#p43_l16" xml:id="p43_lb16"/>
                     mi fece piacere, perché mostra che non invecchio
-                    <lb n="17" facs="#p43_l17" break="yes"/>
+                    <lb n="17" facs="#p43_l17" xml:id="p43_lb17"/>
                     ancora, dato che fu lei a propormelo. In treno altra
-                    <lb n="18" facs="#p43_l18" break="yes"/>
-                    avventura: si mette a discorrere con noi un mi =
-                    <lb n="19" facs="#p43_l19" break="no" rend="double stroke"/>
-                    lite, ignorando che nella valigia avevamo i proiet =
-                    <lb n="20" facs="#p43_l20" break="no" rend="double stroke"/>
-                    tili per impallinarlo. Aveva partecipato alla batta =
-                    <lb n="21" facs="#p43_l21" break="no" rend="double stroke"/>
+                    <lb n="18" facs="#p43_l18" xml:id="p43_lb18"/>
+                    avventura: si mette a discorrere con noi un mi
+                    <lb n="19" facs="#p43_l19" break="no" rend="double_stroke" xml:id="p43_lb19"/>
+                    lite, ignorando che nella valigia avevamo i proiet
+                    <lb n="20" facs="#p43_l20" break="no" rend="double_stroke" xml:id="p43_lb20"/>
+                    tili per impallinarlo. Aveva partecipato alla batta
+                    <lb n="21" facs="#p43_l21" break="no" rend="double_stroke" xml:id="p43_lb21"/>
                     glia di <name type="place" ref="#CR">Crissolo</name> e <subst><del rend="overstrike" hand="author">parti</del><add place="inline" hand="author">doveva</add></subst> raggiungere la
-                    <lb n="22" facs="#p43_l22" break="yes"/>
+                    <lb n="22" facs="#p43_l22" xml:id="p43_lb22"/>
                     guarnigione di <name type="place" ref="#BO">Bobbio</name>. Persuaso <subst><del rend="overstrike" hand="author">che</del><add place="inline" hand="author">dai</add></subst> nostri
                 </ab>
 
-                <pb n="3" facs="#p44"/>
+                <pb n="3" facs="#p44" xml:id="pb44"/>
                 <ab>
-                    <lb n="1" facs="#p44_l1" break="yes"/>
+                    <lb n="1" facs="#p44_l1" xml:id="p44_lb1"/>
                     ingenui discorsi che non sapevamo nulla di questi
-                    <lb n="2" facs="#p44_l2" break="yes"/>
-                    fatti d'arme, <subst><del rend="overstrike" hand="author">ci rac</del><add place="inline" hand="author">siccome</add></subst>lo ascoltavamo dan =
-                    <lb n="3" facs="#p44_l3" break="no" rend="double stroke"/>
-                    dogli molta soddisfazione morale e ascoltan =
-                    <lb n="4" facs="#p44_l4" break="no" rend="double stroke"/>
-                    dolo attentamente, ci raccontò, dopo aver pre =
-                    <lb n="5" facs="#p44_l5" break="no" rend="double stroke"/>
-                    messo che non avrebbe dovuto dirlo, che sta per ar =
-                    <lb n="6" facs="#p44_l6" break="no" rend="double stroke"/>
+                    <lb n="2" facs="#p44_l2" xml:id="p44_lb2"/>
+                    fatti d'arme, <subst><del rend="overstrike" hand="author">ci rac</del><add place="inline" hand="author">siccome</add></subst>lo ascoltavamo dan
+                    <lb n="3" facs="#p44_l3" break="no" rend="double_stroke" xml:id="p44_lb3"/>
+                    dogli molta soddisfazione morale e ascoltan
+                    <lb n="4" facs="#p44_l4" break="no" rend="double_stroke" xml:id="p44_lb4"/>
+                    dolo attentamente, ci raccontò, dopo aver pre
+                    <lb n="5" facs="#p44_l5" break="no" rend="double_stroke" xml:id="p44_lb5"/>
+                    messo che non avrebbe dovuto dirlo, che sta per ar
+                    <lb n="6" facs="#p44_l6" break="no" rend="double_stroke" xml:id="p44_lb6"/>
                     rivare una divisione di <name type="organization">SS</name> per il rastrellamento
-                    <lb n="7" facs="#p44_l7" break="yes"/>
-                    delle montagne, che i partigiani ci sono solo in <name type="place" ref="#PI">Pie =
-                    <lb n="8" facs="#p44_l8" break="no" rend="double stroke"/>
-                    monte</name> e che muoiono di freddo e fame sulle mon =
-                    <lb n="9" facs="#p44_l9" break="no" rend="double stroke"/>
+                    <lb n="7" facs="#p44_l7" xml:id="p44_lb7"/>
+                    delle montagne, che i partigiani ci sono solo in <name type="place" ref="#PI">Pie
+                    <lb n="8" facs="#p44_l8" break="no" rend="double_stroke" xml:id="p44_lb8"/>
+                    monte</name> e che muoiono di freddo e fame sulle mon
+                    <lb n="9" facs="#p44_l9" break="no" rend="double_stroke" xml:id="p44_lb9"/>
                     tagne, cioè le frottole che i fascisti raccontano alle <subst><del type="overstrike" hand="author">capi</del>
-                    <lb n="10" facs="#p44_l10" break="yes"/>
+                    <lb n="10" facs="#p44_l10" xml:id="p44_lb10"/>
                     <add place="inline" hand="author">truppe</add></subst> per fare coraggio. Che cosa penserebbe se sapesse
-                    <lb n="11" facs="#p44_l11" break="yes"/>
+                    <lb n="11" facs="#p44_l11" xml:id="p44_lb11"/>
                     che stamane io ho ricevuto gratuitamente un paio di
-                    <lb n="12" facs="#p44_l12" break="yes"/>
+                    <lb n="12" facs="#p44_l12" xml:id="p44_lb12"/>
                     scarpe che varrà <num>1000</num> lire e che si sono comprati
-                    <lb n="13" facs="#p44_l13" break="yes"/>
+                    <lb n="13" facs="#p44_l13" xml:id="p44_lb13"/>
                     <num>100</num> magnifici mantelli impermeabili? Infine disse:
-                    <lb n="14" facs="#p44_l14" break="yes"/>
+                    <lb n="14" facs="#p44_l14" xml:id="p44_lb14"/>
                     <q><supplied reason="omitted-in-original" cert="high" resp="#FM">&#171;</supplied>&#233; un guaio che se i partigiani continuano, i Tedeschi
-                    <lb n="15" facs="#p44_l15" break="yes"/>
-                    <choice><sic>brucieranno</sic><corr resp="#FM">bruceranno</corr></choice> i paesi.<supplied reason="omitted-in-original" cert="high" resp="#FM">&#187;</supplied></q><q>&#171;E perché?<supplied reason="omitted-in-original" cert="high" resp="#FM">&#187;</supplied></q> si chiese <del rend="overstrike" hand="author">f</del> mo =
-                    <lb n="16" facs="#p44_l16" break="no" rend="double stroke"/>
+                    <lb n="15" facs="#p44_l15" xml:id="p44_lb15"/>
+                    <choice><sic>brucieranno</sic><corr resp="#FM">bruceranno</corr></choice> i paesi.<supplied reason="omitted-in-original" cert="high" resp="#FM">&#187;</supplied></q><q>&#171;E perché?<supplied reason="omitted-in-original" cert="high" resp="#FM">&#187;</supplied></q> si chiese <del rend="overstrike" hand="author">f</del> mo
+                    <lb n="16" facs="#p44_l16" break="no" rend="double_stroke" xml:id="p44_lb16"/>
                     strandoci molto stupiti <del type="overstrike" hand="author">o Perché</del><q><supplied reason="omitted-in-original" cert="high" resp="#FM">&#171;</supplied>Non è mica giusto&#187;</q>
-                    <lb n="17" facs="#p44_l17" break="yes"/>
+                    <lb n="17" facs="#p44_l17" xml:id="p44_lb17"/>
                     <q><supplied reason="omitted-in-original" cert="high" resp="#FM">&#171;</supplied>Perché la popolazione è favorevole a loro.<supplied reason="omitted-in-original" cert="high" resp="#FM">&#187;</supplied></q>
-                    <lb n="18" facs="#p44_l18" break="yes"/>
+                    <lb n="18" facs="#p44_l18" xml:id="p44_lb18"/>
                     <q><supplied reason="omitted-in-original" cert="high" resp="#FM">&#171;</supplied>Come mai?<supplied reason="omitted-in-original" cert="high" resp="#FM">&#187;</supplied></q> domandammo ancora più meravigliati.
-                    <lb n="19" facs="#p44_l19" break="yes"/>
+                    <lb n="19" facs="#p44_l19" xml:id="p44_lb19"/>
                     Ci guardò e rispuose serio serio: <q>&#171;non lo so&#187;</q>.
-                    <lb n="20" facs="#p44_l20" break="yes"/>
+                    <lb n="20" facs="#p44_l20" xml:id="p44_lb20"/>
                     Altre sue notizie: il maggiore e gli altri prigionieri
-                    <lb n="21" facs="#p44_l21" break="yes"/>
+                    <lb n="21" facs="#p44_l21" xml:id="p44_lb21"/>
                     sarebbero stati portati a <name type="place" ref="#PIN">Pinerolo</name> per la fucilazione.
-                    <lb n="22" facs="#p44_l22" break="yes"/>
+                    <lb n="22" facs="#p44_l22" xml:id="p44_lb22"/>
                     A <name type="place" ref="#BO">Bobbio</name> si sono radunati <num>130</num> o <num>40</num> uomini, ma
-                    <lb n="23" facs="#p44_l23" break="yes"/>
+                    <lb n="23" facs="#p44_l23" xml:id="p44_lb23"/>
                     presto il presidio verrà diminuito.
                 </ab>
             </div>
@@ -372,6 +386,32 @@
             <div type="addList"> <!--va bene addlist come valore dell'attributo type??-->
                 <listPerson>
                     <head>Elenco persone presenti nel testo</head>
+
+                    <person xml:id="AA">
+						<persName role="Partigiano">
+					        <ref xml:lang="it" target="http://digital-library.cdec.it/cdec-web/persone/detail/person-it-cdec-eaccpf0001-017448/segre-amalia.html"/>
+							<forename> Amalia </forename>
+							<surname> Segre </surname>
+						</persName>
+						<sex value="F"> female </sex>
+						<birth>
+							<date when="1890">1890</date>
+							<placeName ref="#AO">
+								<settlement type="municipality">Torino</settlement>
+                                <settlement type="region">Piemonte</settlement>
+								<country key="IT">Italia</country>
+							</placeName>
+						</birth>
+						<death>
+							<date when="1972-10-09">9 ottobre 1972</date>
+							<placeName ref="#TO">
+								<settlement type="municipality">Torino</settlement>
+                                <settlement type="region">Piemonte</settlement>
+								<country key="IT">Italia</country>
+							</placeName>
+						</death>
+					</person>
+
                     <person xml:id="EA">
 						<persName role="Partigiano">
 					        <ref xml:lang="it" target="http://digital-library.cdec.it/cdec-web/persone/detail/person-it-cdec-eaccpf0001-000015/artom-emanuele.html"/>
@@ -397,6 +437,7 @@
 						</death>
 					</person>
 
+                    <!--http://www.metarchivi.it/dett_fondi.asp?id=916&#38;tipo=fondi-->
                     <person xml:id="M">
 						<persName role="Partigiano">
 							<forename> Maria Teresa </forename>
@@ -411,27 +452,43 @@
 						</death>
 					</person>
 
-                    <person xml:id="B">
-						<persName role="Partigiano">Balestrieri</persName>
-                        <note>
-                            <p> Non identificato </p>
-                        </note>
+                    <person xml:id="B1">
+						<persName role="Partigiano">
+                            <forename> Felice </forename>
+							<surname> Burdino </surname>
+                            <addName type="nick">Balestrieri</addName>
+                        </persName>
+					</person>
+
+                    <person xml:id="B2">
+						<persName role="Partigiano">
+                            <forename> Eraldo </forename>
+							<surname> Burdino </surname>
+                            <addName type="nick">Balestrieri</addName>
+                        </persName>
 					</person>
 
                 </listPerson>
 
                 <listPlace>
-                    <head>Elenco luoghi presenti nel testo</head>
+                    <head>Elenco luoghi</head>
+
+                    <place xml:id="MI">
+                        <placeName ref="https://www.comune.milano.it">Milano</placeName>
+                        <settlement type="province">Milano</settlement>
+                        <settlement type="region">Lombardia</settlement>
+                        <country key="IT">Italia</country>
+                    </place>
 
                     <place xml:id="CR">
-                        <placeName ref="https://www.comune.crissolo.cn.it/">Crissolo</placeName>
+                        <placeName ref="https://www.comune.crissolo.cn.it">Crissolo</placeName>
                         <settlement type="province">Cuneo</settlement>
                         <settlement type="region">Piemonte</settlement>
                         <country key="IT">Italia</country>
                     </place>
 
                     <place xml:id="BO">
-                        <placeName ref="http://www.comune.bobbio.pc.it/">Bobbio</placeName>
+                        <placeName ref="http://www.comune.bobbio.pc.it">Bobbio</placeName>
                         <settlement type="province">Piacenza</settlement>
                         <settlement type="region">Emilia-Romagna</settlement>
                         <country key="IT">Italia</country>
@@ -444,7 +501,7 @@
                     </place>
 
                     <place xml:id="PIN">
-                        <placeName ref="https://www.comune.pinerolo.to.it/">Pinerolo</placeName>
+                        <placeName ref="https://www.comune.pinerolo.to.it">Pinerolo</placeName>
                         <settlement type="province">Torino</settlement>
                         <settlement type="region">Piemonte</settlement>
                         <country key="IT">Italia</country>
@@ -452,6 +509,33 @@
 
                 </listPlace>
 
+                <listBibl>
+                    <biblStruct>
+                        <monogr xml:id="DeBenedetti-Ravenna">
+                            <author>De Benedetti, Paula</author>
+                            <author>Ravenna, Eloisa</author>
+                            <title>Emanuele Artom, Diari: gennaio 1940 - febbraio 1944;</title>
+                            <edition>Prima edizione</edition>
+                            <imprint>
+                                <publisher>Centro di documentazione ebraica contemporanea- CDEC</publisher>
+                                <pubPlace>Milano</pubPlace>
+                                <date when="1966">1966</date>
+                            </imprint>
+                        </monogr>
+                    </biblStruct>
+                </listBibl>
+
+                <listOrg>
+                    <org xml:id="CDEC">
+                        <orgName ref="https://www.cdec.it/">Fondazione Centro di Documentazione Ebraica Contemporanea</orgName>
+                        <desc>La Fondazione CDEC è il principale centro di ricerca e documentazione sulla storia degli ebrei in Italia. Con oltre sessant’anni di attività alle spalle, è riconosciuta dalla comunità degli storici e degli studiosi come il maggiore ente in Italia di documentazione sulla Shoah ed è un polo di riferimento per la ricerca storica di settore.</desc>
+                    </org>
+
+                    <org xml:id="unipi">
+                        <orgName ref="https://www.unipi.it/">Università di Pisa</orgName>
+                        <desc source="https://it.wikipedia.org/wiki/Universit%C3%A0_di_Pisa">L'Università di Pisa, istituita ufficialmente nel <date>1343</date>, è una delle più antiche e prestigiose università in Italia e in Europa.</desc>
+                    </org>
+                </listOrg>
             </div>
         </back>
     </text>
