@@ -1,2 +1,4 @@
 # codifica_fm
-Esercizi di Codifica di Testi
+Esercizi e progetto d'esame di Codifica di Testi
+
+di Fabio Melasi (614488)
