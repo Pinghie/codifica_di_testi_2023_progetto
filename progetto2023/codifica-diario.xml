@@ -5,9 +5,7 @@
 <TEI>
     <teiHeader>
         <fileDesc>
-        <!--informazioni sul file, non sulla fonte primaria (che invece sono in sourceDesc)-->
             <titleStmt>
-            <!--Codifica del titolo dell'edizione digitale--> 
                 <title>Codifica elettronica del diario di Emanuele Artom</title>
                 <author ref="#EA">Artom, Emanuele (1915-1944)</author>
                 <respStmt xml:id="FM">
@@ -58,13 +56,13 @@
                     <msContents>
                         <summary>Raccolta degli scritti autografi di <name type="person" ref="#EA">Emanuele Artom</name> redatti tra il <date when="1943">1943</date> e il <date when="1944">1944</date> accompagnati dalla lettera originale della madre <name type="person" ref="#AA">Amalia</name> riportante l'epigrafe <quote>alla mia morte questo plico deve essere consegnato al Centro di documentazione ebraica [..] esso ha un grande valore storico [..].</quote></summary>
                         <msItem n="1">
-                            <author ref="#AA">Amalia Artom</author> <!--Aggiungere alla lista di persone-->
+                            <author ref="#AA">Amalia Artom</author>
                             <title>Appunto della signora <name type="person" ref="#AA">Amalia Artom</name> sul diario del figlio <name ref="#EA">Emanuele</name></title>
                             <incipit>Questo pacco contiene il diario autografo di <name type="person" ref="#EA">Emanuele Artom</name></incipit>
                             <textLang mainLang="it">Italiano</textLang>
                         </msItem>
                         <msItem n="2">
-                            <author ref="#AA">Emanuele Artom</author> <!--Aggiungere alla lista di persone-->
+                            <author ref="#AA">Emanuele Artom</author>
                             <title>Diario di Emanuele Artom</title>
                             <textLang mainLang="it">Italiano</textLang>
                             <note>Sono contenute le pagine del diario dal <date when="1943-11">novembre 1943</date> al <date when="1944-02-23">23 febbraio 1944</date></note>
@@ -74,7 +72,7 @@
                         <objectDesc>
                             <supportDesc material="paper">
                                 <support>Fogli di <material>carta</material>.</support>
-                                <extent>172 pagine e un foglietto della madre di <name type="person" ref="#EA">Emanuele Artom</name></extent>
+                                <extent><num type="cardinal">172</num> pagine e <num type="cardinal" value="1">un</num> foglietto della madre di <name type="person" ref="#EA">Emanuele Artom</name></extent>
                                 <collation>
                                     <p>Il diario è preceduto da una nota scritta dalla madre di Emanuele Artom.</p>
                                 </collation>
@@ -83,7 +81,7 @@
                                 </condition>
                             </supportDesc>
                             <layoutDesc>
-                                <p>Le pagine hanno un numero di righe che varia tra <num>18</num> e <num>30</num>.</p>
+                                <p>Le pagine hanno un numero di righe che varia tra <num type="cardinal">18</num> e <num type="cardinal">30</num>.</p>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc hands="1">
@@ -99,7 +97,7 @@
         <encodingDesc> 
         <!-- informazioni riguardo lo schema (e il modello di codifica) utilizzato-->
             <projectDesc>
-                <p>La codifica del testo è stata realizzata rispettando le linee guida TEI P5 come progetto d'esame del corso di Codifica dei Testi dell'Università di Pisa.</p>
+                <p>La codifica del testo è stata realizzata rispettando le linee guida TEI P5 come progetto d'esame del corso di Codifica dei Testi dell'<name type="org" ref="#unipi">Università di Pisa.</name></p>
             </projectDesc>
             <editorialDecl> 
             <!--DA CONTROLLARE VERSO LA FINE-->
@@ -107,8 +105,8 @@
                     <p>Per la correzione di errori sono stati usati i tag <gi>sic</gi> e <gi>corr</gi>.</p>
                     <p>Sono stati corretti i seguenti errori:
                         <list>
-                            <item>pag. 44, riga 15: da brucieranno a bruceranno</item>
-                            <item>pag. 42, riga 21: da disse a le dissi</item>
+                            <item>pag. 42, riga 21: da "disse" a "le dissi"</item>
+                            <item>pag. 44, riga 15: da "brucieranno" a "bruceranno"</item>
                         </list>
                     </p>
                 </correction>
@@ -138,14 +136,14 @@
                 <language ident="it" usage="100">Italiano</language>
             </langUsage>
             <creation>
-                <date>1943-1944</date>
+                <date when="1943">1943</date>-<date when="1944">1944</date>
             </creation>
         </profileDesc>
     </teiHeader>
 
     <facsimile>
         <surface xml:id="p42" start="#pb42">
-            <graphic url='pag42.jpg' width='753.4px' height='1024.4px' />
+            <graphic url='img/pag42.jpg' width='753.4px' height='1024.4px' />
             <zone ulx="397" uly="68" lrx="466" lry="109" xml:id="p42_date" corresp="#p42_dateLine"/>
             <zone ulx="83" uly="101" lrx="663" lry="152" xml:id="p42_l1" start="#p42_lb1"/>
             <zone ulx="83" uly="149" lrx="663" lry="188" xml:id="p42_l2" start="#p42_lb2"/>
@@ -172,7 +170,7 @@
             <zone ulx="85" uly="965" lrx="665" lry="996" xml:id="p42_l23" start="#p42_lb23"/>
         </surface>
         <surface xml:id="p43" start="#pb43">
-            <graphic url='pag43.jpg' width='753.4px' height='1024.4px' />
+            <graphic url='img/pag43.jpg' width='753.4px' height='1024.4px' />
             <zone ulx="90" uly="68" lrx="674" lry="114" xml:id="p43_l1" start="#p43_lb1"/>
             <zone ulx="89" uly="113" lrx="673" lry="148" xml:id="p43_l2" start="#p43_lb2"/>
             <zone ulx="89" uly="149" lrx="672" lry="187" xml:id="p43_l3" start="#p43_lb3"/>
@@ -197,7 +195,7 @@
             <zone ulx="85" uly="897" lrx="697" lry="933" xml:id="p43_l22" start="#p43_lb22"/>
         </surface>
         <surface xml:id="p44" start="#pb44">
-            <graphic url='pag44.jpg' width='754.4px' height='1024.4px' />
+            <graphic url='img/pag44.jpg' width='754.4px' height='1024.4px' />
             <zone ulx="81" uly="72" lrx="665" lry="112" xml:id="p44_l1" start="#p44_lb1"/>
             <zone ulx="79" uly="109" lrx="684" lry="156" xml:id="p44_l2" start="#p44_lb2"/>
             <zone ulx="79" uly="149" lrx="667" lry="189" xml:id="p44_l3" start="#p44_lb3"/>
@@ -224,7 +222,7 @@
         </surface>
     </facsimile>
 
-    <text xml:lang="it" type="diario">
+    <text xml:lang="it">
         <body>
             <div>
                 <pb n="1" facs="#p42" xml:id="pb42"/>
@@ -233,7 +231,7 @@
                         <date when="1943-12-08">8 dic</date>
                     </dateline>
                 </opener>
-                <ab>
+                <ab n="1">
                     <lb n="1" facs="#p42_l1" xml:id="p42_lb1"/>
                     Ieri, anniversario del<del rend="overstrike" hand="author">lo</del> primo mese del mio
                     <lb n="2" facs="#p42_l2" xml:id="p42_lb2"/>
@@ -259,7 +257,7 @@
                     <lb n="12" facs="#p42_l12" break="no" rend="double_stroke" xml:id="p42_lb12"/>
                     bitato un maresciallo di marina antifascista. Arre
                     <lb n="13" facs="#p42_l13" break="no" rend="double_stroke" xml:id="p42_lb13"/>
-                    stato, fu portato in carcere e frustato per <num>20</num> 
+                    stato, fu portato in carcere e frustato per <num type="cardinal">20</num> 
                     <lb n="14" facs="#p42_l14" xml:id="p42_lb14"/>
                     giorni, allo scadere dei quali, toccato dalla grazia,
                     <lb n="15" facs="#p42_l15" xml:id="p42_lb15"/>
@@ -283,7 +281,7 @@
                 </ab>
 
                 <pb n="2" facs="#p43" xml:id="pb43"/>
-                <ab>
+                <ab n="2">
                     <lb n="1" facs="#p43_l1" xml:id="p43_lb1"/>
                     brava donna, persuasa che dicevo la verità, senza
                     <lb n="2" facs="#p43_l2" xml:id="p43_lb2"/>
@@ -291,7 +289,7 @@
                     <lb n="3" facs="#p43_l3" xml:id="p43_lb3"/>
                     <q><supplied reason="omitted-in-original" cert="high" resp="#FM">&#171;</supplied><choice><orig><distinct type="dialectal" space="Piedmont">ellura i dag tut lan chi l'hai</distinct></orig><reg resp="#CDEC" source="#DeBenedetti-Ravenna" cert="high">allora le do tutto quello che ho</reg></choice><supplied reason="omitted-in-original" cert="high" resp="#FM">&#187;</supplied></q> e <del rend="overstrike" hand="author">mi</del> fece dis
                     <lb n="4" facs="#p43_l4" break="no" rend="double_stroke" xml:id="p43_lb4"/>
-                    sotterrare dal figlio <num>2</num> rivoltelle, <num>3</num> moschetti e
+                    sotterrare dal figlio <num type="cardinal">2</num> rivoltelle, <num type="cardinal">3</num> moschetti e
                     <lb n="5" facs="#p43_l5" xml:id="p43_lb5"/>
                     munizioni, con grandi proteste di patriottismo
                     <lb n="6" facs="#p43_l6" xml:id="p43_lb6"/>
@@ -311,7 +309,7 @@
                     <lb n="13" facs="#p43_l13" xml:id="p43_lb13"/>
                     pareva che v'assomigliaste&#187;</q>. Passai il pomeriggio
                     <lb n="14" facs="#p43_l14" xml:id="p43_lb14"/>
-                    con <name type="person" ref="#M"><choice><abbr type="surname">M.</abbr><expan resp="#FM" cert="high">Mitesa</expan></choice></name> che è una ragazzina di <num>16</num> anni molto
+                    con <name type="person" ref="#M"><choice><abbr type="surname">M.</abbr><expan resp="#FM" cert="high">Mitesa</expan></choice></name> che è una ragazzina di <num type="cardinal">16</num> anni molto
                     <lb n="15" facs="#p43_l15" xml:id="p43_lb15"/>
                     in gamba. Si fece amicizia e ci si diede del tu, il che
                     <lb n="16" facs="#p43_l16" xml:id="p43_lb16"/>
@@ -331,7 +329,7 @@
                 </ab>
 
                 <pb n="3" facs="#p44" xml:id="pb44"/>
-                <ab>
+                <ab n="3">
                     <lb n="1" facs="#p44_l1" xml:id="p44_lb1"/>
                     ingenui discorsi che non sapevamo nulla di questi
                     <lb n="2" facs="#p44_l2" xml:id="p44_lb2"/>
@@ -343,7 +341,7 @@
                     <lb n="5" facs="#p44_l5" break="no" rend="double_stroke" xml:id="p44_lb5"/>
                     messo che non avrebbe dovuto dirlo, che sta per ar
                     <lb n="6" facs="#p44_l6" break="no" rend="double_stroke" xml:id="p44_lb6"/>
-                    rivare una divisione di <name type="organization">SS</name> per il rastrellamento
+                    rivare una divisione di <name type="org" ref="#SS">SS</name> per il rastrellamento
                     <lb n="7" facs="#p44_l7" xml:id="p44_lb7"/>
                     delle montagne, che i partigiani ci sono solo in <name type="place" ref="#PI">Pie
                     <lb n="8" facs="#p44_l8" break="no" rend="double_stroke" xml:id="p44_lb8"/>
@@ -353,11 +351,11 @@
                     <lb n="10" facs="#p44_l10" xml:id="p44_lb10"/>
                     <add place="inline" hand="author">truppe</add></subst> per fare coraggio. Che cosa penserebbe se sapesse
                     <lb n="11" facs="#p44_l11" xml:id="p44_lb11"/>
-                    che stamane io ho ricevuto gratuitamente un paio di
+                    che stamane io ho ricevuto gratuitamente <num type="cardinal" value="2">un paio</num> di
                     <lb n="12" facs="#p44_l12" xml:id="p44_lb12"/>
-                    scarpe che varrà <num>1000</num> lire e che si sono comprati
+                    scarpe che varrà <num type="cardinal">1000</num> lire e che si sono comprati
                     <lb n="13" facs="#p44_l13" xml:id="p44_lb13"/>
-                    <num>100</num> magnifici mantelli impermeabili? Infine disse:
+                    <num type="cardinal">100</num> magnifici mantelli impermeabili? Infine disse:
                     <lb n="14" facs="#p44_l14" xml:id="p44_lb14"/>
                     <q><supplied reason="omitted-in-original" cert="high" resp="#FM">&#171;</supplied>&#233; un guaio che se i partigiani continuano, i Tedeschi
                     <lb n="15" facs="#p44_l15" xml:id="p44_lb15"/>
@@ -375,7 +373,7 @@
                     <lb n="21" facs="#p44_l21" xml:id="p44_lb21"/>
                     sarebbero stati portati a <name type="place" ref="#PIN">Pinerolo</name> per la fucilazione.
                     <lb n="22" facs="#p44_l22" xml:id="p44_lb22"/>
-                    A <name type="place" ref="#BO">Bobbio</name> si sono radunati <num>130</num> o <num>40</num> uomini, ma
+                    A <name type="place" ref="#BO">Bobbio</name> si sono radunati <num type="cardinal">130</num> o <num type="cardinal" value="140">40</num> uomini, ma
                     <lb n="23" facs="#p44_l23" xml:id="p44_lb23"/>
                     presto il presidio verrà diminuito.
                 </ab>
@@ -383,12 +381,12 @@
         </body>
 
         <back>
-            <div type="addList"> <!--va bene addlist come valore dell'attributo type??-->
+            <div>
                 <listPerson>
-                    <head>Elenco persone presenti nel testo</head>
+                    <head>Elenco persone</head>
 
                     <person xml:id="AA">
-						<persName role="Partigiano">
+						<persName>
 					        <ref xml:lang="it" target="http://digital-library.cdec.it/cdec-web/persone/detail/person-it-cdec-eaccpf0001-017448/segre-amalia.html"/>
 							<forename> Amalia </forename>
 							<surname> Segre </surname>
@@ -413,7 +411,7 @@
 					</person>
 
                     <person xml:id="EA">
-						<persName role="Partigiano">
+						<persName>
 					        <ref xml:lang="it" target="http://digital-library.cdec.it/cdec-web/persone/detail/person-it-cdec-eaccpf0001-000015/artom-emanuele.html"/>
 							<forename> Emanuele </forename>
 							<surname> Artom </surname>
@@ -437,9 +435,9 @@
 						</death>
 					</person>
 
-                    <!--http://www.metarchivi.it/dett_fondi.asp?id=916&#38;tipo=fondi-->
                     <person xml:id="M">
-						<persName role="Partigiano">
+						<persName>
+                            <ref xml:lang="it" target="#DeBenedetti-Ravenna"/>
 							<forename> Maria Teresa </forename>
 							<surname> Bertolini </surname>
 						</persName>
@@ -453,7 +451,8 @@
 					</person>
 
                     <person xml:id="B1">
-						<persName role="Partigiano">
+						<persName>
+                            <ref xml:lang="it" target="#DeBenedetti-Ravenna"/>
                             <forename> Felice </forename>
 							<surname> Burdino </surname>
                             <addName type="nick">Balestrieri</addName>
@@ -461,7 +460,8 @@
 					</person>
 
                     <person xml:id="B2">
-						<persName role="Partigiano">
+						<persName>
+                            <ref xml:lang="it" target="#DeBenedetti-Ravenna"/>
                             <forename> Eraldo </forename>
 							<surname> Burdino </surname>
                             <addName type="nick">Balestrieri</addName>
@@ -523,6 +523,17 @@
                             </imprint>
                         </monogr>
                     </biblStruct>
+                    <biblStruct>
+                        <monogr xml:id="Schwarz">
+                            <author>Schwarz, Guri</author>
+                            <title>Diari di un partigiano ebreo. Gennaio 1940 - febbraio 1944</title>
+                            <imprint>
+                                <publisher>Bollati Boringhieri</publisher>
+                                <pubPlace>Torino</pubPlace>
+                                <date when="2008">2008</date>
+                            </imprint>
+                        </monogr>
+                    </biblStruct>
                 </listBibl>
 
                 <listOrg>
@@ -533,7 +544,12 @@
 
                     <org xml:id="unipi">
                         <orgName ref="https://www.unipi.it/">Università di Pisa</orgName>
-                        <desc source="https://it.wikipedia.org/wiki/Universit%C3%A0_di_Pisa">L'Università di Pisa, istituita ufficialmente nel <date>1343</date>, è una delle più antiche e prestigiose università in Italia e in Europa.</desc>
+                        <desc source="https://it.wikipedia.org/wiki/Universit%C3%A0_di_Pisa">L'Università di Pisa, istituita ufficialmente nel <date when="1343">1343</date>, è una delle più antiche e prestigiose università in Italia e in Europa.</desc>
+                    </org>
+
+                    <org xml:id="SS">
+                        <orgName>Schutzstaffel</orgName>
+                        <desc source="https://it.wikipedia.org/wiki/Schutzstaffel">Organizzazione paramilitare del Partito Nazionalsocialista Tedesco.</desc>
                     </org>
                 </listOrg>
             </div>
