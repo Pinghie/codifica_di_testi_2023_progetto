@@ -1,3 +1,8 @@
+.evidenziato
+{
+	background-color: red;
+}
+
 html, body
 {
 	margin: 0;
@@ -104,8 +109,8 @@ body{
 }
 
 .container > .page > img{
-	max-width: 440px;
-	min-width: 440px;
+	max-width: 600px;
+	min-width: 600px;
 }
 
 .container h2
@@ -116,7 +121,7 @@ body{
 
 .container p
 {
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -137,7 +142,7 @@ body{
 	all: unset;
 	flex: 1;
 	font-size: 1.3rem;
-	background-color: white;
+	background-color: #eaeaea;
 	border-radius: 15px;
 	padding: 5px 10px;
 	margin: 5px;
@@ -145,7 +150,7 @@ body{
 }
 
 .controlPanel button:hover{
-	background-color: lightgray;
+	box-shadow: inset 0px 0px 50px 50px rgba(0,0,0,0.31)
 }
 
 .divCambioPagina
@@ -190,51 +195,54 @@ footer p
 	font-size: 1.2rem;
 }
 
-
 .del
 {
-	background-color: red;
+	background-color: darkslategray;
 	display: none;
 }
 
 .expan
 {
-	background-color: purple;
+	background-color: darkslateblue;
+	display: none;
+}
+
+.sic
+{
+	background-color: firebrick;
 	display: none;
 }
 
 .reg
 {
-	background-color: deeppink;
+	background-color: darkorange;
 	display: none;
 }
 
 @media screen and (max-width: 1500px) {
 	.container p
 	{
-		font-size: 1.5rem;
+		font-size: 1rem;
 	}
 }
 
-@media screen and (max-width: 1200px) {
-	.container p
-	{
-		font-size: 1.2rem;
-	}
-}
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1100px) {
 
 	.container > .page
 	{
-		display: block;
 		text-align: center;
 	}
 
 	.container p
 	{
+		font-size: 1.3rem;
 		position: static;
 	    transform: none;
 	    margin: 0;
+	}
+
+	.controlPanel button{
+	
+		font-size: 1rem;
 	}
 }

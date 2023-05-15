@@ -8,7 +8,7 @@ function gestoreLoad()
 	arrayPagine = document.getElementsByClassName("page");
 	indicatorePagina = document.getElementById("indicatorePagina");
 
-	if(window.innerWidth > 800)
+	if(window.innerWidth > 1100)
 		arrayPagine[0].style.display = "flex";
 	else
 		arrayPagine[0].style.display = "block";
@@ -27,32 +27,36 @@ function cambioPagina(dir)
 		pag = 2;
 
 	indicatorePagina.innerHTML = "Pagina " + parseInt(pag+1);
-	if(window.innerWidth > 800)
+	if(window.innerWidth > 1100)
 		arrayPagine[pag].style.display = "flex";
 	else
 		arrayPagine[pag].style.display = "block";
 
 }
 
-onresize = (event) => {		if(window.innerWidth > 800)
+
+onresize = (event) => {		if(window.innerWidth > 1100)
 		arrayPagine[pag].style.display = "flex";
 	else
 		arrayPagine[pag].style.display = "block";};
 
 function mostraFenomeno(fenomeno, colore, azione)
 {
-	
-
 	bottoniPremuti = document.getElementsByClassName(fenomeno+"Btn");
 	if(bottoniPremuti[0].style.backgroundColor != colore)
 	{
 		bottoniPremuti[0].style.backgroundColor = colore;
 		bottoniPremuti[1].style.backgroundColor = colore;
+		bottoniPremuti[0].style.color = "white";
+		bottoniPremuti[1].style.color = "white";
+
 	}
 	else
 	{
-		bottoniPremuti[0].style.backgroundColor = "white";
-		bottoniPremuti[1].style.backgroundColor = "white";
+		bottoniPremuti[0].style.backgroundColor = "#eaeaea";
+		bottoniPremuti[1].style.backgroundColor = "#eaeaea";
+		bottoniPremuti[0].style.color = "black";
+		bottoniPremuti[1].style.color = "black";
 	}
 
 	
@@ -71,7 +75,6 @@ function mostraFenomeno(fenomeno, colore, azione)
 	}
 	else if(azione=="ev")
 	{
-		console.log("EVIDENZIO");
 		if(spanFenomeno[0].style.backgroundColor == "transparent" || spanFenomeno[0].style.backgroundColor == "")
 			newStile = colore;
 		else
@@ -80,6 +83,16 @@ function mostraFenomeno(fenomeno, colore, azione)
 		for(var i = 0; i < spanFenomeno.length; i++)
 			spanFenomeno[i].style.backgroundColor = newStile;
 	}
+}
+
+function evidenzia(riga, azione)
+{
+	var idRigaTrascrizione = "#" + riga.id;
+	if(azione ==  "on")
+		document.getElementById(idRigaTrascrizione).classList.add("evidenziato");
+	else
+		document.getElementById(idRigaTrascrizione).classList.remove("evidenziato");
+
 }
 
 window.onload = gestoreLoad()

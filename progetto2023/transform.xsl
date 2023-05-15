@@ -40,53 +40,55 @@
             <div class="container">
 
                 <div class="controlPanel">
+                    <div class="divBottoni">
+                        <div>
+                            <h2>Evidenzia</h2>
+                            <button class="addBtn" onclick="mostraFenomeno('add', 'darkblue', 'ev')">AGGIUNTE</button>
+                            <button class="suppliedBtn" onclick="mostraFenomeno('supplied', 'darkcyan', 'ev')">AGG. EDITORIALE</button>
+                            <button class="placeBtn" onclick="mostraFenomeno('place', 'darkgreen', 'ev')">LUOGHI</button>
+                            <button class="abbrBtn" onclick="mostraFenomeno('abbr', 'crimson', 'ev')">ABBREVIAZIONI</button>
+                            <button class="origBtn" onclick="mostraFenomeno('orig', 'hotpink', 'ev')">ORIGINALE</button>
+                        </div>
+                        <div>
+                            <h2>Mostra</h2>
+                            <button class="sicBtn" onclick="mostraFenomeno('sic', 'firebrick', 'show')">ERRORI</button>
+                            <button class="delBtn" onclick="mostraFenomeno('del', 'darkslategray', 'show')">CANCELLATURE</button>
+                            <button class="expanBtn" onclick="mostraFenomeno('expan', 'darkslateblue', 'show')">ESPANSIONI</button>
+                            <button class="regBtn" onclick="mostraFenomeno('reg', 'darkorange', 'show')">REGOLARIZZAZIONI</button>
+                        </div>
+                    </div>
                     <div class="divCambioPagina">
-                    <button onclick="cambioPagina(-1)"><i class="fa-solid fa-arrow-right fa-rotate-180"></i> Pagina precedente</button>
-                    <button onclick="cambioPagina(1)">Pagina successiva <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-                <div class="divBottoni">
-                    <div>
-                        <h2>Evidenzia</h2>
-                        <button class="addBtn" onclick="mostraFenomeno('add', 'blue', 'ev')">AGGIUNTE</button>
-                        <button class="placeBtn" onclick="mostraFenomeno('place', 'green', 'ev')">LUOGHI</button>
-                        <button class="abbrBtn" onclick="mostraFenomeno('abbr', 'orange', 'ev')">ABBREVIAZIONI</button>
-                        <button class="sicBtn" onclick="mostraFenomeno('sic', 'yellow', 'ev')">ERRORI</button>
-                        <button class="origBtn" onclick="mostraFenomeno('orig', 'aqua', 'ev')">ORIGINALE</button>
+                        <button onclick="cambioPagina(-1)"><i class="fa-solid fa-arrow-right fa-rotate-180"></i> Pagina precedente</button>
+                        <button onclick="cambioPagina(1)">Pagina successiva <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
-                    <div>
-                        <h2>Mostra</h2>
-                        <button class="delBtn" onclick="mostraFenomeno('del', 'red', 'show')">CANCELLATURE</button>
-                        <button class="expanBtn" onclick="mostraFenomeno('expan', 'purple', 'show')">ESPANSIONI</button>
-                        <button class="regBtn" onclick="mostraFenomeno('reg', 'deeppink', 'show')">REGOLARIZZAZIONI</button>
-                    </div>
-                </div>
                 </div>
 
                 <h2 id="indicatorePagina">Pagina X</h2>
                 <xsl:apply-templates select="//tei:facsimile"/>
 
                 <div class="controlPanel">
-                <div class="divBottoni">
-                    <div>
-                        <h2>Evidenzia</h2>
-                        <button class="addBtn" onclick="mostraFenomeno('add', 'blue', 'ev')">AGGIUNTE</button>
-                        <button class="placeBtn" onclick="mostraFenomeno('place', 'green', 'ev')">LUOGHI</button>
-                        <button class="abbrBtn" onclick="mostraFenomeno('abbr', 'orange', 'ev')">ABBREVIAZIONI</button>
-                        <button class="sicBtn" onclick="mostraFenomeno('sic', 'yellow', 'ev')">ERRORI</button>
-                        <button class="origBtn" onclick="mostraFenomeno('orig', 'aqua', 'ev')">ORIGINALE</button>
-                    </div>
-                    <div>
-                        <h2>Mostra</h2>
-                        <button class="delBtn" onclick="mostraFenomeno('del', 'red', 'show')">CANCELLATURE</button>
-                        <button class="expanBtn" onclick="mostraFenomeno('expan', 'purple', 'show')">ESPANSIONI</button>
-                        <button class="regBtn" onclick="mostraFenomeno('reg', 'deeppink', 'show')">REGOLARIZZAZIONI</button>
-                    </div>
-                </div>
                     <div class="divCambioPagina">
                         <button onclick="cambioPagina(-1)"><i class="fa-solid fa-arrow-right fa-rotate-180"></i> Pagina precedente</button>
                         <button onclick="cambioPagina(1)">Pagina successiva <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
-              </div>
+                    <div class="divBottoni">
+                        <div>
+                            <h2>Evidenzia</h2>
+                            <button class="addBtn" onclick="mostraFenomeno('add', 'darkblue', 'ev')">AGGIUNTE</button>
+                            <button class="suppliedBtn" onclick="mostraFenomeno('supplied', 'darkcyan', 'ev')">AGG. EDITORIALE</button>
+                            <button class="placeBtn" onclick="mostraFenomeno('place', 'darkgreen', 'ev')">LUOGHI</button>
+                            <button class="abbrBtn" onclick="mostraFenomeno('abbr', 'crimson', 'ev')">ABBREVIAZIONI</button>
+                            <button class="origBtn" onclick="mostraFenomeno('orig', 'hotpink', 'ev')">ORIGINALE</button>
+                        </div>
+                        <div>
+                            <h2>Mostra</h2>
+                            <button class="sicBtn" onclick="mostraFenomeno('sic', 'firebrick', 'show')">ERRORI</button>
+                            <button class="delBtn" onclick="mostraFenomeno('del', 'darkslategray', 'show')">CANCELLATURE</button>
+                            <button class="expanBtn" onclick="mostraFenomeno('expan', 'darkslateblue', 'show')">ESPANSIONI</button>
+                            <button class="regBtn" onclick="mostraFenomeno('reg', 'darkorange', 'show')">REGOLARIZZAZIONI</button>
+                        </div>
+                    </div>
+                </div>
 	        </div>
 
             <div class="sezione2">
@@ -199,7 +201,21 @@
             <div class="page">
                 <xsl:element name="img">
                     <xsl:attribute name="src"><xsl:value-of select="tei:graphic/@url"/></xsl:attribute>
+                    <xsl:attribute name="usemap">#<xsl:value-of select="@xml:id"/></xsl:attribute>
                 </xsl:element>
+
+                <xsl:element name="map">
+                    <xsl:attribute name="name"><xsl:value-of select="@xml:id"/></xsl:attribute>
+                    <xsl:for-each select="tei:zone">
+                        <xsl:element name="area">
+                            <xsl:attribute name="onmouseout">evidenzia(this, "off")</xsl:attribute>
+                            <xsl:attribute name="onmouseover">evidenzia(this, "on")</xsl:attribute>
+                            <xsl:attribute name="id"><xsl:value-of select="@xml:id"/></xsl:attribute>
+                            <xsl:attribute name="coords"><xsl:value-of select="@ulx"/>,<xsl:value-of select="@uly"/>,<xsl:value-of select="@lrx"/>,<xsl:value-of select="@lry"/></xsl:attribute>
+                        </xsl:element>
+                    </xsl:for-each>
+                </xsl:element>
+
                 <div class="trascrizione">
                     <p>
                         <xsl:variable name="myVar" >
@@ -214,13 +230,16 @@
     </xsl:template>
 
     <xsl:template match="//tei:lb">
+        <xsl:if test="@rend = 'double_stroke'">
+            =
+        </xsl:if>
         <br/>
         <xsl:element name="span">
             <xsl:attribute name="id">
                 <xsl:value-of select="@facs"/>
             </xsl:attribute>
-            <xsl:attribute name="class">row-number</xsl:attribute>
-            <xsl:value-of select="@n" />&#160; 
+            <xsl:attribute name="class">nRiga</xsl:attribute>
+            <xsl:value-of select="@n" />&#160;
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
@@ -272,6 +291,22 @@
         <xsl:template match="tei:del">
             <xsl:element name="span">
                 <xsl:attribute name="class">del</xsl:attribute>
+                <xsl:apply-templates />
+            </xsl:element>
+        </xsl:template>
+
+        <!-- Orig -->
+        <xsl:template match="tei:orig">
+            <xsl:element name="span">
+                <xsl:attribute name="class">orig</xsl:attribute>
+                <xsl:apply-templates />
+            </xsl:element>
+        </xsl:template>
+
+        <!-- Supplied -->
+        <xsl:template match="tei:supplied">
+            <xsl:element name="span">
+                <xsl:attribute name="class">supplied</xsl:attribute>
                 <xsl:apply-templates />
             </xsl:element>
         </xsl:template>
