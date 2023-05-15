@@ -1,0 +1,240 @@
+html, body
+{
+	margin: 0;
+}
+
+body{
+	background-color: #bdbfab;
+	font-family: 'Roboto', sans-serif;
+}
+
+.header
+{
+	text-align: center;
+	background-color: #1e1e21;
+	padding: 3rem;
+	color: white;
+}
+
+.header h1
+{
+	margin: 0;
+	font-size: 4rem;
+}
+
+.header h2
+{
+	font-size: 3rem;
+}
+
+.sezione1{
+	text-align: center;
+	padding: 3rem;
+}
+
+.sezione1 h1{
+	font-size: 3rem;
+}
+
+.sezione1 > .containerTabelle
+{
+	display: flex;
+	margin: 3rem 0;
+}
+
+.sezione1 > .containerTabelle > .containerTabella
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	justify-content: flex-start;
+	flex: 1;
+	text-align: left;
+	font-size: 1.3rem;
+}
+
+.containerTabella:first-child
+{
+	margin: 0 3rem 0 0;
+}
+
+.containerTabella > h2
+{
+	text-align: center;
+}
+
+.containerTabella table{
+	border-collapse: collapse;
+}
+
+.containerTabella > table > tbody > tr
+{
+	border-bottom: 1px solid black;
+}
+
+.containerTabella td{
+	padding:10px 0 10px 10px;
+}
+
+.sezione2
+{
+	width: 65%;
+	margin: auto;
+}
+
+.sezione2 h1
+{
+	font-size: h3;
+	text-align: center;
+}
+
+.container{
+	background-color: #1e1e21;
+	/*box-shadow: inset 0px 0px 18px 0px #ffffff;*/
+	padding: 1rem;
+}
+
+.container > .page{
+	width: 100%;
+	justify-content: center;
+}
+
+.container > .page > img, .container > .page > div{
+	margin: 1rem;
+}
+
+.container > .page > img{
+	max-width: 440px;
+	min-width: 440px;
+}
+
+.container h2
+{
+	text-align: center;
+	color: white;
+}
+
+.container p
+{
+	font-size: 1.5rem;
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    color: white;
+    font-family: 'EB Garamond', serif;
+}
+
+
+.controlPanel{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.controlPanel button{
+	all: unset;
+	flex: 1;
+	font-size: 1.3rem;
+	background-color: white;
+	border-radius: 15px;
+	padding: 5px 10px;
+	margin: 5px;
+	cursor: pointer;
+}
+
+.controlPanel button:hover{
+	background-color: lightgray;
+}
+
+.divCambioPagina
+{
+	flex-direction: row;
+}
+
+.divBottoni
+{
+	flex-direction: row;
+	margin: auto;
+}
+
+.divBottoni > div
+{
+	border: 2px solid white;
+	display: table-cell;
+	padding: 1rem;
+}
+
+.page
+{
+	display: none;
+}
+
+.sezione2 p, ul{
+	font-size: 1.5rem;
+	text-align: justify;
+}
+
+footer
+{
+	background-color: #1e1e21;
+	color: white;
+	padding: 2rem;
+}
+
+footer p
+{
+	margin: 0;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+
+.del
+{
+	background-color: red;
+	display: none;
+}
+
+.expan
+{
+	background-color: purple;
+	display: none;
+}
+
+.reg
+{
+	background-color: deeppink;
+	display: none;
+}
+
+@media screen and (max-width: 1500px) {
+	.container p
+	{
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.container p
+	{
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 800px) {
+
+	.container > .page
+	{
+		display: block;
+		text-align: center;
+	}
+
+	.container p
+	{
+		position: static;
+	    transform: none;
+	    margin: 0;
+	}
+}

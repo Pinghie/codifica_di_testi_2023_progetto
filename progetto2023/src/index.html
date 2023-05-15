@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://kit.fontawesome.com/2fd670a4d1.js" crossorigin="anonymous"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Codifica elettronica dei diari di Emanuele Artom</title>
+</head>
+
+<body>
+
+   <div class="header">
+      <h1>Diari di Emanuele Artom</h1>
+      <h2>Codifica elettronica delle pagine 42-44</h2>
+   </div>
+
+   <div class="sezione1">
+
+      <h1>Informazioni sulla fonte</h1>
+      <div class="containerTabelle">
+         
+         <div class="containerTabella">
+            <h2>Descrizione bibliografica</h2>
+            <table>
+               <tr>
+                  <td colspan="2">Lorem ipsum dolor amtet nd ien fnw ueobv eoveurvb o nsc w ow9 </td>
+               </tr>
+               <tr>
+                  <td>
+                     Item 1
+                  </td>
+                  <td>
+                     <table>
+               <tr>
+                  <td>
+                     Titolo
+                  </td>
+                  <td>
+                     Diario di Emanuele Artom
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Autore
+                  </td>
+                  <td>
+                     Emanuele Artom
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Lingua
+                  </td>
+                  <td>
+                     Italiano
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Collezione
+                  </td>
+                  <td>
+                     Fondo Emanuele Artom
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Manoscritto
+                  </td>
+                  <td>
+                     busta 1, fascicolo 9
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Luogo di conservazione
+                  </td>
+                  <td>
+                     CDEC - Centro di Documentazione Ebraica Contemporanea
+                  </td>
+               </tr>
+            </table>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Item 2
+                  </td>
+                  <td>
+                     <table>
+               <tr>
+                  <td>
+                     Titolo
+                  </td>
+                  <td>
+                     Diario di Emanuele Artom
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Autore
+                  </td>
+                  <td>
+                     Emanuele Artom
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Lingua
+                  </td>
+                  <td>
+                     Italiano
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Collezione
+                  </td>
+                  <td>
+                     Fondo Emanuele Artom
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Manoscritto
+                  </td>
+                  <td>
+                     busta 1, fascicolo 9
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Luogo di conservazione
+                  </td>
+                  <td>
+                     CDEC - Centro di Documentazione Ebraica Contemporanea
+                  </td>
+               </tr>
+            </table>
+                  </td>
+               </tr>
+
+            </table>
+         </div>
+
+         <div class="containerTabella">
+            <h2>Descrizione fisica</h2>
+            <table>
+               <tr>
+                  <td>
+                     Titolo
+                  </td>
+                  <td>
+                     Diario di Emanuele Artom
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Autore
+                  </td>
+                  <td>
+                     Emanuele Artom
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Lingua
+                  </td>
+                  <td>
+                     Italiano
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Collezione
+                  </td>
+                  <td>
+                     Fondo Emanuele Artom
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Manoscritto
+                  </td>
+                  <td>
+                     busta 1, fascicolo 9
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Luogo di conservazione
+                  </td>
+                  <td>
+                     CDEC - Centro di Documentazione Ebraica Contemporanea
+                  </td>
+               </tr>
+            </table>
+         </div>
+
+      </div>
+
+   </div>
+
+	<div class="container">
+		<div class="controlPanel">
+			<div class="divCambioPagina">
+            <button onclick="cambioPagina(-1)"><i class="fa-solid fa-arrow-right fa-rotate-180"></i> Pagina precedente</button>
+            <button onclick="cambioPagina(1)">Pagina successiva <i class="fa-solid fa-arrow-right"></i></button>
+         </div>
+         <div class="divBottoni">
+            <div>
+               <button class="addBtn" onclick="mostraFenomeno('add', 'blue', 'ev')">AGGIUNTE</button>
+               <button class="placeBtn" onclick="mostraFenomeno('place', 'green', 'ev')">LUOGHI</button>
+               <button class="abbrBtn" onclick="mostraFenomeno('abbr', 'orange', 'ev')">ABBREVIAZIONI</button>
+               <button class="sicBtn" onclick="mostraFenomeno('sic', 'yellow', 'ev')">ERRORI</button>
+               <button class="origBtn" onclick="mostraFenomeno('orig', 'aqua', 'ev')">ORIGINALE</button>
+            </div>
+   			<div>
+               <button class="delBtn" onclick="mostraFenomeno('del', 'red', 'show')">CANCELLATURE</button>
+               <button class="expanBtn" onclick="mostraFenomeno('expan', 'purple', 'show')">ESPANSIONI</button>
+               <button class="regBtn" onclick="mostraFenomeno('reg', 'deeppink', 'show')">REGOLARIZZAZIONI</button>
+            </div>
+         </div>
+		</div>
+		<h2 id="indicatorePagina">Pagina X</h2>
+		<div class="page">
+			<img src="pag1.jpg">
+			<div class="trascrizione">
+				<p> 
+                                    <br><span id="#facs_pag4-lb1" class="row-number">1</span>
+                                    rivolgergli, ma poi naturalmente
+                                    
+                                    <br><span id="#facs_pag4-lb2" class="row-number">2</span>
+                                    tacqui; è troppo cordiale ed entu
+                                    
+                                    <br><span id="#facs_pag4-lb3" class="row-number">3</span>
+                                    siasta per non perdonare 
+                                    <span class="add"> 
+                                       <span class="sic"> ila </span> la 
+                                       </span> man
+                                    
+                                    <br><span id="#facs_pag4-lb4" class="row-number">4</span>
+                                    canza di ordine, metodo e puntualità ;
+                                    
+                                    <br><span id="#facs_pag4-lb5" class="row-number">5</span>
+                                    si comprende che per visitare un ma
+                                    
+                                    <br><span id="#facs_pag4-lb6" class="row-number">6</span>
+                                    lato a cui vuol bene, abbandoni per
+                                    
+                                    <br><span id="#facs_pag4-lb7" class="row-number">7</span> 
+                                    un giorno tutta la compagnia e
+                                    <span class="del"><span class="gap">
+                                          ?
+                                          </span> </span> 
+                                    
+                                    <br><span id="#facs_pag4-lb8" class="row-number">8</span>
+                                    trascuri gli appuntamenti .
+                                    
+                                    Pensando
+                                    
+                                    <br><span id="#facs_pag4-lb9" class="row-number">9</span>    
+                                    che bisogna aiutarsi da sé , sono an
+                                    
+                                    <br><span id="#facs_pag4-lb10" class="row-number">10</span>
+                                    dato a <span class="place"><a class="scroll-to" href="#MC">Montanello</a></span> a cercare
+                                    
+                                    <br><span id="#facs_pag4-lb11" class="row-number">11</span>
+                                    una stanza: forse ho trovato una
+                                    
+                                    <br><span id="#facs_pag4-lb12" class="row-number">12</span>
+                                    topaia cara e bruttissima, senza
+                                    
+                                    <br><span id="#facs_pag4-lb13" class="row-number">13</span>
+                                    luce, senza riscaldamento, senza 
+                                    
+                                    <br><span id="#facs_pag4-lb14" class="row-number">14</span>
+                                    acqua, senza mobili, coi vetri in
+                                    
+                                    <br><span id="#facs_pag4-lb15" class="row-number">15</span> 
+                                    parte rotti: 80 lire al mese e c’è
+                                    
+                                    <br><span id="#facs_pag4-lb16" class="row-number">16</span> 
+                                    il problema del vitto!
+                                    
+                                    Ma ormai
+                                    
+                                    <br><span id="#facs_pag4-lb17" class="row-number">17</span>
+                                    mi sono abituato agli scomodi
+                                    
+                                    <br><span id="#facs_pag4-lb18" class="row-number">18</span>
+                                    e li soffro
+                                    <span class="add">con piacere </span>
+                                    con l'idea
+                                    <span class="del"><span class="gap">
+                                          ?
+                                          </span> </span>
+                                    confusa
+                                    
+                                    <br><span id="#facs_pag4-lb19" class="row-number">19</span>
+                                    ma persistente che
+				</p>
+			</div>
+		</div>
+
+		<div class="page">
+			<img src="pag2.jpg">
+			<div class="trascrizione">
+				<p> 
+					<br> <span id="#facs_pag5-lb1" class="row-number">1</span>
+
+                    <br><span id="#facs_pag5-lb7" class="row-number">7</span>
+                    <span class="abbr">25. </span> <span class="expan">25 novembre 1943</span>
+                    
+                    <br><span id="#facs_pag5-lb8" class="row-number">8</span>
+                    Stamane ricevetti una
+                    <span class="del">  visita  </span> 
+                    lettera di papà
+                    
+                    <br><span id="#facs_pag5-lb98" class="row-number">9</span>
+                    che preannunzia una sua prossima visita,
+                    
+                    <br><span id="#facs_pag5-lb10" class="row-number">10</span>
+                    che forse si prolungherà qualche
+                    
+                    <br><span id="#facs_pag5-lb11" class="row-number">11</span>
+                    tempo.
+                    
+                    Per questo mi sarebbe piac
+                    
+                    <br><span id="#facs_pag5-lb12" class="row-number">12</span>
+                    iuta la casetta di <span class="place"><a class="scroll-to" href="#CN">Mondarello</a></span>, dove
+                    
+                    <br><span id="#facs_pag5-lb13" class="row-number">13</span>
+                    avremmo potuto stare insieme, anche
+                    
+                    <br><span id="#facs_pag5-lb14" class="row-number">14</span>
+                    se scomoda
+                    <span class="add"> 
+                       <span class="sic"> - </span> . 
+                       </span>
+                    <span class="orig">oggi</span><span class="reg">Oggi</span>
+                    il propertario mi
+                    
+                    <br><span id="#facs_pag5-lb15" class="row-number">15</span>
+                    <span class="orig">dise</span><span class="reg">disse</span>
+                    che voleva
+                    <span class="del"> tenerla  </span>
+                    due mesi di
+                    
+                    <br><span id="#facs_pag5-lb16" class="row-number">16</span>
+                    affitto anticipato perché nessun inquilino                    
+                    
+                    <br><span id="#facs_pag5-lb17" class="row-number">17</span>
+                    ha potuto resistere piu di 15 giorni;
+                    
+                    <br><span id="#facs_pag5-lb18" class="row-number">18</span>
+                    La presenza di papà mi farebbe
+                    
+                    <br><span id="#facs_pag5-lb19" class="row-number">19</span>
+                    molto piacere da un lato, ma dall'altro
+                    
+                    <br><span id="#facs_pag5-lb20" class="row-number">20</span>
+                    penso che se avessi da compiere qualche
+                    
+                    <br><span id="#facs_pag5-lb21" class="row-number">21</span>
+                    missione pericolosa, sarebbe meglio che
+                    
+                    <br><span id="#facs_pag5-lb22" class="row-number">22</span>
+                    fosse lontano e non avesse da
+				</p>
+			</div>
+		</div>
+
+		<div class="page">
+			<img src="pag3.jpg">
+			<div class="trascrizione">
+				<p> 
+                                    <br><span id="#facs_pag6-lb1" class="row-number">1</span>
+                                    preoccuparsene .
+                                    Domattina sarò
+                                    
+                                    <br><span id="#facs_pag6-lb2" class="row-number">2</span>
+                                    in 
+                                    <span class="add"> 
+                                       <span class="sic"> infermerià </span> infermeria 
+                                       </span>
+                                    e comincerò il mio
+                                    
+                                    <br><span id="#facs_pag6-lb3" class="row-number">3</span>
+                                    lavoro .
+                                              
+                                    Pare che nelle bande
+                                    
+                                    <br><span id="#facs_pag6-lb4" class="row-number">4</span>
+                                    sia stato rimesso un poco di ordine .
+                                    
+                                    <br><span id="#facs_pag6-lb5" class="row-number">5</span>
+                                    <span class="place"><a class="scroll-to" href="#MRT">Moretta</a></span>, che brinda sempre alla
+                                    
+                                    <br><span id="#facs_pag6-lb6" class="row-number">6</span>
+                                    libertà,  oggi  prediceva la ca    
+                                    
+                                    <br><span id="#facs_pag6-lb7" class="row-number">7</span>
+                                    duta di <span class="person"><a class="scroll-to" href="#AH">Hitler</a></span> per il  15 dicembre ;       
+                                    
+                                    <br><span id="#facs_pag6-lb8" class="row-number">8</span>
+                                    io, al più tardi, per l'autunno
+                                    
+                                    <br><span id="#facs_pag6-lb9" class="row-number">9</span>
+                                    venturo. Significativo che gli scio
+                                    
+                                    <br><span id="#facs_pag6-lb10" class="row-number">10</span>
+                                    peri
+                                    <span class="add">di <span class="place"><a class="scroll-to" href="#TO">Torino</a></span> </span>
+                                    si prolunghino e che il governo
+                                    
+                                    <br><span id="#facs_pag6-lb11" class="row-number">11</span>
+                                    non li sappia arginare; significativo
+                                    
+                                    <br><span id="#facs_pag6-lb12" class="row-number">12</span>
+                                    pure che né i 
+                                    <span class="orig">Tedeschi</span><span class="reg">tedeschi</span>
+                                    , né i fascisti
+                                    
+                                    <br><span id="#facs_pag6-lb13" class="row-number">13</span>
+                                    abbiano iniziato azioni di rappresa
+                                    
+                                    <br><span id="#facs_pag6-lb14" class="row-number">14</span>
+                                    glia contro le bande dopo
+                                    <span class="del">il fatto</span><span class="add">l'impresa</span>
+                                    di
+                                    
+                                    <br><span id="#facs_pag6-lb15" class="row-number">15</span>
+                                    <span class="place"><a class="scroll-to" href="#CR">Crissolo</a></span> .
+                                    
+                                    Oggi c'è stato il Consiglio dei
+                                    
+                                    <br><span id="#facs_pag6-lb16" class="row-number">16</span>
+                                    Ministri; un provvedimento sugli                         
+                                    
+                                    <br><span id="#facs_pag6-lb17" class="row-number">17</span>
+                                    <span class="orig">Ebrei</span><span class="reg">ebrei</span>
+                                    ,cioè l'obbligo di
+                                    <span class="del"> la cosa  </span>
+                                    
+                                    <br><span id="#facs_pag6-lb18" class="row-number">18</span>
+                                    consegnare le opere d'arte, mentre
+                                    
+                                    <br><span id="#facs_pag6-lb19" class="row-number">19</span>
+                                    tutti ci aspettavamo il campo di
+                                    
+                                    <br><span id="#facs_pag6-lb20" class="row-number">20</span>
+                                    concentramento: si è mai vista una
+                                    
+                                    <br><span id="#facs_pag6-lb21" class="row-number">21</span>
+                                    simile buffanata ?
+                                    D'altra parte è
+                                    
+                                    <br><span id="#facs_pag6-lb22" class="row-number">22</span>
+                                    una legge molto facile da eludere
+				</p>
+			</div>
+		</div>
+      <div class="controlPanel">
+         <div class="divBottoni">
+            <button class="addBtn" onclick="mostraFenomeno('add', 'blue')">AGGIUNTE</button>
+            <button class="delBtn" onclick="mostraFenomeno('del', 'red')">CANCELLATURE</button>
+            <button class="placeBtn" onclick="mostraFenomeno('place', 'green')">LUOGHI</button>
+            <button class="abbrBtn" onclick="mostraFenomeno('abbr', 'orange')">ABBREVIAZIONI</button>
+            <button class="expanBtn" onclick="mostraFenomeno('expan', 'purple')">ESPANSIONI</button>
+            <button class="sicBtn" onclick="mostraFenomeno('sic', 'yellow')">ERRORI</button>
+            <button class="origBtn" onclick="mostraFenomeno('orig', 'aqua')">ORIGINALE</button>
+            <button class="regBtn" onclick="mostraFenomeno('reg', 'deeppink')">REGOLARIZZAZIONI</button>
+         </div>
+         <div class="divCambioPagina">
+            <button onclick="cambioPagina(-1)"><i class="fa-solid fa-arrow-right fa-rotate-180"></i> Pagina precedente</button>
+            <button onclick="cambioPagina(1)">Pagina successiva <i class="fa-solid fa-arrow-right"></i></button>
+         </div>
+      </div>
+	</div>
+
+   <div class="sezione2">
+      <h1>Sul progetto</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius enim id turpis ultricies pretium. Nunc a dui nisl. Etiam viverra justo urna, id maximus nunc porta at. Aliquam mollis dui massa, sit amet hendrerit nunc egestas nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum ex non risus congue, ut pellentesque magna dignissim. Maecenas interdum at enim in vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam libero massa, rutrum quis fermentum vitae, semper ac turpis. Integer ut posuere massa. Ut mollis felis diam, quis fringilla ipsum feugiat aliquam. Sed orci nulla, consequat vitae massa in, finibus molestie risus. Aliquam ante dui, vestibulum vel diam fringilla, cursus feugiat nunc. Etiam ut erat ipsum.</p>
+      
+      <h1>Bibliografia</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius enim id turpis ultricies pretium. Nunc a dui nisl. Etiam viverra justo urna, id maximus nunc porta at. Aliquam mollis dui massa, sit amet hendrerit nunc egestas nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum ex non risus congue, ut pellentesque magna dignissim. Maecenas interdum at enim in vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam libero massa, rutrum quis fermentum vitae, semper ac turpis. Integer ut posuere massa. Ut mollis felis diam, quis fringilla ipsum feugiat aliquam. Sed orci nulla, consequat vitae massa in, finibus molestie risus. Aliquam ante dui, vestibulum vel diam fringilla, cursus feugiat nunc. Etiam ut erat ipsum.</p>
+
+   </div>
+
+   <footer>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius enim id turpis ultricies pretium. Nunc a dui nisl. Etiam viverra justo urna, id</p>
+   </footer>
+
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>

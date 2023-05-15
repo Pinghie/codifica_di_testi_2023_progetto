@@ -1,0 +1,405 @@
+<!DOCTYPE HTML><html xmlns="http://www.w3.org/1999/xhtml" xmlns:tei="http://www.tei-c.org/ns/1.0">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1"><script src="https://kit.fontawesome.com/2fd670a4d1.js" crossorigin="anonymous"></script><link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="stylesheet" type="text/css" href="src/style.css">
+      <title>Codifica elettronica dei diari di Emanuele Artom</title>
+   </head>
+   <body>
+      <div class="header">
+         <h1>Diari di Emanuele Artom</h1>
+         <h2>Codifica elettronica delle pagine 42-44</h2>
+      </div>
+      <div class="sezione1">
+         <h1>Informazioni sulla fonte</h1>
+         <div class="containerTabelle">
+            <div class="containerTabella">
+               <h2>Descrizione bibliografica</h2>
+               <table>
+                  <tr>
+                     <td><strong>In breve</strong></td>
+                     <td><span>Raccolta degli scritti autografi di Emanuele Artom redatti tra il 1943 e il 1944 accompagnati
+                           dalla lettera originale della madre Amalia riportante l'epigrafe alla mia morte questo
+                           plico deve essere consegnato al Centro di documentazione ebraica [..] esso ha un grande
+                           valore storico [..].</span></td>
+                  </tr>
+                  <tr>
+                     <td><span><strong>Identificazione</strong></span></td>
+                     <td>
+                        <table>
+                           <tr>
+                              <td><strong>Posizione</strong></td>
+                              <td><span>Milano</span>, <span>Italia</span></td>
+                           </tr>
+                           <tr>
+                              <td><strong>Istituzione</strong></td>
+                              <td><span> CDEC - Centro di Documentazione Ebraica Contemporanea  </span></td>
+                           </tr>
+                           <tr>
+                              <td><strong>Collezione</strong></td>
+                              <td><span>Fondo Emanuele Artom</span></td>
+                           </tr>
+                           <tr>
+                              <td><strong>Manoscritto</strong></td>
+                              <td><span>busta 1, fascicolo 9</span></td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td><strong>Item <span>1</span></strong></td>
+                     <td>
+                        <table>
+                           <tr>
+                              <td><strong>Titolo</strong></td>
+                              <td><span>Appunto della signora Amalia Artom sul diario del figlio Emanuele</span></td>
+                           </tr>
+                           <tr>
+                              <td><strong>Autore</strong></td>
+                              <td><span>Amalia Artom</span></td>
+                           </tr>
+                           <tr>
+                              <td><strong>Lingua</strong></td>
+                              <td><span>Italiano</span></td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td><strong>Item <span>2</span></strong></td>
+                     <td>
+                        <table>
+                           <tr>
+                              <td><strong>Titolo</strong></td>
+                              <td><span>Diario di Emanuele Artom</span></td>
+                           </tr>
+                           <tr>
+                              <td><strong>Autore</strong></td>
+                              <td><span>Emanuele Artom</span></td>
+                           </tr>
+                           <tr>
+                              <td><strong>Lingua</strong></td>
+                              <td><span>Italiano</span></td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="containerTabella">
+               <h2>Descrizione fisica</h2>
+               <table>
+                  <tr>
+                     <td><span><strong>Supporto</strong></span></td>
+                     <td><span>Fogli di carta.</span></td>
+                  </tr>
+                  <tr>
+                     <td><span><strong>Quantità</strong></span></td>
+                     <td>172 pagine e un foglietto della madre di Emanuele Artom. </td>
+                  </tr>
+                  <tr>
+                     <td><span><strong>Organizzazione</strong></span></td>
+                     <td>
+                        Il diario è preceduto da una nota scritta dalla madre di Emanuele Artom.
+                        </td>
+                  </tr>
+                  <tr>
+                     <td><span><strong>Condizioni</strong></span></td>
+                     <td><span>
+                           Le pagine sono in buone condizioni. Sono presenti talvolta degli strappi sui bordi
+                           che però non compromettono la lettura del testo.
+                           </span></td>
+                  </tr>
+                  <tr>
+                     <td><span><strong>Impaginazione</strong></span></td>
+                     <td><span>Le pagine hanno un numero di righe che varia tra 18 e 30.</span></td>
+                  </tr>
+                  <tr>
+                     <td><span><strong>Mani</strong></span></td>
+                     <td><span>Il manoscritto è stato redatto esclusivamente dalla mano di Emanuele Artom.</span></td>
+                  </tr>
+                  <tr>
+                     <td><span><strong>Storia</strong></span></td>
+                     <td><span>Manoscritto realizzato tra il 1943 e il 1944 in Italia. </span></td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="controlPanel">
+            <div class="divCambioPagina"><button onclick="cambioPagina(-1)"><i class="fa-solid fa-arrow-right fa-rotate-180"></i> Pagina precedente</button><button onclick="cambioPagina(1)">Pagina successiva <i class="fa-solid fa-arrow-right"></i></button></div>
+            <div class="divBottoni">
+               <div>
+                  <h2>Evidenzia</h2><button class="addBtn" onclick="mostraFenomeno('add', 'blue', 'ev')">AGGIUNTE</button><button class="placeBtn" onclick="mostraFenomeno('place', 'green', 'ev')">LUOGHI</button><button class="abbrBtn" onclick="mostraFenomeno('abbr', 'orange', 'ev')">ABBREVIAZIONI</button><button class="sicBtn" onclick="mostraFenomeno('sic', 'yellow', 'ev')">ERRORI</button><button class="origBtn" onclick="mostraFenomeno('orig', 'aqua', 'ev')">ORIGINALE</button></div>
+               <div>
+                  <h2>Mostra</h2><button class="delBtn" onclick="mostraFenomeno('del', 'red', 'show')">CANCELLATURE</button><button class="expanBtn" onclick="mostraFenomeno('expan', 'purple', 'show')">ESPANSIONI</button><button class="regBtn" onclick="mostraFenomeno('reg', 'deeppink', 'show')">REGOLARIZZAZIONI</button></div>
+            </div>
+         </div>
+         <h2 id="indicatorePagina">Pagina X</h2>
+         <div class="page"><img src="img/pag42.jpg"><div class="trascrizione">
+               <p>
+                  <br><span id="#p42_l1" class="row-number">1&nbsp; 
+                     </span>
+                  Ieri, anniversario del<span class="del">lo</span> primo mese del mio
+                  <br><span id="#p42_l2" class="row-number">2&nbsp; 
+                     </span>
+                  servizio, fu il primo giorno interessante della
+                  <br><span id="#p42_l3" class="row-number">3&nbsp; 
+                     </span>
+                  vita di partigiano. Dopo aver goduto il gran
+                  <br><span id="#p42_l4" class="row-number">4&nbsp; 
+                     </span>
+                  lusso di dormire con le lenzuola a casa <span class="name"><span class="abbr">B.</span><span class="expan">Balestrieri</span></span> partii
+                  <br><span id="#p42_l5" class="row-number">5&nbsp; 
+                     </span>
+                  che era ancor buio con <span class="name"><span class="abbr">M</span><span class="expan">Mitesa</span></span>. La casa dove erano
+                  <br><span id="#p42_l6" class="row-number">6&nbsp; 
+                     </span>
+                  le armi fu piuttosto difficile da cercare, ma da 
+                  <br><span id="#p42_l7" class="row-number">7&nbsp; 
+                     </span>
+                  ultimo la trovammo. <span class="name"><span class="abbr">M.</span><span class="expan">Mitesa</span></span> mi fu molto utile, 
+                  <br><span id="#p42_l8" class="row-number">8&nbsp; 
+                     </span>
+                  perché andò nelle portinerie a chiedere informazioni,
+                  <br><span id="#p42_l9" class="row-number">9&nbsp; 
+                     </span>
+                  evitando che mi facessi troppo vedere. La signora
+                  <br><span id="#p42_l10" class="row-number">10&nbsp; 
+                     </span>
+                  mi accolse con estrema diffidenza ed altrettanta in
+                  <br><span id="#p42_l11" class="row-number">11&nbsp; 
+                     </span>
+                  genuità. Mi raccontò che prima di lei aveva a
+                  <br><span id="#p42_l12" class="row-number">12&nbsp; 
+                     </span>
+                  bitato un maresciallo di marina antifascista. Arre
+                  <br><span id="#p42_l13" class="row-number">13&nbsp; 
+                     </span>
+                  stato, fu portato in carcere e frustato per 20 
+                  <br><span id="#p42_l14" class="row-number">14&nbsp; 
+                     </span>
+                  giorni, allo scadere dei quali, toccato dalla grazia,
+                  <br><span id="#p42_l15" class="row-number">15&nbsp; 
+                     </span>
+                  si era iscritto al fascio repubblicano e aveva conse
+                  <br><span id="#p42_l16" class="row-number">16&nbsp; 
+                     </span>
+                  gnato le armi. Però qualche cosa doveva rimanere
+                  <br><span id="#p42_l17" class="row-number">17&nbsp; 
+                     </span>
+                  e me ne accorsi quando la donna,<span class="del">dopo aver</span><span class="add">commossa</span>
+                  <br><span id="#p42_l18" class="row-number">18&nbsp; 
+                     </span>
+                  da me che le dicevo: «pensi che la pistola che mi darà
+                  <br><span id="#p42_l19" class="row-number">19&nbsp; 
+                     </span>
+                  potrà salvare suo figlio che combatte con noi»,
+                  <br><span id="#p42_l20" class="row-number">20&nbsp; 
+                     </span>
+                  esclamò: «chiel vol feme masè
+                  <reg><span class="reg">lei vuol farmi ammazzare</span></reg>. Persuaso
+                  <br><span id="#p42_l21" class="row-number">21&nbsp; 
+                     </span>
+                  dell'esistenza delle armi 
+                  <sic class="sic"><span class="del">le</span>disse</sic>
+                  <corr><span class="corr">le dissi</span></corr>»:«Ora le confesso
+                  <br><span id="#p42_l22" class="row-number">22&nbsp; 
+                     </span>
+                  una cosa che non dico a nessuno. Sono Ebreo,
+                  <br><span id="#p42_l23" class="row-number">23&nbsp; 
+                     </span>
+                  vuole che la denunzi ai Tedeschi?» e la
+                  </p>
+            </div>
+         </div>
+         <div class="page"><img src="img/pag43.jpg"><div class="trascrizione">
+               <p>
+                  <br><span id="#p43_l1" class="row-number">1&nbsp; 
+                     </span>
+                  brava donna, persuasa che dicevo la verità, senza
+                  <br><span id="#p43_l2" class="row-number">2&nbsp; 
+                     </span>
+                  neppure chiedere il mio cognome, mi rispuose:
+                  <br><span id="#p43_l3" class="row-number">3&nbsp; 
+                     </span>
+                  «ellura i dag tut lan chi l'hai
+                  <reg><span class="reg">allora le do tutto quello che ho</span></reg>» e <span class="del">mi</span> fece dis
+                  <br><span id="#p43_l4" class="row-number">4&nbsp; 
+                     </span>
+                  sotterrare dal figlio 2 rivoltelle, 3 moschetti e
+                  <br><span id="#p43_l5" class="row-number">5&nbsp; 
+                     </span>
+                  munizioni, con grandi proteste di patriottismo
+                  <br><span id="#p43_l6" class="row-number">6&nbsp; 
+                     </span>
+                  e raccomandazioni di metterci in salvo dai
+                  <br><span id="#p43_l7" class="row-number">7&nbsp; 
+                     </span>
+                  Tedeschi. Poi si andò a <span class="del">lasciare</span><span class="add">deporre</span> le
+                  <br><span id="#p43_l8" class="row-number">8&nbsp; 
+                     </span>
+                  valigie in una portineria e si ebbe un bel dialogo:
+                  <br><span id="#p43_l9" class="row-number">9&nbsp; 
+                     </span>
+                  La portinaia ci chiese: «siete marito e moglie?»
+                  <br><span id="#p43_l10" class="row-number">10&nbsp; 
+                     </span>
+                  e io con la disinvoltura di un consumato agente
+                  <br><span id="#p43_l11" class="row-number">11&nbsp; 
+                     </span>
+                  dell'Intelligence Servicerispuosi subito: «no, siamo
+                  <br><span id="#p43_l12" class="row-number">12&nbsp; 
+                     </span>
+                  fratello e sorella» e la portinaia astutamente: «Mi
+                  <br><span id="#p43_l13" class="row-number">13&nbsp; 
+                     </span>
+                  pareva che v'assomigliaste». Passai il pomeriggio
+                  <br><span id="#p43_l14" class="row-number">14&nbsp; 
+                     </span>
+                  con <span class="name"><span class="abbr">M.</span><span class="expan">Mitesa</span></span> che è una ragazzina di 16 anni molto
+                  <br><span id="#p43_l15" class="row-number">15&nbsp; 
+                     </span>
+                  in gamba. Si fece amicizia e ci si diede del tu, il che
+                  <br><span id="#p43_l16" class="row-number">16&nbsp; 
+                     </span>
+                  mi fece piacere, perché mostra che non invecchio
+                  <br><span id="#p43_l17" class="row-number">17&nbsp; 
+                     </span>
+                  ancora, dato che fu lei a propormelo. In treno altra
+                  <br><span id="#p43_l18" class="row-number">18&nbsp; 
+                     </span>
+                  avventura: si mette a discorrere con noi un mi
+                  <br><span id="#p43_l19" class="row-number">19&nbsp; 
+                     </span>
+                  lite, ignorando che nella valigia avevamo i proiet
+                  <br><span id="#p43_l20" class="row-number">20&nbsp; 
+                     </span>
+                  tili per impallinarlo. Aveva partecipato alla batta
+                  <br><span id="#p43_l21" class="row-number">21&nbsp; 
+                     </span>
+                  glia di <span class="place">Crissolo</span> e <span class="del">parti</span><span class="add">doveva</span> raggiungere la
+                  <br><span id="#p43_l22" class="row-number">22&nbsp; 
+                     </span>
+                  guarnigione di <span class="place">Bobbio</span>. Persuaso <span class="del">che</span><span class="add">dai</span> nostri
+                  </p>
+            </div>
+         </div>
+         <div class="page"><img src="img/pag44.jpg"><div class="trascrizione">
+               <p>
+                  <br><span id="#p44_l1" class="row-number">1&nbsp; 
+                     </span>
+                  ingenui discorsi che non sapevamo nulla di questi
+                  <br><span id="#p44_l2" class="row-number">2&nbsp; 
+                     </span>
+                  fatti d'arme, <span class="del">ci rac</span><span class="add">siccome</span>lo ascoltavamo dan
+                  <br><span id="#p44_l3" class="row-number">3&nbsp; 
+                     </span>
+                  dogli molta soddisfazione morale e ascoltan
+                  <br><span id="#p44_l4" class="row-number">4&nbsp; 
+                     </span>
+                  dolo attentamente, ci raccontò, dopo aver pre
+                  <br><span id="#p44_l5" class="row-number">5&nbsp; 
+                     </span>
+                  messo che non avrebbe dovuto dirlo, che sta per ar
+                  <br><span id="#p44_l6" class="row-number">6&nbsp; 
+                     </span>
+                  rivare una divisione di SS per il rastrellamento
+                  <br><span id="#p44_l7" class="row-number">7&nbsp; 
+                     </span>
+                  delle montagne, che i partigiani ci sono solo in <span class="place">Pie
+                     <br><span id="#p44_l8" class="row-number">8&nbsp; 
+                        </span>
+                     monte</span> e che muoiono di freddo e fame sulle mon
+                  <br><span id="#p44_l9" class="row-number">9&nbsp; 
+                     </span>
+                  tagne, cioè le frottole che i fascisti raccontano alle <span class="del">capi</span><br><span id="#p44_l10" class="row-number">10&nbsp; 
+                     </span><span class="add">truppe</span> per fare coraggio. Che cosa penserebbe se sapesse
+                  <br><span id="#p44_l11" class="row-number">11&nbsp; 
+                     </span>
+                  che stamane io ho ricevuto gratuitamente un paio di
+                  <br><span id="#p44_l12" class="row-number">12&nbsp; 
+                     </span>
+                  scarpe che varrà 1000 lire e che si sono comprati
+                  <br><span id="#p44_l13" class="row-number">13&nbsp; 
+                     </span>
+                  100 magnifici mantelli impermeabili? Infine disse:
+                  <br><span id="#p44_l14" class="row-number">14&nbsp; 
+                     </span>
+                  «é un guaio che se i partigiani continuano, i Tedeschi
+                  <br><span id="#p44_l15" class="row-number">15&nbsp; 
+                     </span>
+                  
+                  <sic class="sic">brucieranno</sic>
+                  <corr><span class="corr">bruceranno</span></corr> i paesi.»«E perché?» si chiese <span class="del">f</span> mo
+                  <br><span id="#p44_l16" class="row-number">16&nbsp; 
+                     </span>
+                  strandoci molto stupiti <span class="del">o Perché</span>«Non è mica giusto»
+                  <br><span id="#p44_l17" class="row-number">17&nbsp; 
+                     </span>
+                  «Perché la popolazione è favorevole a loro.»
+                  <br><span id="#p44_l18" class="row-number">18&nbsp; 
+                     </span>
+                  «Come mai?» domandammo ancora più meravigliati.
+                  <br><span id="#p44_l19" class="row-number">19&nbsp; 
+                     </span>
+                  Ci guardò e rispuose serio serio: «non lo so».
+                  <br><span id="#p44_l20" class="row-number">20&nbsp; 
+                     </span>
+                  Altre sue notizie: il maggiore e gli altri prigionieri
+                  <br><span id="#p44_l21" class="row-number">21&nbsp; 
+                     </span>
+                  sarebbero stati portati a <span class="place">Pinerolo</span> per la fucilazione.
+                  <br><span id="#p44_l22" class="row-number">22&nbsp; 
+                     </span>
+                  A <span class="place">Bobbio</span> si sono radunati 130 o 40 uomini, ma
+                  <br><span id="#p44_l23" class="row-number">23&nbsp; 
+                     </span>
+                  presto il presidio verrà diminuito.
+                  </p>
+            </div>
+         </div>
+         <div class="controlPanel">
+            <div class="divBottoni">
+               <div>
+                  <h2>Evidenzia</h2><button class="addBtn" onclick="mostraFenomeno('add', 'blue', 'ev')">AGGIUNTE</button><button class="placeBtn" onclick="mostraFenomeno('place', 'green', 'ev')">LUOGHI</button><button class="abbrBtn" onclick="mostraFenomeno('abbr', 'orange', 'ev')">ABBREVIAZIONI</button><button class="sicBtn" onclick="mostraFenomeno('sic', 'yellow', 'ev')">ERRORI</button><button class="origBtn" onclick="mostraFenomeno('orig', 'aqua', 'ev')">ORIGINALE</button></div>
+               <div>
+                  <h2>Mostra</h2><button class="delBtn" onclick="mostraFenomeno('del', 'red', 'show')">CANCELLATURE</button><button class="expanBtn" onclick="mostraFenomeno('expan', 'purple', 'show')">ESPANSIONI</button><button class="regBtn" onclick="mostraFenomeno('reg', 'deeppink', 'show')">REGOLARIZZAZIONI</button></div>
+            </div>
+            <div class="divCambioPagina"><button onclick="cambioPagina(-1)"><i class="fa-solid fa-arrow-right fa-rotate-180"></i> Pagina precedente</button><button onclick="cambioPagina(1)">Pagina successiva <i class="fa-solid fa-arrow-right"></i></button></div>
+         </div>
+      </div>
+      <div class="sezione2">
+         <h1>Sul progetto</h1>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius enim id turpis
+            ultricies pretium. Nunc a dui nisl. Etiam viverra justo urna, id maximus nunc porta
+            at. Aliquam mollis dui massa, sit amet hendrerit nunc egestas nec. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Ut rutrum ex non risus congue, ut pellentesque
+            magna dignissim. Maecenas interdum at enim in vehicula. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Aliquam libero massa, rutrum quis fermentum vitae, semper
+            ac turpis. Integer ut posuere massa. Ut mollis felis diam, quis fringilla ipsum feugiat
+            aliquam. Sed orci nulla, consequat vitae massa in, finibus molestie risus. Aliquam
+            ante dui, vestibulum vel diam fringilla, cursus feugiat nunc. Etiam ut erat ipsum.</p>
+         <h1>Bibliografia</h1>
+         <p>
+            <ul>
+               <li>Emanuele Artom, Diari: gennaio 1940 - febbraio 1944;,
+                  De Benedetti, Paula Ravenna, Eloisa,
+                  Milano,
+                  1966,
+                  Centro di documentazione ebraica contemporanea- CDEC</li>
+               <li>Diari di un partigiano ebreo. Gennaio 1940 - febbraio 1944,
+                  Schwarz, Guri,
+                  Torino,
+                  2008,
+                  Bollati Boringhieri</li>
+            </ul>
+         </p>
+      </div>
+      <footer>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius enim id turpis
+            ultricies pretium. Nunc a dui nisl. Etiam viverra justo urna, id</p>
+      </footer>
+   </body><script type="text/javascript" src="src/script.js"></script></html>

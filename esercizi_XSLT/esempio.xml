@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
+
+<TEI>
+    <teiHeader>
+        <fileDesc>
+        <!--informazioni sul file, non sulla fonte primaria (che invece sono in sourceDesc)-->
+            <titleStmt>
+            <!--Codifica del titolo dell'edizione digitale--> 
+                <title>Codifica elettronica di un manoscritto di Amalia Segre in memoria del figlio Ennio Artom</title>
+                <author ref="#EA">Segre, Amalia (1890-1972)</author>
+                <respStmt xml:id="FM">
+                    <resp>Codifica TEI a cura di</resp>
+                    <name>Fabio Melasi</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    Edizione digitale realizzata nel <date when="2023-05">maggio 2023</date>
+                </edition>
+                <principal>Fabio Melasi</principal>
+                <sponsor>Università di Pisa</sponsor>
+            </editionStmt>
+            <publicationStmt>
+            <!--Dati di diffusione e distribuzione dell'edizione-->
+                <distributor ref="#unipi">Università di Pisa</distributor>
+                <address>
+                    <addrLine>Lungarno Antonio Pacinotti 43,</addrLine>
+                    <addrLine>56126,</addrLine>
+                    <addrLine>Pisa (PI),</addrLine>
+                    <addrLine>IT</addrLine>
+                </address>
+                <availability status="free">
+                    <p>
+                        Questa edizione digitale è libera e diffusa attraverso <ref target="https://github.com/Pinghie/codifica_fm/tree/main/progetto2023">GitHub</ref>.
+                    </p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+            <!--Descrizione della fonte primaria-->
+                <msDesc>
+                    <msIdentifier>
+                        <country key="IT">Italia</country>
+                        <settlement type="city" ref="#MI">Milano</settlement>
+                        <institution ref="#CDEC"> CDEC - Centro di Documentazione Ebraica Contemporanea  </institution>
+                        <repository ref="http://digital-library.cdec.it/cdec-web/storico/detail/IT-CDEC-ST0003-000001/Fondo+Emanuele+Artom.html">Fondo Emanuele Artom</repository>
+                        <collection>Fondo Emanuele Artom</collection>
+                        <idno>busta 1, fascicolo 7</idno>
+                    </msIdentifier>
+                    <msContents>
+                        <msItem n="1">
+                            <author ref="#AA">Emanuele Artom</author>
+                            <title>Lettera di Emanuele Artom scritta a <placeName>Courmayeur</placeName> il <date>15 luglio 1937</date>;</title>
+                            <textLang mainLang="it">Italiano</textLang>
+                        </msItem>
+                        <msItem n="2">
+                            <author ref="#AA">Ennio Artom</author>
+                            <title>Copertina manoscritta di un libro di algebra con allegato compito di matematica svolto da Ennio Artom il <date>12 novembre 1934</date> conservati dalla madre Amalia</title>
+                            <textLang mainLang="it">Italiano</textLang>
+                        </msItem>
+                        <msItem n="3">
+                            <author ref="#AA">Amalia Segre</author>
+                            <title>Manoscritti scritti da Amalia Segre di rievocazione della vita e della scomparsa del figlio Ennio</title>
+                            <textLang mainLang="it">Italiano</textLang>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc material="paper">
+                                <support>Fogli di <material>carta</material>.</support>
+                                <extent>27 pagine</extent>
+                            </supportDesc>
+                        </objectDesc>
+                        <handDesc hands="2">
+                            <p>Il manoscritto contiene testi scritti da Ennio Artom e sua madre Amalia Segre.</p>
+                        </handDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc> 
+        <!-- informazioni riguardo lo schema (e il modello di codifica) utilizzato-->
+            <projectDesc>
+                <p>La codifica del testo è stata realizzata rispettando le linee guida TEI P5 come esercitazione del corso di Codifica di testi.</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+        <!--descrizione del testo: quando è stato creato, da chi, usando quali lingue etc.-->
+            <langUsage>
+                <language ident="it" usage="100">Italiano</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+
+    <facsimile>
+        <surface>
+            <graphic url='memoria_ennio.jpg' width='760.4px' height='288.4px'/>
+            <zone ulx="52" uly="31" lrx="641" lry="76" xml:id="l1" start="#lb1"/>
+            <zone ulx="49" uly="72" lrx="739" lry="108" xml:id="l2" start="#lb2"/>
+            <zone ulx="51" uly="104" lrx="725" lry="127" xml:id="l3" start="#lb3"/>
+            <zone ulx="172" uly="123" lrx="728" lry="148" xml:id="l4" start="#lb4"/>
+            <zone ulx="55" uly="139" lrx="695" lry="163" xml:id="l5" start="#lb5"/>
+            <zone ulx="96" uly="159" lrx="717" lry="178" xml:id="l6" start="#lb6"/>
+            <zone ulx="55" uly="167" lrx="720" lry="205" xml:id="l7" start="#lb7"/>
+            <zone ulx="48" uly="201" lrx="159" lry="216" xml:id="l8" start="#lb8"/>
+            <zone ulx="47" uly="213" lrx="728" lry="240" xml:id="l9" start="#lb9"/>
+            <zone ulx="52" uly="247" lrx="699" lry="281" xml:id="l10" start="#lb10"/>
+        </surface>
+    </facsimile>
+
+    <text>
+        <body>
+            <div>
+                <ab>
+                    <pb n="1"/>
+
+                    <lb n="1" facs="#l1" xml:id="lb1"/>
+                    <date>25 Aprile 1920</date> - <date>29 Luglio 1940</date> - Vent'anni:
+                    <lb n="2" facs="#l2" xml:id="lb2"/>
+                    appena il <unclear reason="illegible" cert="low">luccicare</unclear> della vita, ma breve e lumino
+                    <lb n="3" facs="#l3" xml:id="lb3" break="no" rend="double_stroke"/>
+                    so veramente, come dice il ricordo marmoreo,
+                    <lb n="4" facs="#l4" xml:id="lb4"/>
+                    <add place="above">tenne fama di <gap quantity="6" unit="chars" reason="illegible"/> che si svolgono tra casa e scuola,</add>
+                    <lb n="5" facs="#l5" xml:id="lb5"/>
+                    promessa, speranza, strazio. Concedete a chi
+                    <lb n="6" facs="#l6" xml:id="lb6"/>
+                    <add place="above">il formarsi e lo sbocciare di un anima eletta, di un'intelligenza</add>
+                    <lb n="7" facs="#l7" xml:id="lb7"/>
+                    L'ha conosciuto nella prima infanzia, di celebra
+                    <lb n="8" facs="#l8" xml:id="lb8"/>
+                    <add place="above">eccezionale:</add>
+                    <lb n="9" facs="#l9" xml:id="lb9" break="no" rend="double_stroke"/>
+                    re anche i ricordi di quei primi anni, <del rend="overstrike">di</del> felici.
+                    <lb n="10" facs="#l10" xml:id="lb10"/>
+                    <del rend="overstrike">quando si apriva giocondamente alla vita.</del>
+                </ab>
+            </div>
+        </body>
+    </text>
+</TEI>
