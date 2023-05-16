@@ -46,6 +46,7 @@
                             <button class="addBtn" onclick="mostraFenomeno('add', 'darkblue', 'ev')">AGGIUNTE</button>
                             <button class="suppliedBtn" onclick="mostraFenomeno('supplied', 'darkcyan', 'ev')">AGG. EDITORIALE</button>
                             <button class="placeBtn" onclick="mostraFenomeno('place', 'darkgreen', 'ev')">LUOGHI</button>
+                            <button class="personBtn" onclick="mostraFenomeno('person', 'mediumvioletred', 'ev')">PERSONE</button>
                             <button class="abbrBtn" onclick="mostraFenomeno('abbr', 'crimson', 'ev')">ABBREVIAZIONI</button>
                             <button class="origBtn" onclick="mostraFenomeno('orig', 'hotpink', 'ev')">ORIGINALE</button>
                         </div>
@@ -77,6 +78,7 @@
                             <button class="addBtn" onclick="mostraFenomeno('add', 'darkblue', 'ev')">AGGIUNTE</button>
                             <button class="suppliedBtn" onclick="mostraFenomeno('supplied', 'darkcyan', 'ev')">AGG. EDITORIALE</button>
                             <button class="placeBtn" onclick="mostraFenomeno('place', 'darkgreen', 'ev')">LUOGHI</button>
+                            <button class="personBtn" onclick="mostraFenomeno('person', 'mediumvioletred', 'ev')">PERSONE</button>
                             <button class="abbrBtn" onclick="mostraFenomeno('abbr', 'crimson', 'ev')">ABBREVIAZIONI</button>
                             <button class="origBtn" onclick="mostraFenomeno('orig', 'hotpink', 'ev')">ORIGINALE</button>
                         </div>
@@ -244,110 +246,123 @@
         </xsl:element>
     </xsl:template>
 
-            <!-- Correzioni -->
-        <xsl:template match="tei:choice/tei:corr">
-            <corr>
-                <xsl:element name="span">
-                    <xsl:attribute name="class">corr</xsl:attribute>
-                    <xsl:apply-templates />
-                </xsl:element>
-            </corr>
-        </xsl:template>
-
-        <!-- Abbreviazioni -->
-        <xsl:template match="tei:abbr">
+    <!-- Correzioni -->
+    <xsl:template match="tei:choice/tei:corr">
+        <corr>
             <xsl:element name="span">
-                <xsl:attribute name="class">abbr</xsl:attribute>
-                <xsl:apply-templates/>
-            </xsl:element>
-        </xsl:template>
-
-        <!-- Normalizzazioni  -->
-        <xsl:template match="tei:choice/tei:reg">
-            <reg>
-                <xsl:element name="span">
-                    <xsl:attribute name="class">reg</xsl:attribute>
-                    <xsl:apply-templates />
-                </xsl:element>
-            </reg>
-        </xsl:template>
-
-        <!-- Aggiunte -->
-        <xsl:template match="tei:add">
-                <xsl:element name="span">
-                    <xsl:attribute name="class">add</xsl:attribute>
-                    <xsl:apply-templates />
-                </xsl:element>
-        </xsl:template>
-
-        <xsl:template match="tei:sic">
-            <xsl:element name="sic">
-                    <xsl:attribute name="class">sic</xsl:attribute>
-                    <xsl:apply-templates />
-                </xsl:element>
-        </xsl:template>
-
-        <!-- Cancellazioni -->
-        <xsl:template match="tei:del">
-            <xsl:element name="span">
-                <xsl:attribute name="class">del</xsl:attribute>
+                <xsl:attribute name="class">corr</xsl:attribute>
                 <xsl:apply-templates />
             </xsl:element>
-        </xsl:template>
+        </corr>
+    </xsl:template>
 
-        <!-- Orig -->
-        <xsl:template match="tei:orig">
+    <!-- Abbreviazioni -->
+    <xsl:template match="tei:abbr">
+        <xsl:element name="span">
+            <xsl:attribute name="class">abbr</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <!-- Normalizzazioni  -->
+    <xsl:template match="tei:choice/tei:reg">
+        <reg>
             <xsl:element name="span">
-                <xsl:attribute name="class">orig</xsl:attribute>
+                <xsl:attribute name="class">reg</xsl:attribute>
                 <xsl:apply-templates />
             </xsl:element>
-        </xsl:template>
+        </reg>
+    </xsl:template>
 
-        <!-- Supplied -->
-        <xsl:template match="tei:supplied">
+    <!-- Aggiunte -->
+    <xsl:template match="tei:add">
             <xsl:element name="span">
-                <xsl:attribute name="class">supplied</xsl:attribute>
+                <xsl:attribute name="class">add</xsl:attribute>
                 <xsl:apply-templates />
             </xsl:element>
-        </xsl:template>
+    </xsl:template>
 
-        <!-- expan -->
-        <xsl:template match="tei:expan">
-            <xsl:element name="span">
-                <xsl:attribute name="class">expan</xsl:attribute>
-                <xsl:apply-templates/>
+    <!--errori-->
+    <xsl:template match="tei:sic">
+        <xsl:element name="sic">
+                <xsl:attribute name="class">sic</xsl:attribute>
+                <xsl:apply-templates />
             </xsl:element>
-        </xsl:template>
+    </xsl:template>
 
-        <!-- persName -->
-        <xsl:template match="tei:name[@type='person']">
-            <xsl:element name="span">
-                <xsl:attribute name="class">name</xsl:attribute>
-                <xsl:apply-templates/>
-            </xsl:element>
-        </xsl:template>
+    <!-- Cancellazioni -->
+    <xsl:template match="tei:del">
+        <xsl:element name="span">
+            <xsl:attribute name="class">del</xsl:attribute>
+            <xsl:apply-templates />
+        </xsl:element>
+    </xsl:template>
 
+    <!-- Orig -->
+    <xsl:template match="tei:orig">
+        <xsl:element name="span">
+            <xsl:attribute name="class">orig</xsl:attribute>
+            <xsl:apply-templates />
+        </xsl:element>
+    </xsl:template>
 
-        <!-- placeName -->
-        <xsl:template match="tei:name[@type='place']">
-            <xsl:element name="span">
-                <xsl:attribute name="class">place</xsl:attribute>
-                <xsl:apply-templates/>
-            </xsl:element>
-        </xsl:template>
+    <!-- Supplied -->
+    <xsl:template match="tei:supplied">
+        <xsl:element name="span">
+            <xsl:attribute name="class">supplied</xsl:attribute>
+            <xsl:apply-templates />
+        </xsl:element>
+    </xsl:template>
 
-        <xsl:template match="//tei:listBibl">
-        <ul>
-            <xsl:for-each select="//tei:biblStruct">
-            <li>
-                <xsl:value-of select="tei:monogr/tei:title"/>,
-                <xsl:value-of select="tei:monogr/tei:author"/>,
-                <xsl:value-of select="tei:monogr/tei:imprint/tei:pubPlace"/>,
-                <xsl:value-of select="tei:monogr/tei:imprint/tei:date"/>,
-                <xsl:value-of select="tei:monogr/tei:imprint/tei:publisher"/>
-            </li>
-            </xsl:for-each>
-        </ul>
-        </xsl:template>
+    <!-- expan -->
+    <xsl:template match="tei:expan">
+        <xsl:element name="span">
+            <xsl:attribute name="class">expan</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <!-- persName -->
+    <xsl:template match="tei:name[@type='person']">
+        <xsl:element name="span">
+            <xsl:attribute name="class">person</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <!-- placeName -->
+    <xsl:template match="tei:name[@type='place']">
+        <xsl:variable name="idPlace">
+            <xsl:value-of select="substring(./@ref,2)"/>
+        </xsl:variable>
+        <xsl:element name="span">
+            <xsl:attribute name="class">place</xsl:attribute>
+            <xsl:attribute name="onmouseover">mostraBox(this, "on")</xsl:attribute>
+            <xsl:attribute name="onmouseout">mostraBox(this, "off")</xsl:attribute>
+            <xsl:apply-templates/>
+            <span class="info_box">
+                <strong>Nome:</strong>&#160; <xsl:value-of select="//tei:place[@xml:id=$idPlace]/tei:placeName"/>,<br/>
+                <xsl:if test="//tei:place[@xml:id=$idPlace]/tei:settlement[@type='province']">
+                    <strong>Provincia:</strong>&#160; <xsl:value-of select="//tei:place[@xml:id=$idPlace]/tei:settlement[@type='province']"/>,<br/>
+                </xsl:if>
+                <strong>Regione:</strong>&#160; <xsl:value-of select="//tei:place[@xml:id=$idPlace]/tei:settlement[@type='region']"/>,<br/>
+                <strong>Paese:</strong>&#160; <xsl:value-of select="//tei:place[@xml:id=$idPlace]/tei:country"/><br/>
+            </span>
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template match="//tei:listBibl">
+    <ul>
+        <xsl:for-each select="//tei:biblStruct">
+        <li>
+            <xsl:value-of select="tei:monogr/tei:title"/>,
+            <xsl:value-of select="tei:monogr/tei:author"/>,
+            <xsl:value-of select="tei:monogr/tei:imprint/tei:pubPlace"/>,
+            <xsl:value-of select="tei:monogr/tei:imprint/tei:date"/>,
+            <xsl:value-of select="tei:monogr/tei:imprint/tei:publisher"/>
+        </li>
+        </xsl:for-each>
+    </ul>
+    </xsl:template>
 
 </xsl:stylesheet>

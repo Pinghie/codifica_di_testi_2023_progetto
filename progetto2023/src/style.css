@@ -1,8 +1,3 @@
-.evidenziato
-{
-	background-color: red;
-}
-
 html, body
 {
 	margin: 0;
@@ -79,6 +74,11 @@ body{
 
 .containerTabella td{
 	padding:10px 0 10px 10px;
+}
+
+.evidenziato
+{
+	background-color: red;
 }
 
 .sezione2
@@ -181,6 +181,19 @@ body{
 	text-align: justify;
 }
 
+.info_box
+{
+    position: absolute;
+    color: black;
+    background-color: #bdbfab;
+    display: none;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 1rem;
+    border: 3px solid #6f705e;
+    padding: 15px 30px;
+}
+
 footer
 {
 	background-color: #1e1e21;
@@ -195,15 +208,22 @@ footer p
 	font-size: 1.2rem;
 }
 
+.place
+{
+	text-decoration: underline wavy white 1px;
+}
+
 .del
 {
 	background-color: darkslategray;
+	text-decoration: line-through;
 	display: none;
 }
 
 .expan
 {
 	background-color: darkslateblue;
+	text-decoration: underline wavy white 1px;
 	display: none;
 }
 
@@ -243,6 +263,16 @@ footer p
 
 	.controlPanel button{
 	
+		font-size: 1rem;
+	}
+
+	.sezione1 > .containerTabelle
+	{
+		flex-direction: column;
+	}
+
+	.sezione1 > .containerTabelle > .containerTabella
+	{
 		font-size: 1rem;
 	}
 }

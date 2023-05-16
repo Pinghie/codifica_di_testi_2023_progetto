@@ -95,4 +95,15 @@ function evidenzia(riga, azione)
 
 }
 
+function mostraBox(spanLuogo, azione)
+{
+	box = spanLuogo.getElementsByClassName("info_box");
+	
+	if(azione == "on")
+		box[0].style.display = "inline-block";
+	else
+		box[0].style.display = "none";
+
+}
+
 window.onload = gestoreLoad()
