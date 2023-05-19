@@ -9,13 +9,13 @@
                 <title>Codifica elettronica del diario di Emanuele Artom</title>
                 <author ref="#EA">Artom, Emanuele (1915-1944)</author>
                 <respStmt xml:id="FM">
-                    <resp>Codifica TEI a cura di</resp>
+                    <resp>Codifica TEI a cura di </resp>
                     <name>Fabio Melasi</name>
                 </respStmt>
             </titleStmt>
             <editionStmt>
                 <edition>
-                    Edizione digitale realizzata nel <date when="2023-05">maggio 2023</date>
+                    Edizione digitale realizzata nel <date when="2023-05">maggio 2023</date>.
                 </edition>
                 <principal>Fabio Melasi</principal>
                 <sponsor>Università di Pisa</sponsor>
@@ -97,10 +97,9 @@
         <encodingDesc> 
         <!-- informazioni riguardo lo schema (e il modello di codifica) utilizzato-->
             <projectDesc>
-                <p>La codifica del testo è stata realizzata rispettando le linee guida TEI P5 come progetto d'esame del corso di Codifica dei Testi dell'<name type="org" ref="#unipi">Università di Pisa.</name></p>
+                <p>La codifica del testo è stata realizzata rispettando le linee guida TEI P5 come progetto d'esame del corso di Codifica di Testi dell'<name type="org" ref="#unipi">Università di Pisa.</name></p>
             </projectDesc>
             <editorialDecl> 
-            <!--DA CONTROLLARE VERSO LA FINE-->
                 <correction status="high" method="markup"> 
                     <p>Per la correzione di errori sono stati usati i tag <gi>sic</gi> e <gi>corr</gi>.</p>
                     <p>Sono stati corretti i seguenti errori:
@@ -229,7 +228,7 @@
                 <pb n="1" facs="#p42" xml:id="pb42"/>
                 <opener>
                     <dateline facs="#p42_date" xml:id="p42_dateLine">
-                        <date when="1943-12-08">8 dic</date>
+                        <date when="1943-12-08">8 <choice><abbr type="suspension">dic</abbr><expan resp="#FM" cert="high">embre</expan></choice> <supplied reason="omitted-in-original" cert="high" resp="#FM">1943</supplied></date>
                     </dateline>
                 </opener>
                 <ab n="1">
@@ -389,10 +388,10 @@
                     <person xml:id="AA">
 						<persName>
 					        <ref xml:lang="it" target="http://digital-library.cdec.it/cdec-web/persone/detail/person-it-cdec-eaccpf0001-017448/segre-amalia.html"/>
-							<forename> Amalia </forename>
-							<surname> Segre </surname>
+							<forename>Amalia</forename>
+							<surname>Segre</surname>
 						</persName>
-						<sex value="F"> female </sex>
+						<sex value="F">femmina</sex>
 						<birth>
 							<date when="1890">1890</date>
 							<placeName ref="#AO">
@@ -414,10 +413,10 @@
                     <person xml:id="EA">
 						<persName>
 					        <ref xml:lang="it" target="http://digital-library.cdec.it/cdec-web/persone/detail/person-it-cdec-eaccpf0001-000015/artom-emanuele.html"/>
-							<forename> Emanuele </forename>
-							<surname> Artom </surname>
+							<forename>Emanuele</forename>
+							<surname>Artom</surname>
 						</persName>
-						<sex value="M"> male </sex>
+						<sex value="M">maschio</sex>
 						<birth>
 							<date when="1915-06-23">23 giugno 1915</date>
 							<placeName ref="#AO">
@@ -439,10 +438,10 @@
                     <person xml:id="M">
 						<persName>
                             <ref xml:lang="it" target="#DeBenedetti-Ravenna"/>
-							<forename> Maria Teresa </forename>
-							<surname> Bertolini </surname>
+							<forename>Maria Teresa</forename>
+							<surname>Bertolini</surname>
 						</persName>
-						<sex value="F"> female </sex>
+						<sex value="F">femmina</sex>
 						<birth>
 							<date when="1927">1927</date>
 						</birth>
@@ -454,19 +453,21 @@
                     <person xml:id="B1">
 						<persName>
                             <ref xml:lang="it" target="#DeBenedetti-Ravenna"/>
-                            <forename> Felice </forename>
-							<surname> Burdino </surname>
+                            <forename>Felice</forename>
+							<surname>Burdino</surname>
                             <addName type="nick">Balestrieri</addName>
                         </persName>
+                        <sex value="M">maschio</sex>
 					</person>
 
                     <person xml:id="B2">
 						<persName>
                             <ref xml:lang="it" target="#DeBenedetti-Ravenna"/>
-                            <forename> Eraldo </forename>
-							<surname> Burdino </surname>
+                            <forename>Eraldo</forename>
+							<surname>Burdino</surname>
                             <addName type="nick">Balestrieri</addName>
                         </persName>
+                        <sex value="M">maschio</sex>
 					</person>
 
                 </listPerson>
@@ -538,6 +539,7 @@
                 </listBibl>
 
                 <listOrg>
+                    <head>Elenco organizzazioni</head>
                     <org xml:id="CDEC">
                         <orgName ref="https://www.cdec.it/">Fondazione Centro di Documentazione Ebraica Contemporanea</orgName>
                         <desc>La Fondazione CDEC è il principale centro di ricerca e documentazione sulla storia degli ebrei in Italia. Con oltre sessant’anni di attività alle spalle, è riconosciuta dalla comunità degli storici e degli studiosi come il maggiore ente in Italia di documentazione sulla Shoah ed è un polo di riferimento per la ricerca storica di settore.</desc>

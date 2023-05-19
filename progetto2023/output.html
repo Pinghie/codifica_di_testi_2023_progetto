@@ -4,12 +4,12 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1"><script src="https://kit.fontawesome.com/2fd670a4d1.js" crossorigin="anonymous"></script><link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="stylesheet" type="text/css" href="src/style.css">
-      <title>Codifica elettronica dei diari di Emanuele Artom</title>
+      <title>Progetto d'esame di Codifica di Testi, di Fabio Melasi</title>
    </head>
    <body>
       <div class="header">
-         <h1>Diari di Emanuele Artom</h1>
-         <h2>Codifica elettronica delle pagine 42-44</h2>
+         <h2>Codifica elettronica del diario di Emanuele Artom</h2>
+         <h3>Codifica TEI a cura di Fabio Melasi</h3>
       </div>
       <div class="sezione1">
          <h1>Informazioni sulla fonte</h1>
@@ -131,15 +131,17 @@
          <div class="controlPanel">
             <div class="divBottoni">
                <div>
-                  <h2>Evidenzia</h2><button class="addBtn" onclick="mostraFenomeno('add', 'darkblue', 'ev')">AGGIUNTE</button><button class="suppliedBtn" onclick="mostraFenomeno('supplied', 'darkcyan', 'ev')">AGG. EDITORIALE</button><button class="placeBtn" onclick="mostraFenomeno('place', 'darkgreen', 'ev')">LUOGHI</button><button class="personBtn" onclick="mostraFenomeno('person', 'mediumvioletred', 'ev')">PERSONE</button><button class="abbrBtn" onclick="mostraFenomeno('abbr', 'crimson', 'ev')">ABBREVIAZIONI</button><button class="origBtn" onclick="mostraFenomeno('orig', 'hotpink', 'ev')">ORIGINALE</button></div>
+                  <h2>Evidenzia</h2><button class="addBtn" onclick="mostraFenomeno('add', 'darkblue', 'ev')">AGGIUNTE</button><button class="corrBtn" onclick="mostraFenomeno('corr', 'goldenrod', 'ev')">CORREZIONE</button><button class="placeBtn" onclick="mostraFenomeno('place', 'darkgreen', 'ev')">LUOGHI</button><button class="personBtn" onclick="mostraFenomeno('person', 'mediumvioletred', 'ev')">PERSONE</button><button class="abbrBtn" onclick="mostraFenomeno('abbr', 'crimson', 'ev')">ABBREVIAZIONI</button><button class="origBtn" onclick="mostraFenomeno('orig', 'hotpink', 'ev')">ORIGINALE</button></div>
                <div>
-                  <h2>Mostra</h2><button class="sicBtn" onclick="mostraFenomeno('sic', 'firebrick', 'show')">ERRORI</button><button class="delBtn" onclick="mostraFenomeno('del', 'darkslategray', 'show')">CANCELLATURE</button><button class="expanBtn" onclick="mostraFenomeno('expan', 'darkslateblue', 'show')">ESPANSIONI</button><button class="regBtn" onclick="mostraFenomeno('reg', 'darkorange', 'show')">REGOLARIZZAZIONI</button></div>
+                  <h2>Mostra</h2><button class="suppliedBtn" onclick="mostraFenomeno('supplied', 'darkcyan', 'show')">AGG. EDITORIALE</button><button class="sicBtn" onclick="mostraFenomeno('sic', 'firebrick', 'show')">ERRORI</button><button class="delBtn" onclick="mostraFenomeno('del', 'darkslategray', 'show')">CANCELLATURE</button><button class="expanBtn" onclick="mostraFenomeno('expan', 'darkslateblue', 'show')">ESPANSIONI</button><button class="regBtn" onclick="mostraFenomeno('reg', 'darkorange', 'show')">REGOLARIZZAZIONI</button></div>
             </div>
             <div class="divCambioPagina"><button onclick="cambioPagina(-1)"><i class="fa-solid fa-arrow-right fa-rotate-180"></i> Pagina precedente</button><button onclick="cambioPagina(1)">Pagina successiva <i class="fa-solid fa-arrow-right"></i></button></div>
          </div>
          <h2 id="indicatorePagina">Pagina X</h2>
          <div class="page"><img src="img/pag42.jpg" usemap="#p42"><map name="p42"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_date" coords="314,56,374,88"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l1" coords="66,82,527,115"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l2" coords="67,116,519,150"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l3" coords="67,154,495,180"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l4" coords="67,181,513,210"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l5" coords="67,212,500,238"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l6" coords="68,242,497,273"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l7" coords="67,275,501,305"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l8" coords="67,308,531,335"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l9" coords="67,334,510,366"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l10" coords="67,367,519,395"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l11" coords="67,398,519,430"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l12" coords="64,431,531,462"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l13" coords="67,462,523,488"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l14" coords="67,490,544,526"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l15" coords="65,527,525,553"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l16" coords="68,556,535,585"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l17" coords="67,590,544,616"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l18" coords="67,618,549,647"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l19" coords="67,649,512,683"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l20" coords="70,686,525,707"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l21" coords="66,710,535,739"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l22" coords="67,742,517,765"><area onmouseout="evidenzia(this, &#34;off&#34;)" onmouseover="evidenzia(this, &#34;on&#34;)" id="p42_l23" coords="67,766,531,793"></map><div class="trascrizione">
-               <p>
+               <p><span id="#p42_date">
+                     8 <span class="abbr">dic</span><span class="expan">embre</span> <span class="supplied">1943</span>
+                     </span>
                   <br><span id="#p42_l1" class="nRiga">1&nbsp;
                      </span>
                   Ieri, anniversario del<span class="del">lo</span> primo mese del mio
@@ -393,23 +395,84 @@
             <div class="divCambioPagina"><button onclick="cambioPagina(-1)"><i class="fa-solid fa-arrow-right fa-rotate-180"></i> Pagina precedente</button><button onclick="cambioPagina(1)">Pagina successiva <i class="fa-solid fa-arrow-right"></i></button></div>
             <div class="divBottoni">
                <div>
-                  <h2>Evidenzia</h2><button class="addBtn" onclick="mostraFenomeno('add', 'darkblue', 'ev')">AGGIUNTE</button><button class="suppliedBtn" onclick="mostraFenomeno('supplied', 'darkcyan', 'ev')">AGG. EDITORIALE</button><button class="placeBtn" onclick="mostraFenomeno('place', 'darkgreen', 'ev')">LUOGHI</button><button class="personBtn" onclick="mostraFenomeno('person', 'mediumvioletred', 'ev')">PERSONE</button><button class="abbrBtn" onclick="mostraFenomeno('abbr', 'crimson', 'ev')">ABBREVIAZIONI</button><button class="origBtn" onclick="mostraFenomeno('orig', 'hotpink', 'ev')">ORIGINALE</button></div>
+                  <h2>Evidenzia</h2><button class="addBtn" onclick="mostraFenomeno('add', 'darkblue', 'ev')">AGGIUNTE</button><button class="corrBtn" onclick="mostraFenomeno('corr', 'goldenrod', 'ev')">CORREZIONE</button><button class="placeBtn" onclick="mostraFenomeno('place', 'darkgreen', 'ev')">LUOGHI</button><button class="personBtn" onclick="mostraFenomeno('person', 'mediumvioletred', 'ev')">PERSONE</button><button class="abbrBtn" onclick="mostraFenomeno('abbr', 'crimson', 'ev')">ABBREVIAZIONI</button><button class="origBtn" onclick="mostraFenomeno('orig', 'hotpink', 'ev')">ORIGINALE</button></div>
                <div>
-                  <h2>Mostra</h2><button class="sicBtn" onclick="mostraFenomeno('sic', 'firebrick', 'show')">ERRORI</button><button class="delBtn" onclick="mostraFenomeno('del', 'darkslategray', 'show')">CANCELLATURE</button><button class="expanBtn" onclick="mostraFenomeno('expan', 'darkslateblue', 'show')">ESPANSIONI</button><button class="regBtn" onclick="mostraFenomeno('reg', 'darkorange', 'show')">REGOLARIZZAZIONI</button></div>
+                  <h2>Mostra</h2><button class="suppliedBtn" onclick="mostraFenomeno('supplied', 'darkcyan', 'show')">AGG. EDITORIALE</button><button class="sicBtn" onclick="mostraFenomeno('sic', 'firebrick', 'show')">ERRORI</button><button class="delBtn" onclick="mostraFenomeno('del', 'darkslategray', 'show')">CANCELLATURE</button><button class="expanBtn" onclick="mostraFenomeno('expan', 'darkslateblue', 'show')">ESPANSIONI</button><button class="regBtn" onclick="mostraFenomeno('reg', 'darkorange', 'show')">REGOLARIZZAZIONI</button></div>
+            </div>
+         </div>
+         <div class="containerFooter"><button id="bottonePannello" onclick="mostraListe()">Visualizza persone e organizzazioni</button><div id="containerListe">
+               <div class="containerLista">
+                  <h2>Elenco persone</h2>
+                  <ul>
+                     <li>
+                        					        
+                        							Amalia
+                        							Segre
+                        						
+                        (F)<br>1890 - 9 ottobre 1972<br></li>
+                  </ul>
+                  <ul>
+                     <li>
+                        					        
+                        							Emanuele
+                        							Artom
+                        						
+                        (M)<br>23 giugno 1915 - 7 aprile 1944<br></li>
+                  </ul>
+                  <ul>
+                     <li>
+                        
+                        							Maria Teresa
+                        							Bertolini
+                        						
+                        (F)<br>1927 - 2007<br></li>
+                  </ul>
+                  <ul>
+                     <li>
+                        
+                        Felice
+                        							Burdino
+                        Balestrieri
+                        
+                        (M)<br></li>
+                  </ul>
+                  <ul>
+                     <li>
+                        
+                        Eraldo
+                        							Burdino
+                        Balestrieri
+                        
+                        (M)<br></li>
+                  </ul>
+               </div>
+               <div class="containerLista">
+                  <h2>Elenco organizzazioni</h2>
+                  <ul>
+                     <li>Fondazione Centro di Documentazione Ebraica Contemporanea<br>La Fondazione CDEC è il principale centro di ricerca e documentazione sulla storia
+                        degli ebrei in Italia. Con oltre sessant’anni di attività alle spalle, è riconosciuta
+                        dalla comunità degli storici e degli studiosi come il maggiore ente in Italia di documentazione
+                        sulla Shoah ed è un polo di riferimento per la ricerca storica di settore.</li>
+                  </ul>
+                  <ul>
+                     <li>Università di Pisa<br>L'Università di Pisa, istituita ufficialmente nel 1343, è una delle più antiche e
+                        prestigiose università in Italia e in Europa.</li>
+                  </ul>
+                  <ul>
+                     <li>Schutzstaffel<br>Organizzazione paramilitare del Partito Nazionalsocialista Tedesco.</li>
+                  </ul>
+               </div>
             </div>
          </div>
       </div>
       <div class="sezione2">
          <h1>Sul progetto</h1>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius enim id turpis
-            ultricies pretium. Nunc a dui nisl. Etiam viverra justo urna, id maximus nunc porta
-            at. Aliquam mollis dui massa, sit amet hendrerit nunc egestas nec. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Ut rutrum ex non risus congue, ut pellentesque
-            magna dignissim. Maecenas interdum at enim in vehicula. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Aliquam libero massa, rutrum quis fermentum vitae, semper
-            ac turpis. Integer ut posuere massa. Ut mollis felis diam, quis fringilla ipsum feugiat
-            aliquam. Sed orci nulla, consequat vitae massa in, finibus molestie risus. Aliquam
-            ante dui, vestibulum vel diam fringilla, cursus feugiat nunc. Etiam ut erat ipsum.</p>
+         <p>
+            Edizione digitale realizzata nel maggio 2023.
+            
+            Questa edizione digitale è libera e diffusa attraverso GitHub.
+            La codifica del testo è stata realizzata rispettando le linee guida TEI P5 come progetto
+            d'esame del corso di Codifica di Testi dell'Università di Pisa.</p>
          <h1>Bibliografia</h1>
          <p>
             <ul>
@@ -417,17 +480,20 @@
                   De Benedetti, Paula Ravenna, Eloisa,
                   Milano,
                   1966,
-                  Centro di documentazione ebraica contemporanea- CDEC</li>
+                  Centro di documentazione ebraica contemporanea- CDEC;
+                  </li>
                <li>Diari di un partigiano ebreo. Gennaio 1940 - febbraio 1944,
                   Schwarz, Guri,
                   Torino,
                   2008,
-                  Bollati Boringhieri</li>
+                  Bollati Boringhieri;
+                  </li>
             </ul>
          </p>
       </div>
       <footer>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius enim id turpis
-            ultricies pretium. Nunc a dui nisl. Etiam viverra justo urna, id</p>
+         <p>Pagina web realizzata usando la trasformazione XSLT della codifica XML TEI delle pagine
+            42-44 del diario di Emanuele Artom.</p>
+         <p>Vedi su <a target="_blank" href="https://github.com/Pinghie/codifica_fm/tree/main/progetto2023">GitHub</a>.</p><br><p>di Fabio Melasi, maggio 2023</p>
       </footer>
    </body><script type="text/javascript" src="src/script.js"></script></html>

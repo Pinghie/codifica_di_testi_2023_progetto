@@ -13,7 +13,7 @@ function gestoreLoad()
 	else
 		arrayPagine[0].style.display = "block";
 
-	indicatorePagina.innerHTML = "Pagina " + parseInt(pag+1);
+	indicatorePagina.innerHTML = "Pagina " + parseInt(pag+42);
 }
 
 function cambioPagina(dir)
@@ -26,7 +26,7 @@ function cambioPagina(dir)
 	else if(pag == -1)
 		pag = 2;
 
-	indicatorePagina.innerHTML = "Pagina " + parseInt(pag+1);
+	indicatorePagina.innerHTML = "Pagina " + parseInt(pag+42);
 	if(window.innerWidth > 1100)
 		arrayPagine[pag].style.display = "flex";
 	else
@@ -104,6 +104,17 @@ function mostraBox(spanLuogo, azione)
 	else
 		box[0].style.display = "none";
 
+}
+
+function mostraListe()
+{
+	var bottone = document.getElementById("bottonePannello");
+	var content = bottone.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = (100+content.scrollHeight) + "px";
+    }
 }
 
 window.onload = gestoreLoad()

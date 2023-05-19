@@ -13,98 +13,121 @@
                 <script src="https://kit.fontawesome.com/2fd670a4d1.js" crossorigin="anonymous"></script>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="stylesheet" type="text/css" href="src/style.css"/>
-                <title>Codifica elettronica dei diari di Emanuele Artom</title>
+                <title>Progetto d'esame di Codifica di Testi, di Fabio Melasi</title>
             </head>
 
             <body>
 
-            <div class="header">
-                <h1>Diari di Emanuele Artom</h1>
-                <h2>Codifica elettronica delle pagine 42-44</h2>
-            </div>
-
-            <div class="sezione1">
-                <h1>Informazioni sulla fonte</h1>
-                <div class="containerTabelle">
-                    <div class="containerTabella">
-                        <h2>Descrizione bibliografica</h2>
-                        <xsl:apply-templates select="//tei:msContents"/>
-                    </div>
-                    <div class="containerTabella">
-                        <h2>Descrizione fisica</h2>
-                        <xsl:apply-templates select="//tei:physDesc"/>
-                    </div>
+                <div class="header">
+                    <h2><xsl:value-of select="tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title"/></h2>
+                    <h3><xsl:value-of select="tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:respStmt"/></h3>
                 </div>
-            </div>
 
-            <div class="container">
-
-                <div class="controlPanel">
-                    <div class="divBottoni">
-                        <div>
-                            <h2>Evidenzia</h2>
-                            <button class="addBtn" onclick="mostraFenomeno('add', 'darkblue', 'ev')">AGGIUNTE</button>
-                            <button class="suppliedBtn" onclick="mostraFenomeno('supplied', 'darkcyan', 'ev')">AGG. EDITORIALE</button>
-                            <button class="placeBtn" onclick="mostraFenomeno('place', 'darkgreen', 'ev')">LUOGHI</button>
-                            <button class="personBtn" onclick="mostraFenomeno('person', 'mediumvioletred', 'ev')">PERSONE</button>
-                            <button class="abbrBtn" onclick="mostraFenomeno('abbr', 'crimson', 'ev')">ABBREVIAZIONI</button>
-                            <button class="origBtn" onclick="mostraFenomeno('orig', 'hotpink', 'ev')">ORIGINALE</button>
+                <div class="sezione1">
+                    <h1>Informazioni sulla fonte</h1>
+                    <div class="containerTabelle">
+                        <div class="containerTabella">
+                            <h2>Descrizione bibliografica</h2>
+                            <xsl:apply-templates select="//tei:msContents"/>
                         </div>
-                        <div>
-                            <h2>Mostra</h2>
-                            <button class="sicBtn" onclick="mostraFenomeno('sic', 'firebrick', 'show')">ERRORI</button>
-                            <button class="delBtn" onclick="mostraFenomeno('del', 'darkslategray', 'show')">CANCELLATURE</button>
-                            <button class="expanBtn" onclick="mostraFenomeno('expan', 'darkslateblue', 'show')">ESPANSIONI</button>
-                            <button class="regBtn" onclick="mostraFenomeno('reg', 'darkorange', 'show')">REGOLARIZZAZIONI</button>
+                        <div class="containerTabella">
+                            <h2>Descrizione fisica</h2>
+                            <xsl:apply-templates select="//tei:physDesc"/>
                         </div>
-                    </div>
-                    <div class="divCambioPagina">
-                        <button onclick="cambioPagina(-1)"><i class="fa-solid fa-arrow-right fa-rotate-180"></i> Pagina precedente</button>
-                        <button onclick="cambioPagina(1)">Pagina successiva <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
 
-                <h2 id="indicatorePagina">Pagina X</h2>
-                <xsl:apply-templates select="//tei:facsimile"/>
+                <div class="container">
 
-                <div class="controlPanel">
-                    <div class="divCambioPagina">
-                        <button onclick="cambioPagina(-1)"><i class="fa-solid fa-arrow-right fa-rotate-180"></i> Pagina precedente</button>
-                        <button onclick="cambioPagina(1)">Pagina successiva <i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
-                    <div class="divBottoni">
-                        <div>
-                            <h2>Evidenzia</h2>
-                            <button class="addBtn" onclick="mostraFenomeno('add', 'darkblue', 'ev')">AGGIUNTE</button>
-                            <button class="suppliedBtn" onclick="mostraFenomeno('supplied', 'darkcyan', 'ev')">AGG. EDITORIALE</button>
-                            <button class="placeBtn" onclick="mostraFenomeno('place', 'darkgreen', 'ev')">LUOGHI</button>
-                            <button class="personBtn" onclick="mostraFenomeno('person', 'mediumvioletred', 'ev')">PERSONE</button>
-                            <button class="abbrBtn" onclick="mostraFenomeno('abbr', 'crimson', 'ev')">ABBREVIAZIONI</button>
-                            <button class="origBtn" onclick="mostraFenomeno('orig', 'hotpink', 'ev')">ORIGINALE</button>
+                    <div class="controlPanel">
+                        <div class="divBottoni">
+                            <div>
+                                <h2>Evidenzia</h2>
+                                <button class="addBtn" onclick="mostraFenomeno('add', 'darkblue', 'ev')">AGGIUNTE</button>
+                                <button class="corrBtn" onclick="mostraFenomeno('corr', 'goldenrod', 'ev')">CORREZIONE</button>
+                                <button class="placeBtn" onclick="mostraFenomeno('place', 'darkgreen', 'ev')">LUOGHI</button>
+                                <button class="personBtn" onclick="mostraFenomeno('person', 'mediumvioletred', 'ev')">PERSONE</button>
+                                <button class="abbrBtn" onclick="mostraFenomeno('abbr', 'crimson', 'ev')">ABBREVIAZIONI</button>
+                                <button class="origBtn" onclick="mostraFenomeno('orig', 'hotpink', 'ev')">ORIGINALE</button>
+                            </div>
+                            <div>
+                                <h2>Mostra</h2>
+                                <button class="suppliedBtn" onclick="mostraFenomeno('supplied', 'darkcyan', 'show')">AGG. EDITORIALE</button>
+                                <button class="sicBtn" onclick="mostraFenomeno('sic', 'firebrick', 'show')">ERRORI</button>
+                                <button class="delBtn" onclick="mostraFenomeno('del', 'darkslategray', 'show')">CANCELLATURE</button>
+                                <button class="expanBtn" onclick="mostraFenomeno('expan', 'darkslateblue', 'show')">ESPANSIONI</button>
+                                <button class="regBtn" onclick="mostraFenomeno('reg', 'darkorange', 'show')">REGOLARIZZAZIONI</button>
+                            </div>
                         </div>
-                        <div>
-                            <h2>Mostra</h2>
-                            <button class="sicBtn" onclick="mostraFenomeno('sic', 'firebrick', 'show')">ERRORI</button>
-                            <button class="delBtn" onclick="mostraFenomeno('del', 'darkslategray', 'show')">CANCELLATURE</button>
-                            <button class="expanBtn" onclick="mostraFenomeno('expan', 'darkslateblue', 'show')">ESPANSIONI</button>
-                            <button class="regBtn" onclick="mostraFenomeno('reg', 'darkorange', 'show')">REGOLARIZZAZIONI</button>
+                        <div class="divCambioPagina">
+                            <button onclick="cambioPagina(-1)"><i class="fa-solid fa-arrow-right fa-rotate-180"></i> Pagina precedente</button>
+                            <button onclick="cambioPagina(1)">Pagina successiva <i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                     </div>
+
+                    <h2 id="indicatorePagina">Pagina X</h2>
+                    <xsl:apply-templates select="//tei:facsimile"/>
+
+                    <div class="controlPanel">
+                        <div class="divCambioPagina">
+                            <button onclick="cambioPagina(-1)"><i class="fa-solid fa-arrow-right fa-rotate-180"></i> Pagina precedente</button>
+                            <button onclick="cambioPagina(1)">Pagina successiva <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <div class="divBottoni">
+                            <div>
+                                <h2>Evidenzia</h2>
+                                <button class="addBtn" onclick="mostraFenomeno('add', 'darkblue', 'ev')">AGGIUNTE</button>
+                                <button class="corrBtn" onclick="mostraFenomeno('corr', 'goldenrod', 'ev')">CORREZIONE</button>
+                                <button class="placeBtn" onclick="mostraFenomeno('place', 'darkgreen', 'ev')">LUOGHI</button>
+                                <button class="personBtn" onclick="mostraFenomeno('person', 'mediumvioletred', 'ev')">PERSONE</button>
+                                <button class="abbrBtn" onclick="mostraFenomeno('abbr', 'crimson', 'ev')">ABBREVIAZIONI</button>
+                                <button class="origBtn" onclick="mostraFenomeno('orig', 'hotpink', 'ev')">ORIGINALE</button>
+                            </div>
+                            <div>
+                                <h2>Mostra</h2>
+                                <button class="suppliedBtn" onclick="mostraFenomeno('supplied', 'darkcyan', 'show')">AGG. EDITORIALE</button>
+                                <button class="sicBtn" onclick="mostraFenomeno('sic', 'firebrick', 'show')">ERRORI</button>
+                                <button class="delBtn" onclick="mostraFenomeno('del', 'darkslategray', 'show')">CANCELLATURE</button>
+                                <button class="expanBtn" onclick="mostraFenomeno('expan', 'darkslateblue', 'show')">ESPANSIONI</button>
+                                <button class="regBtn" onclick="mostraFenomeno('reg', 'darkorange', 'show')">REGOLARIZZAZIONI</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="containerFooter">
+                        <button id="bottonePannello" onclick="mostraListe()">Visualizza persone e organizzazioni</button>
+                        <div id="containerListe">
+                            <div class="containerLista">
+                                <xsl:apply-templates select="//tei:listPerson"/>
+                            </div>
+                            <div class="containerLista">
+                                <xsl:apply-templates select="//tei:listOrg"/>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-	        </div>
 
-            <div class="sezione2">
-                <h1>Sul progetto</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius enim id turpis ultricies pretium. Nunc a dui nisl. Etiam viverra justo urna, id maximus nunc porta at. Aliquam mollis dui massa, sit amet hendrerit nunc egestas nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum ex non risus congue, ut pellentesque magna dignissim. Maecenas interdum at enim in vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam libero massa, rutrum quis fermentum vitae, semper ac turpis. Integer ut posuere massa. Ut mollis felis diam, quis fringilla ipsum feugiat aliquam. Sed orci nulla, consequat vitae massa in, finibus molestie risus. Aliquam ante dui, vestibulum vel diam fringilla, cursus feugiat nunc. Etiam ut erat ipsum.</p>
-                <h1>Bibliografia</h1>
-                <p>
-                    <xsl:apply-templates select="//tei:listBibl"/>
-                </p>
-            </div>
+                <div class="sezione2">
+                    <h1>Sul progetto</h1>
+                    <p>
+                        <xsl:value-of select="tei:TEI/tei:teiHeader/tei:fileDesc/tei:editionStmt/tei:edition"/>
+                        <xsl:value-of select="tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:availability"/>
+                        <xsl:value-of select="tei:TEI/tei:teiHeader/tei:encodingDesc/tei:projectDesc"/>
+                    </p>
+                    
+                    <h1>Bibliografia</h1>
+                    <p>
+                        <xsl:apply-templates select="//tei:listBibl"/>
+                    </p>
+                </div>
 
-            <footer>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius enim id turpis ultricies pretium. Nunc a dui nisl. Etiam viverra justo urna, id</p>
-            </footer>
+                <footer>
+                    <p>Pagina web realizzata usando la trasformazione XSLT della codifica XML TEI delle pagine 42-44 del diario di Emanuele Artom.</p>
+                    <p>Vedi su <a target="_blank" href="https://github.com/Pinghie/codifica_fm/tree/main/progetto2023">GitHub</a>.</p>
+                    <br/>
+                    <p>di Fabio Melasi, maggio 2023</p>
+                </footer>
             
             </body>
             <script type="text/javascript" src="src/script.js"></script>
@@ -112,11 +135,11 @@
 
     </xsl:template>
 
-    <xsl:template match="//tei:msContents">
+    <xsl:template match="tei:msContents">
         <table>
             <tr>
                 <td><strong>In breve</strong></td>
-                <td><span><xsl:value-of select="//tei:msContents/tei:summary"/></span></td>
+                <td><span><xsl:value-of select="tei:summary"/></span></td>
             </tr>
             <tr>
                 <td><span><strong>Identificazione</strong></span></td>
@@ -141,7 +164,7 @@
                     </table>
                 </td>
             </tr>
-            <xsl:for-each select="//tei:msContents/tei:msItem">
+            <xsl:for-each select="tei:msItem">
                 <tr>
                     <td><strong>Item <span><xsl:value-of select="@n"/></span></strong></td>
                     <td>
@@ -165,40 +188,40 @@
         </table>
     </xsl:template>
 
-    <xsl:template match="//tei:physDesc">
+    <xsl:template match="tei:physDesc">
         <table>
             <tr>
                 <td><span><strong>Supporto</strong></span></td>
-                <td><span><xsl:value-of select="//tei:support"/></span></td>
+                <td><span><xsl:value-of select="tei:objectDesc/tei:supportDesc/tei:support"/></span></td>
             </tr>
             <tr>
                 <td><span><strong>Quantità</strong></span></td>
-                <td><xsl:value-of select="//tei:extent"/>. </td>
+                <td><xsl:value-of select="tei:objectDesc/tei:supportDesc/tei:extent"/>. </td>
             </tr>
             <tr>
                 <td><span><strong>Organizzazione</strong></span></td>
-                <td><xsl:value-of select="//tei:collation"/></td>
+                <td><xsl:value-of select="tei:objectDesc/tei:supportDesc/tei:collation"/></td>
             </tr>
             <tr>
                 <td><span><strong>Condizioni</strong></span></td>
-                <td><span><xsl:value-of select="//tei:condition"/></span></td>
+                <td><span><xsl:value-of select="tei:objectDesc/tei:supportDesc/tei:condition"/></span></td>
             </tr>
             <tr>
                 <td><span><strong>Impaginazione</strong></span></td>
-                <td><span><xsl:value-of select="//tei:layoutDesc/tei:p"/></span></td>
+                <td><span><xsl:value-of select="tei:objectDesc/tei:layoutDesc"/></span></td>
             </tr>
             <tr>
                 <td><span><strong>Mani</strong></span></td>
-                <td><span><xsl:value-of select="//tei:handDesc/tei:p"/></span></td>
+                <td><span><xsl:value-of select="tei:handDesc"/></span></td>
             </tr>
             <tr>
                 <td><span><strong>Storia</strong></span></td>
-                <td><span><xsl:value-of select="//tei:history/tei:p"/></span></td>
+                <td><span><xsl:value-of select="//tei:history"/></span></td>
             </tr>
         </table>
     </xsl:template>
 
-    <xsl:template match="//tei:facsimile">
+    <xsl:template match="tei:facsimile">
         <xsl:for-each select="//tei:surface">
             <div class="page">
                 <xsl:element name="img">
@@ -223,6 +246,7 @@
                         <xsl:variable name="myVar" >
                             <xsl:value-of select="position()"/>
                         </xsl:variable>
+
                         <xsl:apply-templates select="//tei:ab[@n=$myVar]"/>
 
                     </p>
@@ -231,7 +255,19 @@
         </xsl:for-each>
     </xsl:template>
 
-    <xsl:template match="//tei:lb">
+    <xsl:template match="tei:ab">
+        <xsl:if test="./preceding-sibling::*[ 1]/tei:dateline">
+            <xsl:element name="span">
+                <xsl:attribute name="id">
+                    <xsl:value-of select="./preceding-sibling::*[ 1]/tei:dateline/@facs"/>
+                </xsl:attribute>
+                <xsl:apply-templates select="./preceding-sibling::*[ 1]/tei:dateline"/>
+            </xsl:element>
+        </xsl:if>
+        <xsl:apply-templates/>
+    </xsl:template>
+
+    <xsl:template match="tei:lb">
         <xsl:if test="@rend = 'double_stroke'">
             =
         </xsl:if>
@@ -246,8 +282,8 @@
         </xsl:element>
     </xsl:template>
 
-    <!-- Correzioni -->
-    <xsl:template match="tei:choice/tei:corr">
+    <!-- correzione -->
+    <xsl:template match="tei:corr">
         <corr>
             <xsl:element name="span">
                 <xsl:attribute name="class">corr</xsl:attribute>
@@ -256,7 +292,7 @@
         </corr>
     </xsl:template>
 
-    <!-- Abbreviazioni -->
+    <!-- abbreviazione -->
     <xsl:template match="tei:abbr">
         <xsl:element name="span">
             <xsl:attribute name="class">abbr</xsl:attribute>
@@ -264,8 +300,8 @@
         </xsl:element>
     </xsl:template>
 
-    <!-- Normalizzazioni  -->
-    <xsl:template match="tei:choice/tei:reg">
+    <!-- regolarizzazione  -->
+    <xsl:template match="tei:reg">
         <reg>
             <xsl:element name="span">
                 <xsl:attribute name="class">reg</xsl:attribute>
@@ -274,7 +310,7 @@
         </reg>
     </xsl:template>
 
-    <!-- Aggiunte -->
+    <!-- aggiunta -->
     <xsl:template match="tei:add">
             <xsl:element name="span">
                 <xsl:attribute name="class">add</xsl:attribute>
@@ -290,7 +326,7 @@
             </xsl:element>
     </xsl:template>
 
-    <!-- Cancellazioni -->
+    <!-- cancellature -->
     <xsl:template match="tei:del">
         <xsl:element name="span">
             <xsl:attribute name="class">del</xsl:attribute>
@@ -298,7 +334,7 @@
         </xsl:element>
     </xsl:template>
 
-    <!-- Orig -->
+    <!-- originale -->
     <xsl:template match="tei:orig">
         <xsl:element name="span">
             <xsl:attribute name="class">orig</xsl:attribute>
@@ -306,7 +342,7 @@
         </xsl:element>
     </xsl:template>
 
-    <!-- Supplied -->
+    <!-- agg. editoriale -->
     <xsl:template match="tei:supplied">
         <xsl:element name="span">
             <xsl:attribute name="class">supplied</xsl:attribute>
@@ -314,7 +350,7 @@
         </xsl:element>
     </xsl:template>
 
-    <!-- expan -->
+    <!-- espansione -->
     <xsl:template match="tei:expan">
         <xsl:element name="span">
             <xsl:attribute name="class">expan</xsl:attribute>
@@ -322,7 +358,7 @@
         </xsl:element>
     </xsl:template>
 
-    <!-- persName -->
+    <!-- persone -->
     <xsl:template match="tei:name[@type='person']">
         <xsl:element name="span">
             <xsl:attribute name="class">person</xsl:attribute>
@@ -330,7 +366,7 @@
         </xsl:element>
     </xsl:template>
 
-    <!-- placeName -->
+    <!-- luoghi -->
     <xsl:template match="tei:name[@type='place']">
         <xsl:variable name="idPlace">
             <xsl:value-of select="substring(./@ref,2)"/>
@@ -351,15 +387,44 @@
         </xsl:element>
     </xsl:template>
 
-    <xsl:template match="//tei:listBibl">
+
+    <xsl:template match="tei:listPerson">
+        <h2><xsl:value-of select="tei:head"/></h2>
+        <xsl:for-each select="tei:person">
+            <ul>
+                <li>
+                    <xsl:value-of select="tei:persName"/>
+                    (<xsl:value-of select="tei:sex/@value"/>)<br/>
+                    <xsl:if test="tei:birth">
+                        <xsl:value-of select="tei:birth/tei:date"/> <xsl:value-of select="tei:birth/tei:placeName/settlement[@type='municipality']"/> - <xsl:value-of select="tei:death/tei:date"/> <xsl:value-of select="tei:death/tei:placeName/settlement[@type='municipality']"/><br/>
+                    </xsl:if>
+                </li>
+            </ul>
+        </xsl:for-each>
+    </xsl:template>
+
+     <xsl:template match="tei:listOrg">
+        <h2><xsl:value-of select="tei:head"/></h2>
+        <xsl:for-each select="tei:org">
+            <ul>
+                <li>
+                    <xsl:value-of select="tei:orgName"/><br/>
+                    <xsl:value-of select="tei:desc"/>
+                </li>
+            </ul>
+        </xsl:for-each>
+     </xsl:template>
+
+    <!--bibliografia-->
+    <xsl:template match="tei:listBibl">
     <ul>
-        <xsl:for-each select="//tei:biblStruct">
+        <xsl:for-each select="tei:biblStruct">
         <li>
             <xsl:value-of select="tei:monogr/tei:title"/>,
             <xsl:value-of select="tei:monogr/tei:author"/>,
             <xsl:value-of select="tei:monogr/tei:imprint/tei:pubPlace"/>,
             <xsl:value-of select="tei:monogr/tei:imprint/tei:date"/>,
-            <xsl:value-of select="tei:monogr/tei:imprint/tei:publisher"/>
+            <xsl:value-of select="tei:monogr/tei:imprint/tei:publisher"/>;
         </li>
         </xsl:for-each>
     </ul>
