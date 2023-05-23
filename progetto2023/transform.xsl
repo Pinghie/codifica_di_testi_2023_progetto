@@ -222,7 +222,7 @@
     </xsl:template>
 
     <xsl:template match="tei:facsimile">
-        <xsl:for-each select="//tei:surface">
+        <xsl:for-each select="tei:surface">
             <div class="page">
                 <xsl:element name="img">
                     <xsl:attribute name="src"><xsl:value-of select="tei:graphic/@url"/></xsl:attribute>
@@ -284,12 +284,10 @@
 
     <!-- correzione -->
     <xsl:template match="tei:corr">
-        <corr>
             <xsl:element name="span">
                 <xsl:attribute name="class">corr</xsl:attribute>
                 <xsl:apply-templates />
             </xsl:element>
-        </corr>
     </xsl:template>
 
     <!-- abbreviazione -->
