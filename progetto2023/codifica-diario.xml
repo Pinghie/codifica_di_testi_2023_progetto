@@ -225,13 +225,15 @@
     <text xml:lang="it">
         <body>
             <div>
-                <pb n="1" facs="#p42" xml:id="pb42"/>
+                
                 <opener>
                     <dateline facs="#p42_date" xml:id="p42_dateLine">
                         <date when="1943-12-08">8 <choice><abbr type="suspension">dic</abbr><expan resp="#FM" cert="high">embre</expan></choice> <supplied reason="omitted-in-original" cert="high" resp="#FM">1943</supplied></date>
                     </dateline>
                 </opener>
                 <ab n="1">
+                    <pb n="1" facs="#p42" xml:id="pb42"/>
+                    
                     <lb n="1" facs="#p42_l1" xml:id="p42_lb1"/>
                     Ieri, anniversario del<del rend="overstrike" hand="author">lo</del> primo mese del mio
                     <lb n="2" facs="#p42_l2" xml:id="p42_lb2"/>
@@ -278,10 +280,9 @@
                     una cosa che non dico a nessuno. Sono Ebreo,
                     <lb n="23" facs="#p42_l23" xml:id="p42_lb23"/>
                     vuole che la denunzi ai Tedeschi?&#187;</q> e la
-                </ab>
 
-                <pb n="2" facs="#p43" xml:id="pb43"/>
-                <ab n="2">
+                    <pb n="2" facs="#p43" xml:id="pb43"/>
+
                     <lb n="1" facs="#p43_l1" xml:id="p43_lb1"/>
                     brava donna, persuasa che dicevo la verità, senza
                     <lb n="2" facs="#p43_l2" xml:id="p43_lb2"/>
@@ -326,10 +327,9 @@
                     glia di <name type="place" ref="#CR">Crissolo</name> e <subst><del rend="overstrike" hand="author">parti</del><add place="inline" hand="author">doveva</add></subst> raggiungere la
                     <lb n="22" facs="#p43_l22" xml:id="p43_lb22"/>
                     guarnigione di <name type="place" ref="#BO">Bobbio</name>. Persuaso <subst><del rend="overstrike" hand="author">che</del><add place="inline" hand="author">dai</add></subst> nostri
-                </ab>
 
-                <pb n="3" facs="#p44" xml:id="pb44"/>
-                <ab n="3">
+                    <pb n="3" facs="#p44" xml:id="pb44"/>
+
                     <lb n="1" facs="#p44_l1" xml:id="p44_lb1"/>
                     ingenui discorsi che non sapevamo nulla di questi
                     <lb n="2" facs="#p44_l2" xml:id="p44_lb2"/>
@@ -376,7 +376,9 @@
                     A <name type="place" ref="#BO">Bobbio</name> si sono radunati <num type="cardinal">130</num> o <num type="cardinal" value="140">40</num> uomini, ma
                     <lb n="23" facs="#p44_l23" xml:id="p44_lb23"/>
                     presto il presidio verrà diminuito.
+
                 </ab>
+
             </div>
         </body>
 

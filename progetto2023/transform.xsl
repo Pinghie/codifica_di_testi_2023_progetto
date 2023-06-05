@@ -242,11 +242,20 @@
 
                 <div class="trascrizione">
                     <p>
-                        <xsl:variable name="myVar" >
+                        <xsl:variable name="nPagina" >
                             <xsl:value-of select="position()"/>
                         </xsl:variable>
 
-                        <xsl:apply-templates select="//tei:ab[@n=$myVar]"/>
+                        <xsl:for-each-group select="//tei:ab/node()" group-starting-with="tei:pb">
+                            <xsl:variable name="nGruppo" >
+                                <xsl:value-of select="position()-1"/>
+                            </xsl:variable>
+
+                            <xsl:if test="$nPagina=$nGruppo">
+                                <xsl:apply-templates select="current-group()"/>
+                            </xsl:if>
+                            
+                        </xsl:for-each-group>
 
                     </p>
                 </div>
@@ -255,6 +264,11 @@
     </xsl:template>
 
     <xsl:template match="tei:ab">
+
+<!--
+
+        
+
         <xsl:if test="./preceding-sibling::*[1]/tei:dateline">
             <xsl:element name="span">
                 <xsl:attribute name="id">
@@ -264,6 +278,7 @@
             </xsl:element>
         </xsl:if>
         <xsl:apply-templates/>
+    -->
     </xsl:template>
 
     <xsl:template match="tei:lb">
