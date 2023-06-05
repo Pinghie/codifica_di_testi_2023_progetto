@@ -11,7 +11,6 @@
                 <meta charset="utf-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <script src="https://kit.fontawesome.com/2fd670a4d1.js" crossorigin="anonymous"></script>
-                <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="stylesheet" type="text/css" href="src/style.css"/>
                 <title>Progetto d'esame di Codifica di Testi, di Fabio Melasi</title>
             </head>
@@ -44,7 +43,7 @@
                             <div>
                                 <h2>Evidenzia</h2>
                                 <button class="addBtn" onclick="mostraFenomeno('add', 'darkblue', 'ev')">AGGIUNTE</button>
-                                <button class="corrBtn" onclick="mostraFenomeno('corr', 'goldenrod', 'ev')">CORREZIONE</button>
+                                <button class="corrBtn" onclick="mostraFenomeno('corr', 'goldenrod', 'ev')">CORREZIONI</button>
                                 <button class="placeBtn" onclick="mostraFenomeno('place', 'darkgreen', 'ev')">LUOGHI</button>
                                 <button class="personBtn" onclick="mostraFenomeno('person', 'mediumvioletred', 'ev')">PERSONE</button>
                                 <button class="abbrBtn" onclick="mostraFenomeno('abbr', 'crimson', 'ev')">ABBREVIAZIONI</button>
@@ -77,7 +76,7 @@
                             <div>
                                 <h2>Evidenzia</h2>
                                 <button class="addBtn" onclick="mostraFenomeno('add', 'darkblue', 'ev')">AGGIUNTE</button>
-                                <button class="corrBtn" onclick="mostraFenomeno('corr', 'goldenrod', 'ev')">CORREZIONE</button>
+                                <button class="corrBtn" onclick="mostraFenomeno('corr', 'goldenrod', 'ev')">CORREZIONI</button>
                                 <button class="placeBtn" onclick="mostraFenomeno('place', 'darkgreen', 'ev')">LUOGHI</button>
                                 <button class="personBtn" onclick="mostraFenomeno('person', 'mediumvioletred', 'ev')">PERSONE</button>
                                 <button class="abbrBtn" onclick="mostraFenomeno('abbr', 'crimson', 'ev')">ABBREVIAZIONI</button>
@@ -115,7 +114,7 @@
                         <xsl:value-of select="tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:availability"/>
                         <xsl:value-of select="tei:TEI/tei:teiHeader/tei:encodingDesc/tei:projectDesc"/>
                     </p>
-                    
+
                     <h1>Bibliografia</h1>
                     <p>
                         <xsl:apply-templates select="//tei:listBibl"/>
@@ -128,7 +127,7 @@
                     <br/>
                     <p>di Fabio Melasi, maggio 2023</p>
                 </footer>
-            
+
             </body>
             <script type="text/javascript" src="src/script.js"></script>
         </html>
@@ -256,12 +255,12 @@
     </xsl:template>
 
     <xsl:template match="tei:ab">
-        <xsl:if test="./preceding-sibling::*[ 1]/tei:dateline">
+        <xsl:if test="./preceding-sibling::*[1]/tei:dateline">
             <xsl:element name="span">
                 <xsl:attribute name="id">
-                    <xsl:value-of select="./preceding-sibling::*[ 1]/tei:dateline/@facs"/>
+                    <xsl:value-of select="./preceding-sibling::*[1]/tei:dateline/@facs"/>
                 </xsl:attribute>
-                <xsl:apply-templates select="./preceding-sibling::*[ 1]/tei:dateline"/>
+                <xsl:apply-templates select="./preceding-sibling::*[1]/tei:dateline"/>
             </xsl:element>
         </xsl:if>
         <xsl:apply-templates/>
@@ -375,7 +374,7 @@
             <xsl:attribute name="onmouseout">mostraBox(this, "off")</xsl:attribute>
             <xsl:apply-templates/>
             <span class="info_box">
-                <strong>Nome:</strong>&#160; <xsl:value-of select="//tei:place[@xml:id=$idPlace]/tei:placeName"/>,<br/>
+                <strong>Nome:</strong>&#160; <xsl:value-of select="//tei:place[@xml:id=$idPlace]/tei:placeName"/>,<br/> <!--provare qui a scriver id($idPlace) invece che tei_place[] ecc.-->
                 <xsl:if test="//tei:place[@xml:id=$idPlace]/tei:settlement[@type='province']">
                     <strong>Provincia:</strong>&#160; <xsl:value-of select="//tei:place[@xml:id=$idPlace]/tei:settlement[@type='province']"/>,<br/>
                 </xsl:if>
@@ -384,7 +383,6 @@
             </span>
         </xsl:element>
     </xsl:template>
-
 
     <xsl:template match="tei:listPerson">
         <h2><xsl:value-of select="tei:head"/></h2>
@@ -416,14 +414,14 @@
     <!--bibliografia-->
     <xsl:template match="tei:listBibl">
     <ul>
-        <xsl:for-each select="tei:biblStruct">
-        <li>
-            <xsl:value-of select="tei:monogr/tei:title"/>,
-            <xsl:value-of select="tei:monogr/tei:author"/>,
-            <xsl:value-of select="tei:monogr/tei:imprint/tei:pubPlace"/>,
-            <xsl:value-of select="tei:monogr/tei:imprint/tei:date"/>,
-            <xsl:value-of select="tei:monogr/tei:imprint/tei:publisher"/>;
-        </li>
+        <xsl:for-each select="tei:biblStruct/tei:monogr">
+            <li>
+                <xsl:value-of select="tei:title"/>,
+                <xsl:value-of select="tei:author"/>,
+                <xsl:value-of select="tei:imprint/tei:pubPlace"/>,
+                <xsl:value-of select="tei:imprint/tei:date"/>,
+                <xsl:value-of select="tei:imprint/tei:publisher"/>;
+            </li>
         </xsl:for-each>
     </ul>
     </xsl:template>
