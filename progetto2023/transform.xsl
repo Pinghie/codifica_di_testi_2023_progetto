@@ -3,7 +3,6 @@
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml" >
     <xsl:output method="html" encoding="UTF-8"/>
 
-
     <xsl:template match="/">
 
         <html>
@@ -27,11 +26,11 @@
                     <div class="containerTabelle">
                         <div class="containerTabella">
                             <h2>Descrizione bibliografica</h2>
-                            <xsl:apply-templates select="//tei:msContents"/>
+                            <xsl:apply-templates select="tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:msContents"/>
                         </div>
                         <div class="containerTabella">
                             <h2>Descrizione fisica</h2>
-                            <xsl:apply-templates select="//tei:physDesc"/>
+                            <xsl:apply-templates select="tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:physDesc"/>
                         </div>
                     </div>
                 </div>
@@ -65,7 +64,7 @@
                     </div>
 
                     <h2 id="indicatorePagina">Pagina X</h2>
-                    <xsl:apply-templates select="//tei:facsimile"/>
+                    <xsl:apply-templates select="tei:TEI/tei:facsimile"/>
 
                     <div class="controlPanel">
                         <div class="divCambioPagina">
@@ -97,10 +96,10 @@
                         <button id="bottonePannello" onclick="mostraListe()">Visualizza persone e organizzazioni</button>
                         <div id="containerListe">
                             <div class="containerLista">
-                                <xsl:apply-templates select="//tei:listPerson"/>
+                                <xsl:apply-templates select="tei:TEI/tei:text/tei:back/tei:div/tei:listPerson"/>
                             </div>
                             <div class="containerLista">
-                                <xsl:apply-templates select="//tei:listOrg"/>
+                                <xsl:apply-templates select="tei:TEI/tei:text/tei:back/tei:div/tei:listOrg"/>
                             </div>
                         </div>
                     </div>
@@ -117,7 +116,7 @@
 
                     <h1>Bibliografia</h1>
                     <p>
-                        <xsl:apply-templates select="//tei:listBibl"/>
+                        <xsl:apply-templates select="tei:TEI/tei:text/tei:back/tei:div/tei:listBibl"/>
                     </p>
                 </div>
 
@@ -146,19 +145,19 @@
                     <table>
                         <tr>
                             <td><strong>Posizione</strong></td>
-                            <td><span><xsl:value-of select="//tei:msIdentifier/tei:settlement"/></span>, <span><xsl:value-of select="//tei:msIdentifier/tei:country"/></span></td>
+                            <td><span><xsl:value-of select="../tei:msIdentifier/tei:settlement"/></span>, <span><xsl:value-of select="../tei:msIdentifier/tei:country"/></span></td>
                         </tr>
                         <tr>
                             <td><strong>Istituzione</strong></td>
-                            <td><span><xsl:value-of select="//tei:msIdentifier/tei:institution"/></span></td>
+                            <td><span><xsl:value-of select="../tei:msIdentifier/tei:institution"/></span></td>
                         </tr>
                         <tr>
                             <td><strong>Collezione</strong></td>
-                            <td><span><xsl:value-of select="//tei:msIdentifier/tei:repository"/></span></td>
+                            <td><span><xsl:value-of select="../tei:msIdentifier/tei:repository"/></span></td>
                         </tr>
                         <tr>
                             <td><strong>Manoscritto</strong></td>
-                            <td><span><xsl:value-of select="//tei:msIdentifier/tei:idno"/></span></td>
+                            <td><span><xsl:value-of select="../tei:msIdentifier/tei:idno"/></span></td>
                         </tr>
                     </table>
                 </td>
@@ -215,7 +214,7 @@
             </tr>
             <tr>
                 <td><span><strong>Storia</strong></span></td>
-                <td><span><xsl:value-of select="//tei:history"/></span></td>
+                <td><span><xsl:value-of select="../tei:history"/></span></td>
             </tr>
         </table>
     </xsl:template>
@@ -246,39 +245,27 @@
                             <xsl:value-of select="position()"/>
                         </xsl:variable>
 
-                        <xsl:for-each-group select="//tei:ab/node()" group-starting-with="tei:pb">
+                        <xsl:for-each-group select="../../tei:text/tei:body/tei:div/tei:ab/node()" group-starting-with="tei:pb">
                             <xsl:variable name="nGruppo" >
                                 <xsl:value-of select="position()-1"/>
                             </xsl:variable>
 
                             <xsl:if test="$nPagina=$nGruppo">
+                                <xsl:if test="$nPagina=1">
+                                    <xsl:element name="span">
+                                        <xsl:attribute name="id">
+                                            <xsl:value-of select="../../tei:opener/tei:dateline/@facs"/>
+                                        </xsl:attribute>
+                                        <xsl:apply-templates select="../../tei:opener/tei:dateline"/>
+                                    </xsl:element>
+                                </xsl:if>
                                 <xsl:apply-templates select="current-group()"/>
                             </xsl:if>
-                            
                         </xsl:for-each-group>
-
                     </p>
                 </div>
             </div>
         </xsl:for-each>
-    </xsl:template>
-
-    <xsl:template match="tei:ab">
-
-<!--
-
-        
-
-        <xsl:if test="./preceding-sibling::*[1]/tei:dateline">
-            <xsl:element name="span">
-                <xsl:attribute name="id">
-                    <xsl:value-of select="./preceding-sibling::*[1]/tei:dateline/@facs"/>
-                </xsl:attribute>
-                <xsl:apply-templates select="./preceding-sibling::*[1]/tei:dateline"/>
-            </xsl:element>
-        </xsl:if>
-        <xsl:apply-templates/>
-    -->
     </xsl:template>
 
     <xsl:template match="tei:lb">
@@ -389,12 +376,12 @@
             <xsl:attribute name="onmouseout">mostraBox(this, "off")</xsl:attribute>
             <xsl:apply-templates/>
             <span class="info_box">
-                <strong>Nome:</strong>&#160; <xsl:value-of select="//tei:place[@xml:id=$idPlace]/tei:placeName"/>,<br/> <!--provare qui a scriver id($idPlace) invece che tei_place[] ecc.-->
-                <xsl:if test="//tei:place[@xml:id=$idPlace]/tei:settlement[@type='province']">
-                    <strong>Provincia:</strong>&#160; <xsl:value-of select="//tei:place[@xml:id=$idPlace]/tei:settlement[@type='province']"/>,<br/>
+                <strong>Nome:</strong>&#160; <xsl:value-of select="id($idPlace)/tei:placeName"/>,<br/>
+                <xsl:if test="id($idPlace)/tei:settlement[@type='province']">
+                    <strong>Provincia:</strong>&#160; <xsl:value-of select="id($idPlace)/tei:settlement[@type='province']"/>,<br/>
                 </xsl:if>
-                <strong>Regione:</strong>&#160; <xsl:value-of select="//tei:place[@xml:id=$idPlace]/tei:settlement[@type='region']"/>,<br/>
-                <strong>Paese:</strong>&#160; <xsl:value-of select="//tei:place[@xml:id=$idPlace]/tei:country"/><br/>
+                <strong>Regione:</strong>&#160; <xsl:value-of select="id($idPlace)/tei:settlement[@type='region']"/>,<br/>
+                <strong>Paese:</strong>&#160; <xsl:value-of select="id($idPlace)/tei:country"/><br/>
             </span>
         </xsl:element>
     </xsl:template>
