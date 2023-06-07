@@ -194,7 +194,7 @@
             </tr>
             <tr>
                 <td><span><strong>Quantità</strong></span></td>
-                <td><xsl:value-of select="tei:objectDesc/tei:supportDesc/tei:extent"/>. </td>
+                <td><xsl:value-of select="tei:objectDesc/tei:supportDesc/tei:extent"/></td>
             </tr>
             <tr>
                 <td><span><strong>Organizzazione</strong></span></td>
@@ -279,7 +279,6 @@
             </xsl:attribute>
             <xsl:attribute name="class">nRiga</xsl:attribute>
             <xsl:value-of select="@n" />&#160;
-            <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
 
@@ -287,7 +286,7 @@
     <xsl:template match="tei:corr">
         <xsl:element name="span">
             <xsl:attribute name="class">corr</xsl:attribute>
-            <xsl:apply-templates />
+            <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
 
@@ -388,7 +387,7 @@
         <h2><xsl:value-of select="tei:head"/></h2>
         <xsl:for-each select="tei:person">
             <ul>
-                <liw>
+                <li>
                     <xsl:value-of select="tei:persName"/>
                     (<xsl:value-of select="tei:sex/@value"/>)<br/>
                     <xsl:if test="tei:birth">
@@ -413,17 +412,17 @@
 
     <!--bibliografia-->
     <xsl:template match="tei:listBibl">
-    <ul>
-        <xsl:for-each select="tei:biblStruct/tei:monogr">
-            <li>
-                <xsl:value-of select="tei:title"/>,
-                <xsl:value-of select="tei:author"/>,
-                <xsl:value-of select="tei:imprint/tei:pubPlace"/>,
-                <xsl:value-of select="tei:imprint/tei:date"/>,
-                <xsl:value-of select="tei:imprint/tei:publisher"/>;
-            </li>
-        </xsl:for-each>
-    </ul>
+        <ul>
+            <xsl:for-each select="tei:biblStruct/tei:monogr">
+                <li>
+                    <xsl:value-of select="tei:title"/>,
+                    <xsl:value-of select="tei:author"/>,
+                    <xsl:value-of select="tei:imprint/tei:pubPlace"/>,
+                    <xsl:value-of select="tei:imprint/tei:date"/>,
+                    <xsl:value-of select="tei:imprint/tei:publisher"/>;
+                </li>
+            </xsl:for-each>
+        </ul>
     </xsl:template>
 
 </xsl:stylesheet>

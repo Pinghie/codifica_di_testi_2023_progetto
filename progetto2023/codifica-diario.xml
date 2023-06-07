@@ -25,7 +25,6 @@
                 </respStmt>
             </editionStmt>
             <publicationStmt>
-            <!--Dati di diffusione e distribuzione dell'edizione-->
                 <distributor ref="#unipi">Università di Pisa</distributor>
                 <address>
                     <addrLine>Lungarno Antonio Pacinotti 43,</addrLine>
@@ -43,26 +42,25 @@
                 <note>Edizione digitale realizzata come progetto d'esame di Codifica di testi del corso di laurea in Informatica Umanistica dell'Università di Pisa.</note>
             </notesStmt>
             <sourceDesc>
-            <!--Descrizione della fonte primaria-->
                 <msDesc>
                     <msIdentifier>
                         <country key="IT">Italia</country>
                         <settlement type="city" ref="#MI">Milano</settlement>
-                        <institution ref="#CDEC"> CDEC - Centro di Documentazione Ebraica Contemporanea  </institution>
+                        <institution ref="#CDEC">CDEC - Centro di Documentazione Ebraica Contemporanea</institution>
                         <repository ref="http://digital-library.cdec.it/cdec-web/storico/detail/IT-CDEC-ST0003-000001/Fondo+Emanuele+Artom.html">Fondo Emanuele Artom</repository>
                         <collection>Fondo Emanuele Artom</collection>
                         <idno>busta 1, fascicolo 9</idno>
                     </msIdentifier>
                     <msContents>
-                        <summary>Raccolta degli scritti autografi di <name type="person" ref="#EA">Emanuele Artom</name> redatti tra il <date when="1943">1943</date> e il <date when="1944">1944</date> accompagnati dalla lettera originale della madre <name type="person" ref="#AA">Amalia</name> riportante l'epigrafe <quote>alla mia morte questo plico deve essere consegnato al Centro di documentazione ebraica [..] esso ha un grande valore storico [..].</quote></summary>
+                        <summary>Raccolta degli scritti autografi di <name type="person" ref="#EA">Emanuele Artom</name> redatti tra il <date when="1943">1943</date> e il <date when="1944">1944</date> accompagnati dalla lettera originale della madre <name type="person" ref="#AS">Amalia</name> riportante l'epigrafe: <quote>alla mia morte questo plico deve essere consegnato al Centro di documentazione ebraica [..] esso ha un grande valore storico [..].</quote></summary>
                         <msItem n="1">
-                            <author ref="#AA">Amalia Segre</author>
-                            <title>Appunto della signora <name type="person" ref="#AA">Amalia Segre</name> sul diario del figlio <name ref="#EA">Emanuele</name></title>
+                            <author ref="#AS">Amalia Segre</author>
+                            <title>Appunto della signora <name type="person" ref="#AS">Amalia Segre</name> sul diario del figlio <name ref="#EA">Emanuele</name></title>
                             <incipit>Questo pacco contiene il diario autografo di <name type="person" ref="#EA">Emanuele Artom</name></incipit>
                             <textLang mainLang="it">Italiano</textLang>
                         </msItem>
                         <msItem n="2">
-                            <author ref="#AA">Emanuele Artom</author>
+                            <author ref="#EA">Emanuele Artom</author>
                             <title>Diario di Emanuele Artom</title>
                             <textLang mainLang="it">Italiano</textLang>
                             <note>Sono contenute le pagine del diario dal <date when="1943-11">novembre 1943</date> al <date when="1944-02-23">23 febbraio 1944</date></note>
@@ -72,7 +70,7 @@
                         <objectDesc>
                             <supportDesc material="paper">
                                 <support>Fogli di <material>carta</material>.</support>
-                                <extent><num type="cardinal">172</num> pagine e <num type="cardinal" value="1">un</num> foglietto della madre di <name type="person" ref="#EA">Emanuele Artom</name></extent>
+                                <extent><num type="cardinal">172</num> pagine e <num type="cardinal" value="1">un</num> foglietto della madre di <name type="person" ref="#EA">Emanuele Artom</name>.</extent>
                                 <collation>
                                     <p>Il diario è preceduto da una nota scritta dalla madre di Emanuele Artom.</p>
                                 </collation>
@@ -94,8 +92,7 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <encodingDesc> 
-        <!-- informazioni riguardo lo schema (e il modello di codifica) utilizzato-->
+        <encodingDesc>
             <projectDesc>
                 <p>La codifica del testo è stata realizzata rispettando le linee guida TEI P5 come progetto d'esame del corso di Codifica di Testi dell'<name type="org" ref="#unipi">Università di Pisa.</name></p>
             </projectDesc>
@@ -122,7 +119,7 @@
                     <p>Tutte le virgolette sono state mantenute. Sono state aggiunte quelle mancanti nel testo attraverso il tag <gi>supplied</gi></p>
                 </quotation>
                 <hyphenation eol="all">
-                    <p>Tutti i trattini del ritorno a capo sono stati mantenuti, segnalando esplicitamente l'interruzione di parola attraverso l'attributo <att>break</att> dell'elemento milestone <gi>lb</gi>.</p>
+                    <p>Tutti i trattini del ritorno a capo sono stati segnalati attraverso l'attributo <att>rend</att>, indicando l'interruzione di parola attraverso l'attributo <att>break</att> dell'elemento milestone <gi>lb</gi>.</p>
                 </hyphenation>
                 <interpretation>
                     <p>I cognomi che nella fonte venivano indicati esclusivamente attraverso l'iniziale sono stati indicati attraverso il tag <gi>abbr</gi> con attributo <att>surname</att>. Sono stati sciolti utilizzando il tag <gi>expan</gi>.</p>
@@ -130,7 +127,6 @@
             </editorialDecl>
         </encodingDesc>
         <profileDesc>
-        <!--descrizione del testo: quando è stato creato, da chi, usando quali lingue etc.-->
             <langUsage>
                 <language ident="it" usage="100">Italiano</language>
             </langUsage>
@@ -225,13 +221,12 @@
     <text xml:lang="it">
         <body>
             <div>
-                
                 <opener>
                     <dateline facs="#p42_date" xml:id="p42_dateLine">
                         <date when="1943-12-08">8 <choice><abbr type="suspension">dic</abbr><expan resp="#FM" cert="high">embre</expan></choice> <supplied reason="omitted-in-original" cert="high" resp="#FM">1943</supplied></date>
                     </dateline>
                 </opener>
-                <ab n="1">
+                <ab>
                     <pb n="1" facs="#p42" xml:id="pb42"/>
                     
                     <lb n="1" facs="#p42_l1" xml:id="p42_lb1"/>
@@ -376,9 +371,7 @@
                     A <name type="place" ref="#BO">Bobbio</name> si sono radunati <num type="cardinal">130</num> o <num type="cardinal" value="140">40</num> uomini, ma
                     <lb n="23" facs="#p44_l23" xml:id="p44_lb23"/>
                     presto il presidio verrà diminuito.
-
                 </ab>
-
             </div>
         </body>
 
@@ -386,8 +379,7 @@
             <div>
                 <listPerson>
                     <head>Elenco persone</head>
-
-                    <person xml:id="AA">
+                    <person xml:id="AS">
 						<persName>
 					        <ref xml:lang="it" target="http://digital-library.cdec.it/cdec-web/persone/detail/person-it-cdec-eaccpf0001-017448/segre-amalia.html"/>
 							<forename>Amalia</forename>
@@ -471,12 +463,10 @@
                         </persName>
                         <sex value="M">maschio</sex>
 					</person>
-
                 </listPerson>
 
                 <listPlace>
                     <head>Elenco luoghi</head>
-
                     <place xml:id="MI">
                         <placeName ref="https://www.comune.milano.it">Milano</placeName>
                         <settlement type="province">Milano</settlement>
@@ -510,7 +500,6 @@
                         <settlement type="region">Piemonte</settlement>
                         <country key="IT">Italia</country>
                     </place>
-
                 </listPlace>
 
                 <listBibl>
@@ -527,6 +516,7 @@
                             </imprint>
                         </monogr>
                     </biblStruct>
+                    
                     <biblStruct>
                         <monogr xml:id="Schwarz">
                             <author>Schwarz, Guri</author>

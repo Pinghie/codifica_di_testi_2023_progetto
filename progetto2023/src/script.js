@@ -31,9 +31,7 @@ function cambioPagina(dir)
 		arrayPagine[pag].style.display = "flex";
 	else
 		arrayPagine[pag].style.display = "block";
-
 }
-
 
 onresize = (event) => {		if(window.innerWidth > 1100)
 		arrayPagine[pag].style.display = "flex";
@@ -59,7 +57,6 @@ function mostraFenomeno(fenomeno, colore, azione)
 		bottoniPremuti[1].style.color = "black";
 	}
 
-	
 	var newStile;
 	spanFenomeno = document.getElementsByClassName(fenomeno);
 
