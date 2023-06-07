@@ -56,8 +56,8 @@
                     <msContents>
                         <summary>Raccolta degli scritti autografi di <name type="person" ref="#EA">Emanuele Artom</name> redatti tra il <date when="1943">1943</date> e il <date when="1944">1944</date> accompagnati dalla lettera originale della madre <name type="person" ref="#AA">Amalia</name> riportante l'epigrafe <quote>alla mia morte questo plico deve essere consegnato al Centro di documentazione ebraica [..] esso ha un grande valore storico [..].</quote></summary>
                         <msItem n="1">
-                            <author ref="#AA">Amalia Artom</author>
-                            <title>Appunto della signora <name type="person" ref="#AA">Amalia Artom</name> sul diario del figlio <name ref="#EA">Emanuele</name></title>
+                            <author ref="#AA">Amalia Segre</author>
+                            <title>Appunto della signora <name type="person" ref="#AA">Amalia Segre</name> sul diario del figlio <name ref="#EA">Emanuele</name></title>
                             <incipit>Questo pacco contiene il diario autografo di <name type="person" ref="#EA">Emanuele Artom</name></incipit>
                             <textLang mainLang="it">Italiano</textLang>
                         </msItem>

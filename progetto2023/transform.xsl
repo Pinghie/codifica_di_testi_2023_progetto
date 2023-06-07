@@ -124,7 +124,7 @@
                     <p>Pagina web realizzata usando la trasformazione XSLT della codifica XML TEI delle pagine 42-44 del diario di Emanuele Artom.</p>
                     <p>Vedi su <a target="_blank" href="https://github.com/Pinghie/codifica_fm/tree/main/progetto2023">GitHub</a>.</p>
                     <br/>
-                    <p>di Fabio Melasi, maggio 2023</p>
+                    <p>di Fabio Melasi, maggio-giugno 2023</p>
                 </footer>
 
             </body>
@@ -242,11 +242,11 @@
                 <div class="trascrizione">
                     <p>
                         <xsl:variable name="nPagina" >
-                            <xsl:value-of select="position()"/>
+                            <xsl:value-of select="position()"/> <!--posizione nel foreach surface-->
                         </xsl:variable>
 
                         <xsl:for-each-group select="../../tei:text/tei:body/tei:div/tei:ab/node()" group-starting-with="tei:pb">
-                            <xsl:variable name="nGruppo" >
+                            <xsl:variable name="nGruppo" > <!--posizione nel foreach gruppo pb-->
                                 <xsl:value-of select="position()-1"/>
                             </xsl:variable>
 
@@ -285,10 +285,10 @@
 
     <!-- correzione -->
     <xsl:template match="tei:corr">
-            <xsl:element name="span">
-                <xsl:attribute name="class">corr</xsl:attribute>
-                <xsl:apply-templates />
-            </xsl:element>
+        <xsl:element name="span">
+            <xsl:attribute name="class">corr</xsl:attribute>
+            <xsl:apply-templates />
+        </xsl:element>
     </xsl:template>
 
     <!-- abbreviazione -->
@@ -301,28 +301,26 @@
 
     <!-- regolarizzazione  -->
     <xsl:template match="tei:reg">
-        <reg>
-            <xsl:element name="span">
-                <xsl:attribute name="class">reg</xsl:attribute>
-                <xsl:apply-templates />
-            </xsl:element>
-        </reg>
+        <xsl:element name="span">
+            <xsl:attribute name="class">reg</xsl:attribute>
+            <xsl:apply-templates />
+        </xsl:element>
     </xsl:template>
 
     <!-- aggiunta -->
     <xsl:template match="tei:add">
-            <xsl:element name="span">
-                <xsl:attribute name="class">add</xsl:attribute>
-                <xsl:apply-templates />
-            </xsl:element>
+        <xsl:element name="span">
+            <xsl:attribute name="class">add</xsl:attribute>
+            <xsl:apply-templates />
+        </xsl:element>
     </xsl:template>
 
     <!--errori-->
     <xsl:template match="tei:sic">
         <xsl:element name="sic">
-                <xsl:attribute name="class">sic</xsl:attribute>
-                <xsl:apply-templates />
-            </xsl:element>
+            <xsl:attribute name="class">sic</xsl:attribute>
+            <xsl:apply-templates />
+        </xsl:element>
     </xsl:template>
 
     <!-- cancellature -->
@@ -390,7 +388,7 @@
         <h2><xsl:value-of select="tei:head"/></h2>
         <xsl:for-each select="tei:person">
             <ul>
-                <li>
+                <liw>
                     <xsl:value-of select="tei:persName"/>
                     (<xsl:value-of select="tei:sex/@value"/>)<br/>
                     <xsl:if test="tei:birth">
