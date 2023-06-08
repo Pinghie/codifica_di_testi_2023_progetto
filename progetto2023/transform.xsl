@@ -64,7 +64,7 @@
                     </div>
 
                     <h2 id="indicatorePagina">Pagina X</h2>
-                    <xsl:apply-templates select="tei:TEI/tei:facsimile"/>
+                    <xsl:apply-templates select="tei:TEI/tei:text/tei:body"/>
 
                     <div class="controlPanel">
                         <div class="divCambioPagina">
@@ -219,53 +219,55 @@
         </table>
     </xsl:template>
 
-    <xsl:template match="tei:facsimile">
-        <xsl:for-each select="tei:surface">
-            <div class="page">
-                <xsl:element name="img">
-                    <xsl:attribute name="src"><xsl:value-of select="tei:graphic/@url"/></xsl:attribute>
-                    <xsl:attribute name="usemap">#<xsl:value-of select="@xml:id"/></xsl:attribute>
-                </xsl:element>
+    <xsl:template match="tei:body">
+        <xsl:for-each-group select="tei:div/tei:ab/node()" group-starting-with="tei:pb">
+            <xsl:variable name="nPagina" >
+                <xsl:value-of select="position()-1"/>
+            </xsl:variable>
 
-                <xsl:element name="map">
-                    <xsl:attribute name="name"><xsl:value-of select="@xml:id"/></xsl:attribute>
-                    <xsl:for-each select="tei:zone">
-                        <xsl:element name="area">
-                            <xsl:attribute name="onmouseout">evidenzia(this, "off")</xsl:attribute>
-                            <xsl:attribute name="onmouseover">evidenzia(this, "on")</xsl:attribute>
-                            <xsl:attribute name="id"><xsl:value-of select="@xml:id"/></xsl:attribute>
-                            <xsl:attribute name="coords"><xsl:value-of select="@ulx"/>,<xsl:value-of select="@uly"/>,<xsl:value-of select="@lrx"/>,<xsl:value-of select="@lry"/></xsl:attribute>
-                        </xsl:element>
-                    </xsl:for-each>
-                </xsl:element>
+            <xsl:if test="position()>1">
+                <div class="page">
+                    <xsl:apply-templates select="../../../../../tei:facsimile/tei:surface[@n=$nPagina]"/>
 
-                <div class="trascrizione">
-                    <p>
-                        <xsl:variable name="nPagina" >
-                            <xsl:value-of select="position()"/> <!--posizione nel foreach surface-->
-                        </xsl:variable>
-
-                        <xsl:for-each-group select="../../tei:text/tei:body/tei:div/tei:ab/node()" group-starting-with="tei:pb">
-                            <xsl:variable name="nGruppo" > <!--posizione nel foreach gruppo pb-->
-                                <xsl:value-of select="position()-1"/>
-                            </xsl:variable>
-
-                            <xsl:if test="$nPagina=$nGruppo">
-                                <xsl:if test="$nPagina=1">
-                                    <xsl:element name="span">
-                                        <xsl:attribute name="id">
-                                            <xsl:value-of select="../../tei:opener/tei:dateline/@facs"/>
-                                        </xsl:attribute>
-                                        <xsl:apply-templates select="../../tei:opener/tei:dateline"/>
-                                    </xsl:element>
-                                </xsl:if>
-                                <xsl:apply-templates select="current-group()"/>
+                    <div class="trascrizione">
+                        <p>
+                            <xsl:if test="$nPagina=1">
+                                <xsl:apply-templates select="../../tei:opener/tei:dateline"/>
                             </xsl:if>
-                        </xsl:for-each-group>
-                    </p>
+                            <xsl:apply-templates select="current-group()"/>
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </xsl:for-each>
+            </xsl:if>
+        </xsl:for-each-group>
+    </xsl:template>
+
+    <xsl:template match="tei:surface">
+        <xsl:element name="img">
+            <xsl:attribute name="src"><xsl:value-of select="tei:graphic/@url"/></xsl:attribute>
+            <xsl:attribute name="usemap">#<xsl:value-of select="@xml:id"/></xsl:attribute>
+        </xsl:element>
+
+        <xsl:element name="map">
+            <xsl:attribute name="name"><xsl:value-of select="@xml:id"/></xsl:attribute>
+            <xsl:for-each select="tei:zone">
+                <xsl:element name="area">
+                    <xsl:attribute name="onmouseout">evidenzia(this, "off")</xsl:attribute>
+                    <xsl:attribute name="onmouseover">evidenzia(this, "on")</xsl:attribute>
+                    <xsl:attribute name="id"><xsl:value-of select="@xml:id"/></xsl:attribute>
+                    <xsl:attribute name="coords"><xsl:value-of select="@ulx"/>,<xsl:value-of select="@uly"/>,<xsl:value-of select="@lrx"/>,<xsl:value-of select="@lry"/></xsl:attribute>
+                </xsl:element>
+            </xsl:for-each>
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template match="tei:dateline">
+        <xsl:element name="span">
+            <xsl:attribute name="id">
+                <xsl:value-of select="@facs"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
     </xsl:template>
 
     <xsl:template match="tei:lb">

@@ -137,7 +137,7 @@
     </teiHeader>
 
     <facsimile>
-        <surface xml:id="p42" start="#pb42">
+        <surface xml:id="p42" start="#pb42" n="1">
             <graphic url='img/pag42.jpg' width='600.4px' height='815.4px' />
 
             <zone ulx="314" uly="56" lrx="374" lry="88" xml:id="p42_date" corresp="#p42_dateLine"/>
@@ -165,7 +165,7 @@
             <zone ulx="67" uly="742" lrx="517" lry="765" xml:id="p42_l22" start="#p42_lb22"/>
             <zone ulx="67" uly="766" lrx="531" lry="793" xml:id="p42_l23" start="#p42_lb23"/>
         </surface>
-        <surface xml:id="p43" start="#pb43">
+        <surface xml:id="p43" start="#pb43" n="2">
             <graphic url='img/pag43.jpg' width='600.4px' height='815.4px' />
             <zone ulx="71" uly="58" lrx="538" lry="88" xml:id="p43_l1" start="#p43_lb1"/>
             <zone ulx="72" uly="90" lrx="523" lry="116" xml:id="p43_l2" start="#p43_lb2"/>
@@ -190,7 +190,7 @@
             <zone ulx="67" uly="678" lrx="537" lry="709" xml:id="p43_l21" start="#p43_lb21"/>
             <zone ulx="66" uly="711" lrx="552" lry="742" xml:id="p43_l22" start="#p43_lb22"/>
         </surface>
-        <surface xml:id="p44" start="#pb44">
+        <surface xml:id="p44" start="#pb44" n="3">
             <graphic url='img/pag44.jpg' width='600.4px' height='814.4px' />
             <zone ulx="63" uly="58" lrx="527" lry="85" xml:id="p44_l1" start="#p44_lb1"/>
             <zone ulx="61" uly="87" lrx="543" lry="122" xml:id="p44_l2" start="#p44_lb2"/>
