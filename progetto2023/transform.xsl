@@ -400,7 +400,7 @@
         </xsl:for-each>
     </xsl:template>
 
-     <xsl:template match="tei:listOrg">
+    <xsl:template match="tei:listOrg">
         <h2><xsl:value-of select="tei:head"/></h2>
         <xsl:for-each select="tei:org">
             <ul>
@@ -410,7 +410,7 @@
                 </li>
             </ul>
         </xsl:for-each>
-     </xsl:template>
+    </xsl:template>
 
     <!--bibliografia-->
     <xsl:template match="tei:listBibl">
