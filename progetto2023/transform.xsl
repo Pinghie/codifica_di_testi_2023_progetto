@@ -7,7 +7,6 @@
 
         <html>
             <head>
-                <meta charset="utf-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <script src="https://kit.fontawesome.com/2fd670a4d1.js" crossorigin="anonymous"></script>
                 <link rel="stylesheet" type="text/css" href="src/style.css"/>
@@ -127,8 +126,8 @@
                     <p>di Fabio Melasi, maggio-giugno 2023</p>
                 </footer>
 
+                <script type="text/javascript" src="src/script.js"></script>
             </body>
-            <script type="text/javascript" src="src/script.js"></script>
         </html>
 
     </xsl:template>
@@ -246,6 +245,7 @@
         <xsl:element name="img">
             <xsl:attribute name="src"><xsl:value-of select="tei:graphic/@url"/></xsl:attribute>
             <xsl:attribute name="usemap">#<xsl:value-of select="@xml:id"/></xsl:attribute>
+            <xsl:attribute name="alt">Immagine <xsl:value-of select="@xml:id"/></xsl:attribute>
         </xsl:element>
 
         <xsl:element name="map">
@@ -318,7 +318,7 @@
 
     <!--errori-->
     <xsl:template match="tei:sic">
-        <xsl:element name="sic">
+        <xsl:element name="span">
             <xsl:attribute name="class">sic</xsl:attribute>
             <xsl:apply-templates />
         </xsl:element>
